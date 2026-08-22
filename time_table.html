@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable | Government Boys Degree College Shahdadpur</title>
+    <meta name="description" content="Official Class Timetable and Workload Schedule of Government Boys Degree College Shahdadpur.">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* =========================================================
+           GLOBAL & INDEX.HTML THEME COLOR PALETTE
+        ========================================================= */
+        :root {
+            --primary-green: #0b5d3b;
+            --primary-dark: #123c2b;
+            --accent-gold: #c5a24a;
+            --accent-gold-hover: #f0d27b;
+            --bg-body: #f7f9f8;
+            --bg-card: #ffffff;
+            --text-main: #26332d;
+            --text-muted: #5f6b65;
+            --border-light: #e0e9e4;
+            --border-subtle: #dfe8e3;
+
+            /* Subject Themes */
+            --bg-physics: #eaf4ef;
+            --text-physics: #0b5d3b;
+            --bg-chemistry: #fef3c7;
+            --text-chemistry: #b45309;
+            --bg-english: #e0f2fe;
+            --text-english: #0369a1;
+            --bg-zoology: #ffedd5;
+            --text-zoology: #c2410c;
+            --bg-botany: #dcfce7;
+            --text-botany: #15803d;
+            --bg-math: #f3e8ff;
+            --text-math: #6b21a8;
+            --bg-cs: #cffafe;
+            --text-cs: #0e7490;
+            --bg-arts: #fce7f3;
+            --text-arts: #be185d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+           TOP BAR & BRAND HEADER
+        ========================================================= */
+        .site-header {
+            width: 100%;
+            background: #ffffff;
+            position: relative;
+            z-index: 9999;
+        }
+
+        .top-bar {
+            background: var(--primary-green);
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 9px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .top-bar-left, .top-bar-right {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .top-bar i {
+            color: #ffffff;
+            margin-right: 5px;
+        }
+
+        .separator {
+            opacity: .45;
+        }
+
+        .brand-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5ebe7;
+        }
+
+        .brand-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .college-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .college-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .college-name h1 {
+            margin: 0;
+            color: var(--primary-dark);
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .college-name span {
+            display: block;
+            margin-top: 3px;
+            color: #68756e;
+            font-size: 12px;
+        }
+
+        .mobile-menu-button {
+            display: none;
+            border: 0;
+            background: var(--primary-green);
+            color: #ffffff;
+            font-size: 20px;
+            width: 46px;
+            height: 42px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* =========================================================
+           NAVIGATION & SUBMENUS
+        ========================================================= */
+        .main-navigation {
+            background: var(--primary-green);
+            border-top: 1px solid rgba(255,255,255,.08);
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 15px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .nav-menu > li {
+            position: relative;
+        }
+
+        .nav-menu > li > a,
+        .nav-menu > li > button {
+            min-height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 0 13px;
+            border: 0;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease;
+        }
+
+        .nav-menu > li > a:hover,
+        .nav-menu > li > button:hover,
+        .nav-menu > li.active > a,
+        .nav-menu > li.active > button {
+            background: rgba(255,255,255,.12);
+            color: var(--accent-gold-hover);
+        }
+
+        .nav-arrow {
+            font-size: 9px;
+            transition: transform .2s ease;
+        }
+
+        .nav-menu > li.open > a .nav-arrow,
+        .nav-menu > li.open > button .nav-arrow {
+            transform: rotate(180deg);
+        }
+
+        .submenu {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 230px;
+            margin: 0;
+            padding: 7px 0;
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-top: 3px solid var(--accent-gold);
+            box-shadow: 0 12px 30px rgba(0,0,0,.14);
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+            transform: translateY(8px);
+            transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+            z-index: 1000;
+        }
+
+        .nav-menu > li.open > .submenu {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+            transform: translateY(0);
+        }
+
+        .submenu li {
+            position: relative;
+        }
+
+        .submenu li a,
+        .submenu li button {
+            width: 100%;
+            min-height: 40px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 0;
+            background: transparent;
+            color: #34453d;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease, padding-left .2s ease;
+        }
+
+        .submenu li a:hover,
+        .submenu li button:hover {
+            background: #edf5f1;
+            color: var(--primary-green);
+            padding-left: 21px;
+        }
+
+        /* =========================================================
+           PAGE HEADER / BANNER
+        ========================================================= */
+        .page-banner {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-green));
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        .page-banner h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .page-banner p {
+            color: rgba(255,255,255,0.85);
+            font-size: 14px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* =========================================================
+           TIMETABLE CONTROLS & INTERACTIVE DASHBOARD
+        ========================================================= */
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .controls-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(20,50,37,.04);
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr;
+            gap: 15px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-green);
+            font-size: 14px;
+        }
+
+        .custom-input, .custom-select {
+            width: 100%;
+            padding: 12px 14px 12px 40px;
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 13px;
+            color: var(--text-main);
+            outline: none;
+            transition: border-color .2s ease, box-shadow .2s ease;
+        }
+
+        .custom-select {
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .custom-input:focus, .custom-select:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(11, 93, 59, 0.12);
+        }
+
+        .btn-gold {
+            background: var(--accent-gold);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background .2s ease, transform .2s ease;
+        }
+
+        .btn-gold:hover {
+            background: #b3913f;
+            transform: translateY(-1px);
+        }
+
+        /* PROGRAM TABS */
+        .program-tabs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .tab-btn {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            color: var(--text-muted);
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            color: var(--primary-green);
+            background: #edf5f1;
+        }
+
+        .tab-btn.active {
+            background: var(--primary-green);
+            border-color: var(--primary-green);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(11, 93, 59, 0.2);
+        }
+
+        /* TABLE STYLING */
+        .table-panel {
+            display: none;
+        }
+
+        .table-panel.active {
+            display: block;
+        }
+
+        .table-wrapper {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            overflow-x: auto;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .timetable {
+            width: 100%;
+            min-width: 1000px;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .timetable thead th {
+            background: var(--primary-green);
+            color: #ffffff;
+            padding: 14px 10px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .period-time {
+            display: block;
+            font-size: 10px;
+            color: var(--accent-gold-hover);
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        .timetable td {
+            padding: 8px;
+            height: 90px;
+            vertical-align: middle;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+            border-right: 1px solid var(--border-light);
+        }
+
+        .class-title-cell {
+            background: #fdfdfd !important;
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--primary-dark);
+            position: sticky;
+            left: 0;
+            z-index: 5;
+            width: 170px;
+            border-right: 2px solid var(--border-light) !important;
+        }
+
+        .class-category {
+            display: block;
+            font-size: 10px;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        /* SUBJECT CARDS */
+        .subject-card {
+            height: 100%;
+            border-radius: 8px;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid transparent;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+        }
+
+        .subject-title {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .teacher-badge {
+            margin-top: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--text-main);
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .co-teach-indicator {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            background: var(--accent-gold);
+            color: #ffffff;
+            font-size: 8px;
+            font-weight: 700;
+            padding: 1px 4px;
+            border-radius: 3px;
+        }
+
+        /* Subject Themes */
+        .bg-physics { background: var(--bg-physics); color: var(--text-physics); }
+        .bg-chemistry { background: var(--bg-chemistry); color: var(--text-chemistry); }
+        .bg-english { background: var(--bg-english); color: var(--text-english); }
+        .bg-zoology { background: var(--bg-zoology); color: var(--text-zoology); }
+        .bg-botany { background: var(--bg-botany); color: var(--text-botany); }
+        .bg-math { background: var(--bg-math); color: var(--text-math); }
+        .bg-computer { background: var(--bg-cs); color: var(--text-cs); }
+        .bg-arts { background: var(--bg-arts); color: var(--text-arts); }
+        
+        .bg-break { background: #f1f5f9; color: var(--text-muted); font-size: 11px; font-weight: 600; }
+        .bg-prayer { background: #fef3c7; color: #b45309; font-size: 11px; font-weight: 600; }
+
+        /* Highlight States */
+        .subject-card.highlighted {
+            transform: scale(1.05);
+            border: 2px solid var(--accent-gold) !important;
+            box-shadow: 0 0 12px rgba(197, 162, 74, 0.4) !important;
+            z-index: 2;
+        }
+
+        .subject-card.dimmed {
+            opacity: 0.25;
+            filter: grayscale(100%);
+        }
+
+        /* =========================================================
+           ANALYTICS & WORKLOAD DASHBOARD
+        ========================================================= */
+        .analytics-section {
+            margin-top: 35px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 18px rgba(20,50,37,.04);
+        }
+
+        .analytics-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .analytics-header h3 {
+            font-size: 20px;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        .analytics-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: var(--bg-body);
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .stat-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            background: var(--primary-green);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .stat-number {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .workload-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 12px;
+        }
+
+        .teacher-card {
+            background: var(--bg-body);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 12px 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .teacher-card:hover, .teacher-card.active-card {
+            border-color: var(--accent-gold);
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .teacher-card-name {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .lecture-count {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-top: 2px;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+        .home-footer {
+            background: #102b20;
+            color: #ffffff;
+            padding-top: 55px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1180px;
+            margin: auto;
+            padding: 0 20px 45px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 45px;
+        }
+
+        .footer-column h3 {
+            margin: 0 0 17px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .footer-college-name {
+            margin-bottom: 13px;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .footer-column p {
+            margin: 0;
+            color: rgba(255,255,255,.68);
+            font-size: 13px;
+            line-height: 1.75;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 9px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,.70);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold-hover);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 13px;
+            color: rgba(255,255,255,.70);
+            font-size: 13px;
+        }
+
+        .contact-item i {
+            width: 18px;
+            margin-top: 3px;
+            color: #d2b65d;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.10);
+            padding: 18px 20px;
+            text-align: center;
+            color: rgba(255,255,255,.58);
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE STYLES */
+        @media (max-width: 900px) {
+            .mobile-menu-button { display: block; }
+            .nav-menu { display: none; flex-direction: column; }
+            .nav-menu.mobile-open { display: flex; }
+            .controls-grid { grid-template-columns: 1fr; }
+            .analytics-stats { grid-template-columns: 1fr; }
+            .footer-container { grid-template-columns: 1fr; }
+            .submenu { position: static; width: 100%; display: none; }
+            .nav-menu > li.open > .submenu { display: block; }
+        }
+
+        @media print {
+            .site-header, .page-banner, .controls-card, .program-tabs, .analytics-section, .home-footer { display: none !important; }
+            .table-panel.active { display: block !important; }
+            body { background: #fff; color: #000; }
+            .timetable thead th { background: #f1f5f9; color: #000; border-bottom: 2px solid #000; }
+            .subject-card { border: 1px solid #ccc !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER & TOP BAR -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-landmark"></i> Government of Sindh</span>
+                    <span class="separator">|</span>
+                    <span>College Education Department</span>
+                    <span class="separator">|</span>
+                    <span>Shahdadpur, District Sanghar, Sindh</span>
+                </div>
+                <div class="top-bar-right">
+                    <span><i class="fas fa-graduation-cap"></i> Quality Education</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand-header">
+            <div class="brand-container">
+                <a href="index.html" class="college-brand">
+                    <img src="photos/college logo.jpg" class="college-logo" alt="College Logo">
+                    <div class="college-name">
+                        <h1>Government Boys Degree College Shahdadpur</h1>
+                        <span>District Sanghar, Sindh</span>
+                    </div>
+                </a>
+                <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- NAVIGATION MENU -->
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <ul class="nav-menu" id="mainNav">
+                    <li>
+                        <a href="index.html"><i class="fas fa-house"></i> HOME</a>
+                    </li>
+                    <li class="has-submenu">
+                        <button type="button" class="submenu-toggle">
+                            ABOUT COLLEGE <i class="fas fa-chevron-down nav-arrow"></i>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="college-overview.html">College Overview</a></li>
+                            <li><a href="principal-message.html">Principal's Message</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <button type="button" class="submenu-toggle">
+                            ACADEMICS <i class="fas fa-chevron-down nav-arrow"></i>
+                        </button>
+                        <ul class="submenu">
+                            <li class="has-submenu">
+                                <button type="button" class="submenu-toggle">
+                                    Intermediate Programs <i class="fas fa-chevron-right nav-arrow"></i>
+                                </button>
+                                <ul class="submenu">
+                                    <li><a href="pre-medical.html">Pre-Medical</a></li>
+                                    <li><a href="pre-engineering.html">Pre-Engineering</a></li>
+                                    <li><a href="computer-science.html">Computer Science</a></li>
+                                    <li><a href="commerce.html">Commerce</a></li>
+                                    <li><a href="humanities.html">Humanities</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <button type="button" class="submenu-toggle">
+                                    Associate Degree Programs <i class="fas fa-chevron-right nav-arrow"></i>
+                                </button>
+                                <ul class="submenu">
+                                    <li><a href="associate-science.html">Associate Degree in Science</a></li>
+                                    <li><a href="associate-commerce.html">Associate Degree in Commerce</a></li>
+                                    <li><a href="associate-arts.html">Associate Degree in Arts</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu active">
+                        <button type="button" class="submenu-toggle">
+                            ADMISSIONS <i class="fas fa-chevron-down nav-arrow"></i>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="eligibility.html">Eligibility</a></li>
+                            <li><a href="fee-structure.html">Fee Structure</a></li>
+                            <li><a href="Time_Table.html">Time Table</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faculty.html">FACULTY</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> LIBRARY</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> NEWS &amp; EVENTS</a></li>
+                    <li><a href="downloads.html"><i class="fas fa-download"></i> DOWNLOADS</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> GALLERY</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+        <h2>Academic Class Timetable 2025-26</h2>
+        <p>Interactive schedule, period lookup, and faculty workload tracker</p>
+    </section>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <div class="dashboard-container">
+
+        <!-- INTERACTIVE CONTROLS -->
+        <div class="controls-card">
+            <div class="controls-grid">
+                <div class="input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchBox" class="custom-input" placeholder="Search Subject, Class, or Teacher...">
+                </div>
+                <div class="input-wrapper">
+                    <i class="fas fa-user-tie"></i>
+                    <select id="teacherSpinner" class="custom-select">
+                        <option value="">-- All Faculty (Filter by Teacher) --</option>
+                    </select>
+                </div>
+                <button class="btn-gold" id="printBtn">
+                    <i class="fas fa-print"></i> Print Schedule
+                </button>
+            </div>
+        </div>
+
+        <!-- PROGRAM TABS -->
+        <div class="program-tabs">
+            <button class="tab-btn active" data-target="xiPanel"><i class="fas fa-graduation-cap"></i> Class XI</button>
+            <button class="tab-btn" data-target="xiiPanel"><i class="fas fa-graduation-cap"></i> Class XII</button>
+            <button class="tab-btn" data-target="ad1Panel"><i class="fas fa-book-reader"></i> AD Science Part-I</button>
+            <button class="tab-btn" data-target="ad2Panel"><i class="fas fa-book-reader"></i> AD Science Part-II</button>
+            <button class="tab-btn" data-target="adArts1Panel"><i class="fas fa-book-reader"></i> AD Arts Part-I</button>
+            <button class="tab-btn" data-target="adCom1Panel"><i class="fas fa-book-reader"></i> AD Commerce Part-I</button>
+        </div>
+
+        <!-- TIMETABLE PANELS -->
+        <div class="table-panel active" id="xiPanel">
+            <div class="table-wrapper">
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>Class Section</th>
+                            <th>P-I<span class="period-time">09:00 - 09:40</span></th>
+                            <th>P-II<span class="period-time">09:40 - 10:20</span></th>
+                            <th>P-III<span class="period-time">10:20 - 11:00</span></th>
+                            <th>Recess<span class="period-time">11:00 - 11:15</span></th>
+                            <th>P-IV<span class="period-time">11:15 - 11:55</span></th>
+                            <th>P-V<span class="period-time">11:55 - 12:35</span></th>
+                            <th>P-VI<span class="period-time">12:35 - 01:15</span></th>
+                            <th>Prayer<span class="period-time">01:15 - 01:45</span></th>
+                            <th>P-VII<span class="period-time">01:45 - 02:30</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="xiTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="table-panel" id="xiiPanel">
+            <div class="table-wrapper">
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>Class Section</th>
+                            <th>P-I<span class="period-time">09:00 - 09:40</span></th>
+                            <th>P-II<span class="period-time">09:40 - 10:20</span></th>
+                            <th>P-III<span class="period-time">10:20 - 11:00</span></th>
+                            <th>Recess<span class="period-time">11:00 - 11:15</span></th>
+                            <th>P-IV<span class="period-time">11:15 - 11:55</span></th>
+                            <th>P-V<span class="period-time">11:55 - 12:35</span></th>
+                            <th>P-VI<span class="period-time">12:35 - 01:15</span></th>
+                            <th>Prayer<span class="period-time">01:15 - 01:45</span></th>
+                            <th>P-VII<span class="period-time">01:45 - 02:30</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="xiiTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="table-panel" id="ad1Panel">
+            <div class="table-wrapper">
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>Class Section</th>
+                            <th>P-I<span class="period-time">09:00 - 09:40</span></th>
+                            <th>P-II<span class="period-time">09:40 - 10:20</span></th>
+                            <th>P-III<span class="period-time">10:20 - 11:00</span></th>
+                            <th>Recess<span class="period-time">11:00 - 11:15</span></th>
+                            <th>P-IV<span class="period-time">11:15 - 11:55</span></th>
+                            <th>P-V<span class="period-time">11:55 - 12:35</span></th>
+                            <th>P-VI<span class="period-time">12:35 - 01:15</span></th>
+                            <th>Prayer<span class="period-time">01:15 - 01:45</span></th>
+                            <th>P-VII<span class="period-time">01:45 - 02:30</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ad1Table"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="table-panel" id="ad2Panel">
+            <div class="table-wrapper">
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>Class Section</th>
+                            <th>P-I<span class="period-time">09:00 - 09:40</span></th>
+                            <th>P-II<span class="period-time">09:40 - 10:20</span></th>
+                            <th>P-III<span class="period-time">10:20 - 11:00</span></th>
+                            <th>Recess<span class="period-time">11:00 - 11:15</span></th>
+                            <th>P-IV<span class="period-time">11:15 - 11:55</span></th>
+                            <th>P-V<span class="period-time">11:55 - 12:35</span></th>
+                            <th>P-VI<span class="period-time">12:35 - 01:15</span></th>
+                            <th>Prayer<span class="period-time">01:15 - 01:45</span></th>
+                            <th>P-VII<span class="period-time">01:45 - 02:30</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ad2Table"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="table-panel" id="adArts1Panel">
+            <div class="table-wrapper">
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>Class Section</th>
+                            <th>P-I<span class="period-time">09:00 - 09:40</span></th>
+                            <th>P-II<span class="period-time">09:40 - 10:20</span></th>
+                            <th>P-III<span class="period-time">10:20 - 11:00</span></th>
+                            <th>Recess<span class="period-time">11:00 - 11:15</span></th>
+                            <th>P-IV<span class="period-time">11:15 - 11:55</span></th>
+                            <th>P-V<span class="period-time">11:55 - 12:35</span></th>
+                            <th>P-VI<span class="period-time">12:35 - 01:15</span></th>
+                            <th>Prayer<span class="period-time">01:15 - 01:45</span></th>
+                            <th>P-VII<span class="period-time">01:45 - 02:30</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="adArts1Table"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="table-panel" id="adCom1Panel">
+            <div class="table-wrapper">
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>Class Section</th>
+                            <th>P-I<span class="period-time">09:00 - 09:40</span></th>
+                            <th>P-II<span class="period-time">09:40 - 10:20</span></th>
+                            <th>P-III<span class="period-time">10:20 - 11:00</span></th>
+                            <th>Recess<span class="period-time">11:00 - 11:15</span></th>
+                            <th>P-IV<span class="period-time">11:15 - 11:55</span></th>
+                            <th>P-V<span class="period-time">11:55 - 12:35</span></th>
+                            <th>P-VI<span class="period-time">12:35 - 01:15</span></th>
+                            <th>Prayer<span class="period-time">01:15 - 01:45</span></th>
+                            <th>P-VII<span class="period-time">01:45 - 02:30</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="adCom1Table"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- WORKLOAD ANALYTICS -->
+        <div class="analytics-section">
+            <div class="analytics-header">
+                <h3>Faculty Workload Engine</h3>
+                <p style="font-size: 12px; color: var(--text-muted);">Co-taught subjects credit 0.5 workload count per assigned instructor.</p>
+            </div>
+
+            <div class="analytics-stats">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div>
+                        <div class="stat-number" id="totalTeachers">0</div>
+                        <div class="stat-label">Active Instructors</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-handshake"></i></div>
+                    <div>
+                        <div class="stat-number" id="totalCoTeach">0</div>
+                        <div class="stat-label">Co-Taught Periods</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-calculator"></i></div>
+                    <div>
+                        <div class="stat-number" id="avgLectures">0</div>
+                        <div class="stat-label">Avg Load / Teacher</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workload-grid" id="workloadGrid"></div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="home-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-college-name">
+                    Government Boys Degree College<br>Shahdadpur
+                </div>
+                <p>District Sanghar, Sindh.<br><br>Providing quality education and preparing students for higher education and professional life.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="college-overview.html">About College</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admission.html">Admissions</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="library.html">Library</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Important Links</h3>
+                <ul class="footer-links">
+                    <li><a href="downloads.html">Downloads</a></li>
+                    <li><a href="news.html">News &amp; Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Shahdadpur, District Sanghar, Sindh</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>College Office</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>College Email</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Government Boys Degree College Shahdadpur. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT ENGINE -->
+    <script>
+        // FULL DATA UPDATED FROM EXCEL SHEET DATED 23-02-2026
+        const SCHEDULE_DATA = [
+            // --- CLASS XI ---
+            { group: "XI", name: "XI Pre-Medical", category: "Intermediate", cells: [["English","Prof. Lal Muhammad"],["Physics","Prof. Waleed"],["Chemistry","Prof. Mohsin Baig"],["BREAK TIME",""],["Zoology","Ms. Khanzadi"],["Urdu","Prof. Waseem Baig / Prof. Asad Raza"],["Botany","Prof. Waseem Baig / Prof. Dileep Kumar"],["PRAYER TIME",""],["Practical","Liaquat / Arbab Ali"]] },
+            { group: "XI", name: "XI Pre-Engineering", category: "Intermediate", cells: [["English","Prof. M. Akram"],["Physics","Prof. Sartaj Ahmed"],["Chemistry","Prof. Sohail Muhammad"],["BREAK TIME",""],["Mathematics","Prof. M. Asim"],["Urdu","Prof. Waseem Baig / Prof. Asad Raza"],["Islamic Studies","Prof. Asad Raza / Prof. Dileep Kumar"],["PRAYER TIME",""],["Sports","Liaquat / Arbab Ali"]] },
+            { group: "XI", name: "XI Computer Science", category: "Intermediate", cells: [["English","Prof. M. Akram"],["Physics","Prof. Sartaj Ahmed"],["Computer Science","Prof. Sikandar Channar"],["BREAK TIME",""],["Mathematics","Prof. M. Asim"],["Urdu","Prof. Waseem Baig / Prof. Asad Raza"],["Islamic Studies","Prof. Asad Raza / Prof. Dileep Kumar"],["PRAYER TIME",""],["Library","Liaquat / Arbab Ali"]] },
+            { group: "XI", name: "XI Humanities", category: "Intermediate", cells: [["English","Prof. M. Akram"],["Civics","Prof. Ayaz Haroon"],["Economics","Prof. Asad Raza"],["BREAK TIME",""],["Islamic History","Prof. Ayaz Haroon"],["Urdu","Prof. Waseem Baig / Prof. Asad Raza"],["Islamic Studies","Prof. Asad Raza / Prof. Dileep Kumar"],["PRAYER TIME",""],["Sports","Liaquat / Arbab Ali"]] },
+            { group: "XI", name: "XI Commerce", category: "Intermediate", cells: [["English","Prof. Lal Muhammad"],["Principles of Accounting","Prof. Khan Muhammad"],["Principles of Commerce","Prof. Khan Muhammad"],["BREAK TIME",""],["Economics","Prof. Asad Raza"],["Urdu","Prof. Waseem Baig / Prof. Asad Raza"],["Islamic Studies","Prof. Asad Raza / Prof. Dileep Kumar"],["PRAYER TIME",""],["Library","Liaquat / Arbab Ali"]] },
+
+            // --- CLASS XII ---
+            { group: "XII", name: "XII Pre-Medical", category: "Intermediate", cells: [["Physics","Prof. Sartaj Ahmed / Prof. Waleed"],["Chemistry","Prof. Sohail Akhter"],["Botany","Prof. Punhal Talpur"],["BREAK TIME",""],["English","Prof. Lal Muhammad / Prof. M. Akram"],["Urdu","Prof. Waseem Baig / Ms. S. Laghari"],["Zoology","Prof. Hassan Aftab"],["PRAYER TIME",""],["Practical","Liaquat / Arbab Ali"]] },
+            { group: "XII", name: "XII Pre-Engineering", category: "Intermediate", cells: [["Physics","Prof. Sartaj Ahmed / Prof. Waleed"],["Chemistry","Prof. Sohail Akhter"],["Mathematics","Prof. M. Asim"],["BREAK TIME",""],["English","Prof. Lal Muhammad / Prof. M. Akram"],["Sindhi","Prof. Waseem Baig / Ms. S. Laghari"],["Pakistan Studies","Prof. Ayaz Haroon"],["PRAYER TIME",""],["Sports","Liaquat / Arbab Ali"]] },
+            { group: "XII", name: "XII Computer Science", category: "Intermediate", cells: [["Physics","Prof. Sartaj Ahmed / Prof. Waleed"],["Computer Science","Prof. Shabir Channar"],["Mathematics","Prof. M. Asim"],["BREAK TIME",""],["English","Prof. Lal Muhammad / Prof. M. Akram"],["Sindhi","Prof. Waseem Baig / Ms. S. Laghari"],["Pakistan Studies","Prof. Ayaz Haroon"],["PRAYER TIME",""],["Library","Liaquat / Arbab Ali"]] },
+            { group: "XII", name: "XII Humanities", category: "Intermediate", cells: [["Civics","Prof. Ayaz Haroon"],["Economics","Prof. Asad Raza"],["Islamic History","Prof. Ayaz Haroon"],["BREAK TIME",""],["English","Prof. Lal Muhammad / Prof. M. Akram"],["Sindhi","Prof. Waseem Baig / Ms. S. Laghari"],["Pakistan Studies","Prof. Ayaz Haroon"],["PRAYER TIME",""],["Sports","Liaquat / Arbab Ali"]] },
+            { group: "XII", name: "XII Commerce", category: "Intermediate", cells: [["Principles of Accounting","Prof. Khan Muhammad"],["Commercial Geography","Prof. Khan Muhammad"],["Banking","Prof. Khan Muhammad"],["BREAK TIME",""],["English","Prof. Lal Muhammad / Prof. M. Akram"],["Sindhi","Prof. Waseem Baig / Ms. S. Laghari"],["Pakistan Studies","Prof. Ayaz Haroon"],["PRAYER TIME",""],["Library","Liaquat / Arbab Ali"]] },
+
+            // --- AD SCIENCE PART-I ---
+            { group: "AD1", name: "AD Science Part-I", category: "Associate Degree", cells: [["Mathematics","Prof. M. Asim / Prof. Khan Muhammad"],["English","Prof. Masood Shah"],["Physics","Prof. Shabir / Prof. Sartaj Ahmed"],["BREAK TIME",""],["Chemistry","Prof. Mohsin / Prof. Sohail Akhter"],["Pakistan Studies","Prof. Asad Raza / Prof. Ayaz Haroon"],["Library","Liaquat / Adeeb Alam"],["PRAYER TIME",""],["Practical","Liaquat / Adeeb Alam"]] },
+
+            // --- AD SCIENCE PART-II ---
+            { group: "AD2", name: "AD Science Part-II", category: "Associate Degree", cells: [["Chemistry","Prof. Mohsin / Prof. Sohail Akhter"],["Botany","Prof. Dileep Kumar / Prof. Punhal Talpur"],["English","Prof. Masood Shah"],["BREAK TIME",""],["Physics","Prof. Shabir / Prof. Sartaj Ahmed"],["Botany","Prof. Punhal Talpur"],["Zoology","Prof. Hassan Aftab / Prof. Waleed"],["PRAYER TIME",""],["Practical","Liaquat / Adeeb Alam"]] },
+
+            // --- AD ARTS PART-I ---
+            { group: "ADARTS1", name: "AD Arts Part-I", category: "Associate Degree", cells: [["English Compulsory","Prof. Masood Shah"],["Political Science","Prof. Ayaz Haroon"],["Economics","Prof. Asad Raza"],["BREAK TIME",""],["Islamic Culture","Prof. Ayaz Haroon"],["Pakistan Studies","Prof. Asad Raza / Prof. Ayaz Haroon"],["Library","Liaquat / Adeeb Alam"],["PRAYER TIME",""],["Sports","Liaquat / Adeeb Alam"]] },
+
+            // --- AD COMMERCE PART-I ---
+            { group: "ADCOM1", name: "AD Commerce Part-I", category: "Associate Degree", cells: [["Financial Accounting","Prof. Khan Muhammad"],["Business Math & Stat","Prof. M. Asim"],["Economics","Prof. Asad Raza"],["BREAK TIME",""],["Business Communication","Prof. Masood Shah"],["Pakistan Studies","Prof. Asad Raza / Prof. Ayaz Haroon"],["Library","Liaquat / Adeeb Alam"],["PRAYER TIME",""],["Sports","Liaquat / Adeeb Alam"]] }
+        ];
+
+        function getSubjectTheme(subject) {
+            const s = subject.toLowerCase();
+            if (s.includes("physics")) return "bg-physics";
+            if (s.includes("chemistry")) return "bg-chemistry";
+            if (s.includes("english")) return "bg-english";
+            if (s.includes("zoology")) return "bg-zoology";
+            if (s.includes("botany")) return "bg-botany";
+            if (s.includes("math")) return "bg-math";
+            if (s.includes("computer")) return "bg-computer";
+            if (s.includes("urdu") || s.includes("sindhi") || s.includes("arts") || s.includes("civics") || s.includes("history") || s.includes("political") || s.includes("islamic")) return "bg-arts";
+            return "bg-english";
+        }
+
+        function initTeacherFilter() {
+            const teacherSet = new Set();
+            SCHEDULE_DATA.forEach(row => {
+                row.cells.forEach(cell => {
+                    const teacherStr = cell[1];
+                    if (teacherStr && cell[0] !== "BREAK TIME" && cell[0] !== "PRAYER TIME") {
+                        teacherStr.split("/").forEach(t => teacherSet.add(t.trim()));
+                    }
+                });
+            });
+
+            const spinner = document.getElementById("teacherSpinner");
+            spinner.innerHTML = '<option value="">-- All Faculty (Filter by Teacher) --</option>';
+            Array.from(teacherSet).sort().forEach(t => {
+                const opt = document.createElement("option");
+                opt.value = t;
+                opt.textContent = t;
+                spinner.appendChild(opt);
+            });
+        }
+
+        function renderCell(cell) {
+            const [subject, teacherStr] = cell;
+            const selectedTeacher = document.getElementById("teacherSpinner").value;
+
+            if (subject === "BREAK TIME") return `<td class="bg-break">Recess</td>`;
+            if (subject === "PRAYER TIME") return `<td class="bg-prayer">Prayer</td>`;
+
+            const teachers = teacherStr ? teacherStr.split("/").map(t => t.trim()) : [];
+            const isCoTaught = teachers.length > 1;
+
+            let highlightClass = "";
+            if (selectedTeacher) {
+                highlightClass = teachers.includes(selectedTeacher) ? "highlighted" : "dimmed";
+            }
+
+            return `
+                <td>
+                    <div class="subject-card ${getSubjectTheme(subject)} ${highlightClass}">
+                        ${isCoTaught ? `<span class="co-teach-indicator">Shared</span>` : ''}
+                        <span class="subject-title">${subject}</span>
+                        ${teacherStr ? `<span class="teacher-badge">${teacherStr}</span>` : ''}
+                    </div>
+                </td>
+            `;
+        }
+
+        function renderTables() {
+            const search = document.getElementById("searchBox").value.toLowerCase();
+
+            const groupMapping = {
+                "XI": "xiTable",
+                "XII": "xiiTable",
+                "AD1": "ad1Table",
+                "AD2": "ad2Table",
+                "ADARTS1": "adArts1Table",
+                "ADCOM1": "adCom1Table"
+            };
+
+            Object.keys(groupMapping).forEach(group => {
+                const tbody = document.getElementById(groupMapping[group]);
+                if (!tbody) return;
+
+                const filteredRows = SCHEDULE_DATA.filter(item => {
+                    if (item.group !== group) return false;
+                    if (!search) return true;
+                    return (item.name + " " + item.cells.map(c => c.join(" ")).join(" ")).toLowerCase().includes(search);
+                });
+
+                tbody.innerHTML = "";
+                filteredRows.forEach(item => {
+                    const tr = document.createElement("tr");
+                    let html = `<td class="class-title-cell">${item.name}<span class="class-category">${item.category}</span></td>`;
+                    item.cells.forEach(c => html += renderCell(c));
+                    tr.innerHTML = html;
+                    tbody.appendChild(tr);
+                });
+            });
+        }
+
+        function calculateWorkload() {
+            const workloadMap = {};
+            let coTaughtCount = 0;
+            const selectedTeacher = document.getElementById("teacherSpinner").value;
+
+            SCHEDULE_DATA.forEach(row => {
+                row.cells.forEach(cell => {
+                    const [subject, teacherStr] = cell;
+                    if (!teacherStr || subject === "BREAK TIME" || subject === "PRAYER TIME") return;
+
+                    const teachers = teacherStr.split("/").map(t => t.trim());
+                    const splitWeight = 1 / teachers.length;
+
+                    if (teachers.length > 1) coTaughtCount++;
+
+                    teachers.forEach(teacher => {
+                        if (!workloadMap[teacher]) {
+                            workloadMap[teacher] = { totalLectures: 0, sharedCount: 0, soloCount: 0 };
+                        }
+                        workloadMap[teacher].totalLectures += splitWeight;
+                        if (teachers.length > 1) workloadMap[teacher].sharedCount++;
+                        else workloadMap[teacher].soloCount++;
+                    });
+                });
+            });
+
+            const teacherList = Object.keys(workloadMap);
+            document.getElementById("totalTeachers").textContent = teacherList.length;
+            document.getElementById("totalCoTeach").textContent = coTaughtCount;
+
+            const avg = teacherList.length ? (Object.values(workloadMap).reduce((acc, curr) => acc + curr.totalLectures, 0) / teacherList.length).toFixed(1) : 0;
+            document.getElementById("avgLectures").textContent = avg;
+
+            const grid = document.getElementById("workloadGrid");
+            grid.innerHTML = "";
+
+            Object.entries(workloadMap).sort((a,b) => b[1].totalLectures - a[1].totalLectures).forEach(([teacher, data]) => {
+                const isSelected = selectedTeacher === teacher;
+                grid.innerHTML += `
+                    <div class="teacher-card ${isSelected ? 'active-card' : ''}" onclick="selectTeacher('${teacher}')">
+                        <div class="teacher-card-name"><i class="fas fa-user-circle"></i> ${teacher}</div>
+                        <div class="lecture-count">${data.totalLectures.toFixed(1)} <span style="font-size: 11px; color: var(--text-muted); font-weight: normal;">Lectures</span></div>
+                    </div>
+                `;
+            });
+        }
+
+        function selectTeacher(teacherName) {
+            document.getElementById("teacherSpinner").value = teacherName;
+            updateAll();
+        }
+
+        function updateAll() {
+            renderTables();
+            calculateWorkload();
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile Menu Toggle
+            const menuButton = document.getElementById("mobileMenuButton");
+            const mainNav = document.getElementById("mainNav");
+
+            if (menuButton && mainNav) {
+                menuButton.addEventListener("click", function () {
+                    mainNav.classList.toggle("mobile-open");
+                    const icon = menuButton.querySelector("i");
+                    if (icon) {
+                        icon.classList.toggle("fa-bars");
+                        icon.classList.toggle("fa-xmark");
+                    }
+                });
+            }
+
+            // Submenu Dropdown Toggles
+            const submenuButtons = document.querySelectorAll(".submenu-toggle");
+            submenuButtons.forEach(btn => {
+                btn.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const parent = this.parentElement;
+                    const siblings = parent.parentElement.children;
+
+                    for (let sibling of siblings) {
+                        if (sibling !== parent) sibling.classList.remove("open");
+                    }
+                    parent.classList.toggle("open");
+                });
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!event.target.closest(".main-navigation")) {
+                    document.querySelectorAll(".nav-menu li.open").forEach(item => item.classList.remove("open"));
+                }
+            });
+
+            // Program Tab Switching
+            document.querySelectorAll(".tab-btn").forEach(btn => {
+                btn.addEventListener("click", function() {
+                    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+                    document.querySelectorAll(".table-panel").forEach(p => p.classList.remove("active"));
+                    this.classList.add("active");
+                    const targetPanel = document.getElementById(this.dataset.target);
+                    if(targetPanel) targetPanel.classList.add("active");
+                });
+            });
+
+            document.getElementById("searchBox").addEventListener("input", updateAll);
+            document.getElementById("teacherSpinner").addEventListener("change", updateAll);
+            document.getElementById("printBtn").addEventListener("click", () => window.print());
+
+            initTeacherFilter();
+            updateAll();
+        });
+    </script>
+</body>
+</html>

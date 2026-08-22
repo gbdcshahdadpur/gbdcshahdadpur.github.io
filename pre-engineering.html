@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>F.Sc. Pre-Engineering | Government Boys Degree College Shahdadpur</title>
+
+<meta name="description"
+content="F.Sc. Pre-Engineering HSC-I and HSC-II program at Government Boys Degree College Shahdadpur.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* =========================================================
+   PRE-ENGINEERING PAGE (MATCHING PRE-MEDICAL STRUCTURE)
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f9f8;
+    color: #26332d;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    width: 100%;
+    background: #fff;
+    position: relative;
+    z-index: 9999;
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+    background: #0b5d3b;
+    color: #fff;
+    font-size: 12px;
+}
+
+.top-bar-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 9px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.top-bar i {
+    margin-right: 5px;
+}
+
+.separator {
+    opacity: .45;
+}
+
+/* =========================================================
+   COLLEGE BRAND
+========================================================= */
+
+.brand-header {
+    background: #fff;
+    border-bottom: 1px solid #e5ebe7;
+}
+
+.brand-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 13px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.college-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.college-logo {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.college-name h1 {
+    margin: 0;
+    color: #123c2b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.college-name span {
+    display: block;
+    margin-top: 3px;
+    color: #68756e;
+    font-size: 12px;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-navigation {
+    background: #0b5d3b;
+    border-bottom: 3px solid #c5a24a;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu > li > a,
+.nav-menu > li > button {
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 0 13px;
+
+    border: 0;
+    background: transparent;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.nav-menu > li > a:hover,
+.nav-menu > li > button:hover,
+.nav-menu > li.active > a,
+.nav-menu > li.active > button {
+    background: rgba(255,255,255,.12);
+    color: #f0d27b;
+}
+
+.nav-arrow {
+    font-size: 9px;
+    transition: transform .2s ease;
+}
+
+.nav-menu li.open > button .nav-arrow {
+    transform: rotate(180deg);
+}
+
+/* =========================================================
+   SUBMENU
+========================================================= */
+
+.submenu {
+    list-style: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 230px;
+
+    margin: 0;
+    padding: 6px 0;
+
+    background: #fff;
+
+    border: 1px solid #dfe8e3;
+    border-top: 3px solid #c5a24a;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.14);
+
+    display: none;
+}
+
+.nav-menu li.open > .submenu {
+    display: block;
+}
+
+.submenu li a,
+.submenu li button {
+    width: 100%;
+
+    min-height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 9px 15px;
+
+    border: 0;
+    background: transparent;
+
+    color: #34453d;
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+.submenu li a:hover,
+.submenu li button:hover,
+.submenu li.active > a {
+    background: #edf5f1;
+    color: #0b5d3b;
+}
+
+/* Nested submenu */
+
+.submenu .submenu {
+    top: -3px;
+    left: 100%;
+}
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 44px;
+    height: 42px;
+
+    border: 0;
+    border-radius: 6px;
+
+    background: #0b5d3b;
+    color: #fff;
+
+    font-size: 19px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.page-hero {
+    position: relative;
+
+    padding: 75px 20px;
+
+    background:
+        linear-gradient(
+            rgba(11,93,59,.88),
+            rgba(18,60,43,.94)
+        ),
+        url("photos/Main Entrance.png");
+
+    background-size: cover;
+    background-position: center;
+
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.25);
+
+    color: #f0d27b;
+    font-size: 30px;
+}
+
+.page-hero h1 {
+    margin: 0 0 10px;
+
+    color: #fff;
+
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.page-hero h2 {
+    margin: 0 0 14px;
+
+    color: #f0d27b;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.page-hero p {
+    max-width: 750px;
+    margin: auto;
+
+    color: rgba(255,255,255,.9);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.breadcrumb {
+    display: inline-flex;
+    gap: 8px;
+
+    margin-top: 20px;
+    padding: 8px 16px;
+
+    background: rgba(255,255,255,.12);
+    border-radius: 25px;
+
+    font-size: 12px;
+}
+
+.breadcrumb a {
+    color: #f0d27b;
+    text-decoration: none;
+}
+
+/* =========================================================
+   MAIN SECTIONS
+========================================================= */
+
+.section {
+    max-width: 1180px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #0b5d3b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #173a2b;
+
+    font-size: 29px;
+}
+
+.section-heading p {
+    max-width: 700px;
+    margin: 10px auto 0;
+
+    color: #69756f;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.heading-line {
+    width: 55px;
+    height: 4px;
+
+    margin: 13px auto 0;
+
+    background: #c5a24a;
+    border-radius: 5px;
+}
+
+/* =========================================================
+   INTRO & HIGHLIGHTS
+========================================================= */
+
+.intro-card {
+    background: #fff;
+
+    padding: 30px;
+
+    border: 1px solid #e0e9e4;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(20,60,43,.05);
+}
+
+.intro-card p {
+    margin: 0 0 15px;
+
+    color: #596760;
+
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.intro-card p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+
+    margin-top: 22px;
+}
+
+.highlight-card {
+    padding: 22px 15px;
+
+    text-align: center;
+
+    background: #f8fbf9;
+
+    border: 1px solid #e0e9e4;
+    border-radius: 13px;
+}
+
+.highlight-icon {
+    width: 45px;
+    height: 45px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf4ef;
+    color: #0b5d3b;
+
+    font-size: 19px;
+}
+
+.highlight-card h3 {
+    margin: 0 0 4px;
+
+    color: #173a2b;
+
+    font-size: 16px;
+}
+
+.highlight-card p {
+    margin: 0;
+
+    color: #6b7771;
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   SUBJECT SECTION
+========================================================= */
+
+.subject-section {
+    background: #fff;
+
+    border-top: 1px solid #e5ebe7;
+    border-bottom: 1px solid #e5ebe7;
+}
+
+.subject-year {
+    margin-bottom: 35px;
+}
+
+.year-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.year-badge {
+    padding: 8px 14px;
+
+    background: #0b5d3b;
+    color: #fff;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.year-title h3 {
+    margin: 0;
+
+    color: #173a2b;
+
+    font-size: 20px;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.subject-card {
+    position: relative;
+
+    padding: 22px;
+
+    background: #f9fbfa;
+
+    border: 1px solid #dfe8e3;
+    border-radius: 13px;
+
+    transition: .25s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(20,50,37,.08);
+}
+
+.subject-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eaf4ef;
+    color: #0b5d3b;
+
+    font-size: 20px;
+}
+
+.subject-card h4 {
+    margin: 0 0 7px;
+
+    color: #173a2b;
+
+    font-size: 16px;
+}
+
+.subject-card p {
+    margin: 0;
+
+    color: #68746e;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.compulsory {
+    border-left: 4px solid #c5a24a;
+}
+
+/* =========================================================
+   CAREER OPTIONS
+========================================================= */
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.career-card {
+    padding: 22px;
+
+    background: #fff;
+
+    border: 1px solid #dfe8e3;
+    border-radius: 13px;
+
+    text-align: center;
+}
+
+.career-card i {
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eaf4ef;
+    color: #0b5d3b;
+
+    font-size: 21px;
+}
+
+.career-card h4 {
+    margin: 0 0 7px;
+
+    color: #173a2b;
+    font-size: 15px;
+}
+
+.career-card p {
+    margin: 0;
+
+    color: #68746e;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   NOTICE
+========================================================= */
+
+.notice {
+    max-width: 1180px;
+    margin: 0 auto 50px;
+
+    padding: 18px 22px;
+
+    display: flex;
+    gap: 13px;
+
+    background: #fffaf0;
+
+    border-left: 4px solid #c5a24a;
+    border-radius: 7px;
+}
+
+.notice i {
+    color: #b18a28;
+    font-size: 19px;
+}
+
+.notice p {
+    margin: 0;
+
+    color: #665a3b;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   ADMISSION CTA
+========================================================= */
+
+.admission {
+    max-width: 1180px;
+    margin: auto;
+
+    padding: 10px 20px 65px;
+}
+
+.admission-box {
+    padding: 35px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    background: linear-gradient(135deg,#0b5d3b,#164d38);
+
+    border-radius: 16px;
+
+    color: #fff;
+}
+
+.admission-box h2 {
+    margin: 0 0 8px;
+
+    color: #fff;
+    font-size: 25px;
+}
+
+.admission-box p {
+    margin: 0;
+
+    color: rgba(255,255,255,.83);
+
+    font-size: 13px;
+}
+
+.admission-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 20px;
+
+    background: #c5a24a;
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.admission-button:hover {
+    background: #b18d35;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.home-footer {
+    background: #102b20;
+    color: #fff;
+
+    padding-top: 50px;
+}
+
+.footer-container {
+    max-width: 1180px;
+    margin: auto;
+
+    padding: 0 20px 40px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+}
+
+.footer-column h3 {
+    margin: 0 0 15px;
+
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-college-name {
+    margin-bottom: 12px;
+
+    color: #fff;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-column p {
+    margin: 0;
+
+    color: rgba(255,255,255,.67);
+
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,.68);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: #e2c970;
+}
+
+.contact-item {
+    display: flex;
+    gap: 9px;
+
+    margin-bottom: 11px;
+
+    color: rgba(255,255,255,.68);
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.contact-item i {
+    width: 17px;
+    color: #d2b65d;
+}
+
+.footer-bottom {
+    padding: 17px 20px;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    text-align: center;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px) {
+
+    .nav-menu > li > a,
+    .nav-menu > li > button {
+        padding: 0 8px;
+        font-size: 11px;
+    }
+
+    .highlight-grid,
+    .career-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:900px) {
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .nav-container {
+        padding: 7px 15px;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-menu.mobile-open {
+        display: flex;
+    }
+
+    .nav-menu > li > a,
+    .nav-menu > li > button {
+        width: 100%;
+        min-height: 44px;
+        justify-content: space-between;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+
+        box-shadow: none;
+
+        border-top: 1px solid #dfe8e3;
+        border-left: 3px solid #c5a24a;
+    }
+
+    .submenu .submenu {
+        position: static;
+        border-left: 3px solid #0b5d3b;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:650px) {
+
+    .top-bar-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar-left,
+    .top-bar-right {
+        justify-content: center;
+    }
+
+    .college-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .college-name h1 {
+        font-size: 15px;
+    }
+
+    .college-name span {
+        font-size: 10px;
+    }
+
+    .page-hero {
+        padding: 55px 16px;
+    }
+
+    .page-hero h1 {
+        font-size: 28px;
+    }
+
+    .page-hero h2 {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 45px 16px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .highlight-grid,
+    .subject-grid,
+    .career-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admission {
+        padding: 10px 16px 50px;
+    }
+
+    .admission-box {
+        padding: 28px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER (MATCHING PRE-MEDICAL PAGE)
+========================================================= -->
+
+<header class="site-header">
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        <div class="top-bar-content">
+
+            <div class="top-bar-left">
+
+                <span>
+                    <i class="fas fa-landmark"></i>
+                    Government of Sindh
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    College Education Department
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    Shahdadpur, District Sanghar, Sindh
+                </span>
+
+            </div>
+
+            <div class="top-bar-right">
+
+                <span>
+                    <i class="fas fa-graduation-cap"></i>
+                    Quality Education
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BRAND -->
+
+    <div class="brand-header">
+
+        <div class="brand-container">
+
+            <a href="index.html" class="college-brand">
+
+                <img src="photos/college logo.jpg"
+                     class="college-logo"
+                     alt="Government Boys Degree College Shahdadpur Logo">
+
+                <div class="college-name">
+
+                    <h1>
+                        Government Boys Degree College Shahdadpur
+                    </h1>
+
+                    <span>
+                        District Sanghar, Sindh
+                    </span>
+
+                </div>
+
+            </a>
+
+            <button class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    aria-label="Open Menu">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <!-- NAVIGATION -->
+
+<nav class="main-navigation">
+
+    <div class="nav-container">
+
+        <ul class="nav-menu" id="mainNav">
+
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-house"></i>
+                    HOME
+                </a>
+            </li>
+
+
+            <!-- ABOUT COLLEGE -->
+
+            <li class="has-submenu">
+
+                <button type="button"
+                        class="submenu-toggle">
+
+                    ABOUT COLLEGE
+
+                    <i class="fas fa-chevron-down nav-arrow"></i>
+
+                </button>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="college-overview.html">
+                            College Overview
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="principal-message.html">
+                            Principal's Message
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="facilities.html">
+                            Facilities
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <!-- ACADEMICS -->
+
+            <li class="has-submenu active">
+
+                <button type="button"
+                        class="submenu-toggle">
+
+                    ACADEMICS
+
+                    <i class="fas fa-chevron-down nav-arrow"></i>
+
+                </button>
+
+                <ul class="submenu">
+
+
+                    <!-- INTERMEDIATE -->
+
+                    <li class="has-submenu">
+
+                        <button type="button"
+                                class="submenu-toggle">
+
+                            Intermediate Programs
+
+                            <i class="fas fa-chevron-right nav-arrow"></i>
+
+                        </button>
+
+                        <ul class="submenu">
+
+                            <li class="active">
+                                <a href="pre-medical.html">
+                                    Pre-Medical
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="pre-engineering.html">
+                                    Pre-Engineering
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="computer-science.html">
+                                    Computer Science
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="commerce.html">
+                                    Commerce
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="humanities.html">
+                                    Humanities
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- ASSOCIATE DEGREE -->
+
+                    <li class="has-submenu">
+
+                        <button type="button"
+                                class="submenu-toggle">
+
+                            Associate Degree Programs
+
+                            <i class="fas fa-chevron-right nav-arrow"></i>
+
+                        </button>
+
+                        <ul class="submenu">
+
+                            <li>
+                                <a href="associate-science.html">
+                                    Associate Degree in Science
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="associate-commerce.html">
+                                    Associate Degree in Commerce
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="associate-arts.html">
+                                    Associate Degree in Arts
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <!-- ADMISSIONS -->
+
+            <li class="has-submenu">
+
+                <button type="button"
+                        class="submenu-toggle">
+
+                    ADMISSIONS
+
+                    <i class="fas fa-chevron-down nav-arrow"></i>
+
+                </button>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="eligibility.html">
+                            Eligibility
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="fee-structure.html">
+                            Fee Structure
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="admission-process.html">
+                            Admission Process
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <!-- FACULTY -->
+
+            <li>
+                <a href="faculty.html">
+                    FACULTY
+                </a>
+            </li>
+
+
+            <!-- LIBRARY -->
+
+            <li>
+                <a href="library.html">
+                    LIBRARY
+                </a>
+            </li>
+
+
+            <!-- NEWS -->
+
+            <li>
+                <a href="news-events.html">
+                    NEWS & EVENTS
+                </a>
+            </li>
+
+
+            <!-- DOWNLOADS -->
+
+            <li>
+                <a href="downloads.html">
+                    DOWNLOADS
+                </a>
+            </li>
+
+
+            <!-- GALLERY -->
+
+            <li>
+                <a href="gallery.html">
+                    GALLERY
+                </a>
+            </li>
+
+
+            <!-- CONTACT -->
+
+            <li>
+                <a href="contact.html">
+                    CONTACT
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="page-hero">
+
+    <div class="hero-content">
+
+        <div class="hero-icon">
+            <i class="fas fa-gear"></i>
+        </div>
+
+        <h1>
+            F.Sc. Pre-Engineering
+        </h1>
+
+        <h2>
+            HSC-I & HSC-II
+        </h2>
+
+        <p>
+            Building the technical foundation for future innovators, architects,
+            software engineers, and industrial leaders.
+        </p>
+
+        <div class="breadcrumb">
+
+            <a href="index.html">Home</a>
+
+            <i class="fas fa-chevron-right"></i>
+
+            <a href="#">Academics</a>
+
+            <i class="fas fa-chevron-right"></i>
+
+            <span>Pre-Engineering</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROGRAM INTRODUCTION
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            Intermediate Program
+        </span>
+
+        <h2>
+            About F.Sc. Pre-Engineering
+        </h2>
+
+        <div class="heading-line"></div>
+
+    </div>
+
+
+    <div class="intro-card">
+
+        <p>
+            The Higher Secondary Certificate (HSC) Pre-Engineering program provides rigorous training in problem-solving, analytical thinking, and quantitative reasoning.
+        </p>
+
+        <p>
+            Designed under the Board of Intermediate and Secondary Education guidelines, it equips students with the exact competencies required to crack competitive university entry tests for engineering, computing, and technology fields.
+        </p>
+
+    </div>
+
+
+    <!-- HIGHLIGHTS -->
+
+    <div class="highlight-grid">
+
+        <div class="highlight-card">
+
+            <div class="highlight-icon">
+                <i class="fas fa-calculator"></i>
+            </div>
+
+            <h3>Mathematics</h3>
+
+            <p>
+                Advanced quantitative reasoning and calculus
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <div class="highlight-icon">
+                <i class="fas fa-atom"></i>
+            </div>
+
+            <h3>Physics</h3>
+
+            <p>
+                Physical mechanics, energy, and electronics
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <div class="highlight-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+
+            <h3>Chemistry</h3>
+
+            <p>
+                Chemical principles, reactions, and materials
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <div class="highlight-icon">
+                <i class="fas fa-vial"></i>
+            </div>
+
+            <h3>Practical Labs</h3>
+
+            <p>
+                Hands-on experimental learning
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SUBJECTS
+========================================================= -->
+
+<section class="section subject-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            Course Structure
+        </span>
+
+        <h2>
+            Subjects in F.Sc. Pre-Engineering
+        </h2>
+
+        <p>
+            Students study core science and mathematics subjects along with compulsory
+            subjects during HSC-I and HSC-II.
+        </p>
+
+        <div class="heading-line"></div>
+
+    </div>
+
+
+    <!-- HSC-I -->
+
+    <div class="subject-year">
+
+        <div class="year-title">
+
+            <span class="year-badge">
+                HSC-I
+            </span>
+
+            <h3>
+                First Year / Class XI
+            </h3>
+
+        </div>
+
+
+        <div class="subject-grid">
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+
+                <h4>
+                    Mathematics-I
+                </h4>
+
+                <p>
+                    Algebra, trigonometry, functions, vectors, matrices, and analytical problem-solving.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-atom"></i>
+                </div>
+
+                <h4>
+                    Physics-I
+                </h4>
+
+                <p>
+                    Vectors, motion, work and energy, circular motion, fluid dynamics, and thermodynamics.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+
+                <h4>
+                    Chemistry-I
+                </h4>
+
+                <p>
+                    Atomic structure, chemical bonding, states of matter, stoichiometry, and reaction kinetics.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card compulsory">
+
+                <div class="subject-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+
+                <h4>
+                    English
+                </h4>
+
+                <p>
+                    Grammar, comprehension, vocabulary, communication, and literature.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card compulsory">
+
+                <div class="subject-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+
+                <h4>
+                    Urdu / Sindhi
+                </h4>
+
+                <p>
+                    Language, literature, comprehension, and writing skills according to the board scheme.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card compulsory">
+
+                <div class="subject-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+
+                <h4>
+                    Islamiat / Ethics
+                </h4>
+
+                <p>
+                    Islamic studies for Muslim students and ethics for non-Muslim students.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HSC-II -->
+
+    <div class="subject-year">
+
+        <div class="year-title">
+
+            <span class="year-badge">
+                HSC-II
+            </span>
+
+            <h3>
+                Second Year / Class XII
+            </h3>
+
+        </div>
+
+
+        <div class="subject-grid">
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-square-root-variable"></i>
+                </div>
+
+                <h4>
+                    Mathematics-II
+                </h4>
+
+                <p>
+                    Calculus, differential equations, analytic geometry, and advanced quantitative techniques.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+
+                <h4>
+                    Physics-II
+                </h4>
+
+                <p>
+                    Electrostatics, current electricity, electromagnetism, electronics, and modern physics.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-vials"></i>
+                </div>
+
+                <h4>
+                    Chemistry-II
+                </h4>
+
+                <p>
+                    Organic chemistry, environmental chemistry, industrial chemical processes, and equilibrium.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card compulsory">
+
+                <div class="subject-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+
+                <h4>
+                    English
+                </h4>
+
+                <p>
+                    Advanced language skills, technical comprehension, essay writing, and literature.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card compulsory">
+
+                <div class="subject-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+
+                <h4>
+                    Urdu / Sindhi
+                </h4>
+
+                <p>
+                    Language and literature studies according to the examination board scheme.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card compulsory">
+
+                <div class="subject-icon">
+                    <i class="fas fa-flag"></i>
+                </div>
+
+                <h4>
+                    Pakistan Studies
+                </h4>
+
+                <p>
+                    History, geography, constitution, and national socio-economic development.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="notice">
+
+        <i class="fas fa-circle-info"></i>
+
+        <p>
+            <strong>Note:</strong>
+            Subject names and compulsory-subject combinations may vary according to the current examination scheme issued by the relevant Board of Intermediate and Secondary Education.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CAREER PATHWAYS
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            Future Pathways
+        </span>
+
+        <h2>
+            Career & University Pathways
+        </h2>
+
+        <p>
+            After F.Sc. Pre-Engineering, students can pursue engineering, technology, computer science, and analytical fields.
+        </p>
+
+        <div class="heading-line"></div>
+
+    </div>
+
+
+    <div class="career-grid">
+
+        <div class="career-card">
+
+            <i class="fas fa-microchip"></i>
+
+            <h4>
+                Core Engineering
+            </h4>
+
+            <p>
+                Civil, Mechanical, Electrical, Electronics, Chemical, and Mechatronics Engineering.
+            </p>
+
+        </div>
+
+
+        <div class="career-card">
+
+            <i class="fas fa-laptop-code"></i>
+
+            <h4>
+                Computing & IT
+            </h4>
+
+            <p>
+                BS Computer Science, Software Engineering, AI, Data Science, and Cybersecurity.
+            </p>
+
+        </div>
+
+
+        <div class="career-card">
+
+            <i class="fas fa-compass-drafting"></i>
+
+            <h4>
+                Architecture & Design
+            </h4>
+
+            <p>
+                Bachelor of Architecture (B.Arch), Urban Planning, and Structural Design.
+            </p>
+
+        </div>
+
+
+        <div class="career-card">
+
+            <i class="fas fa-plane"></i>
+
+            <h4>
+                Aeronautics & Avionics
+            </h4>
+
+            <p>
+                Aerospace Engineering, Avionics Systems, and Renewable Energy Technology.
+            </p>
+
+        </div>
+
+
+        <div class="career-card">
+
+            <i class="fas fa-chart-line"></i>
+
+            <h4>
+                Applied Sciences
+            </h4>
+
+            <p>
+                BS Mathematics, Actuarial Science, BS Physics, and Financial Analytics.
+            </p>
+
+        </div>
+
+
+        <div class="career-card">
+
+            <i class="fas fa-file-pen"></i>
+
+            <h4>
+                Entry Test Guidance
+            </h4>
+
+            <p>
+                Preparation pathways for ECAT, MUET, NUST (NET), and FAST entry exams.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ADMISSION CTA
+========================================================= -->
+
+<section class="admission">
+
+    <div class="admission-box">
+
+        <div>
+
+            <h2>
+                Interested in F.Sc. Pre-Engineering?
+            </h2>
+
+            <p>
+                Visit Government Boys Degree College Shahdadpur for admission information and guidance.
+            </p>
+
+        </div>
+
+        <a href="admission-process.html"
+           class="admission-button">
+
+            Admission Information
+
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER (MATCHING PRE-MEDICAL PAGE)
+========================================================= -->
+
+<footer class="home-footer">
+
+    <div class="footer-container">
+
+
+        <!-- COLLEGE -->
+
+        <div class="footer-column">
+
+            <div class="footer-college-name">
+                Government Boys Degree College Shahdadpur
+            </div>
+
+            <p>
+                A public sector degree college providing quality intermediate and higher education to students of Shahdadpur and surrounding areas.
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="college-overview.html">
+                        College Overview
+                    </a>
+                </li>
+
+                <li>
+                    <a href="faculty.html">
+                        Faculty
+                    </a>
+                </li>
+
+                <li>
+                    <a href="facilities.html">
+                        Facilities
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ACADEMICS -->
+
+        <div class="footer-column">
+
+            <h3>
+                Academics
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="pre-medical.html">
+                        Pre-Medical
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pre-engineering.html">
+                        Pre-Engineering
+                    </a>
+                </li>
+
+                <li>
+                    <a href="computer-science.html">
+                        Computer Science
+                    </a>
+                </li>
+
+                <li>
+                    <a href="commerce.html">
+                        Commerce
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <div class="contact-item">
+
+                <i class="fas fa-location-dot"></i>
+
+                <span>
+                    Shahdadpur, District Sanghar, Sindh
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i class="fas fa-building-columns"></i>
+
+                <span>
+                    College Education Department
+                    Government of Sindh
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i class="fas fa-envelope"></i>
+
+                <span>
+                    Government Boys Degree College Shahdadpur
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Government Boys Degree College Shahdadpur. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const mobileButton =
+        document.getElementById("mobileMenuButton");
+
+    const mainNav =
+        document.getElementById("mainNav");
+
+
+    /* ============================================
+       MOBILE MENU
+    ============================================ */
+
+    mobileButton.addEventListener("click", function () {
+
+        mainNav.classList.toggle("mobile-open");
+
+        const icon =
+            mobileButton.querySelector("i");
+
+        if (mainNav.classList.contains("mobile-open")) {
+
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+
+        } else {
+
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+
+        }
+
+    });
+
+
+    /* ============================================
+       SUBMENU CLICK
+    ============================================ */
+
+    const submenuButtons =
+        document.querySelectorAll(".submenu-toggle");
+
+
+    submenuButtons.forEach(function (button) {
+
+        button.addEventListener("click", function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            const parent =
+                button.parentElement;
+
+            const submenu =
+                parent.querySelector(":scope > .submenu");
+
+
+            if (!submenu) {
+                return;
+            }
+
+
+            /* Close sibling submenus */
+
+            const siblings =
+                parent.parentElement.children;
+
+
+            Array.from(siblings).forEach(function (sibling) {
+
+                if (sibling !== parent) {
+
+                    sibling.classList.remove("open");
+
+                    const child =
+                        sibling.querySelector(":scope > .submenu");
+
+                    if (child) {
+                        child.style.display = "";
+                    }
+
+                }
+
+            });
+
+
+            /* Toggle current submenu */
+
+            parent.classList.toggle("open");
+
+        });
+
+    });
+
+
+    /* ============================================
+       CLOSE MENU WHEN CLICKING OUTSIDE
+    ============================================ */
+
+    document.addEventListener("click", function (event) {
+
+        if (!event.target.closest(".main-navigation")) {
+
+            document
+                .querySelectorAll(".nav-menu li.open")
+                .forEach(function (item) {
+
+                    item.classList.remove("open");
+
+                });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

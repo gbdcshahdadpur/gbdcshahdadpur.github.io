@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty | Government Boys Degree College Shahdadpur</title>
+    <meta name="description" content="Faculty Directory of Government Boys Degree College Shahdadpur, District Sanghar, Sindh, Pakistan.">
+
+    <!-- Fonts & Icons matching index.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* =========================================================
+           GLOBAL & CORE LAYOUT (MATCHING INDEX.HTML)
+        ========================================================= */
+        body {
+            margin: 0;
+            background: #f7f9f8;
+            color: #26332d;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* =========================================================
+           HEADER & BRANDING (INDEX.HTML EXACT MATCH)
+        ========================================================= */
+        .site-header {
+            width: 100%;
+            background: #ffffff;
+            position: relative;
+            z-index: 9999;
+        }
+
+        .top-bar {
+            background: #0b5d3b;
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 9px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .top-bar-left, .top-bar-right {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .top-bar i {
+            color: #ffffff;
+            margin-right: 5px;
+        }
+
+        .separator {
+            opacity: .45;
+        }
+
+        .brand-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5ebe7;
+        }
+
+        .brand-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .college-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .college-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+
+        .college-name h1 {
+            margin: 0;
+            color: #123c2b;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .college-name span {
+            display: block;
+            margin-top: 3px;
+            color: #68756e;
+            font-size: 12px;
+        }
+
+        /* NAVIGATION */
+        .main-navigation {
+            background: #0b5d3b;
+            border-top: 1px solid rgba(255,255,255,.08);
+            border-bottom: 3px solid #c5a24a;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 15px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .nav-menu > li {
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu > li > a,
+        .nav-menu > li > button {
+            min-height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 0 13px;
+            border: 0;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease;
+        }
+
+        .nav-menu > li > a:hover,
+        .nav-menu > li > button:hover,
+        .nav-menu > li.active > a,
+        .nav-menu > li.active > button {
+            background: rgba(255,255,255,.12);
+            color: #f0d27b;
+        }
+
+        .nav-arrow {
+            font-size: 9px;
+            transition: transform .2s ease;
+        }
+
+        .nav-menu > li.open > a .nav-arrow,
+        .nav-menu > li.open > button .nav-arrow {
+            transform: rotate(180deg);
+        }
+
+        /* SUBMENUS */
+        .submenu {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 230px;
+            margin: 0;
+            padding: 7px 0;
+            background: #ffffff;
+            border: 1px solid #dfe8e3;
+            border-top: 3px solid #c5a24a;
+            box-shadow: 0 12px 30px rgba(0,0,0,.14);
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+            transform: translateY(8px);
+            transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+        }
+
+        .nav-menu > li.open > .submenu {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+            transform: translateY(0);
+        }
+
+        .submenu li {
+            position: relative;
+        }
+
+        .submenu li a,
+        .submenu li button {
+            width: 100%;
+            min-height: 40px;
+            box-sizing: border-box;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 0;
+            background: transparent;
+            color: #34453d;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease, padding-left .2s ease;
+        }
+
+        .submenu li a:hover,
+        .submenu li button:hover {
+            background: #edf5f1;
+            color: #0b5d3b;
+            padding-left: 21px;
+        }
+
+        .submenu .submenu {
+            top: -3px;
+            left: 100%;
+            border-top: 3px solid #c5a24a;
+        }
+
+        .submenu li.open > .submenu {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+            transform: translateX(0);
+        }
+
+        .mobile-menu-button {
+            display: none;
+            border: 0;
+            background: #0b5d3b;
+            color: #ffffff;
+            font-size: 20px;
+            width: 46px;
+            height: 42px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* =========================================================
+           FACULTY HERO & CONTENT SECTIONS (INDEX STYLE MATCH)
+        ========================================================= */
+        .page-hero {
+            background: linear-gradient(135deg, #0b5d3b, #123c2b);
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            max-width: 700px;
+            margin: 12px auto 0;
+            color: rgba(255,255,255,0.85);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .breadcrumb {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #c5a24a;
+        }
+
+        .breadcrumb a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* STATS SECTION */
+        .stats-section {
+            max-width: 1180px;
+            margin: -30px auto 0;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #ffffff;
+            border: 1px solid #e0e9e4;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .stat-card {
+            padding: 22px 15px;
+            text-align: center;
+            border-right: 1px solid #e0e9e4;
+        }
+
+        .stat-card:last-child {
+            border-right: 0;
+        }
+
+        .stat-icon {
+            color: #c5a24a;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .stat-number {
+            color: #0b5d3b;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            color: #68746e;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* SECTION HEADINGS */
+        .home-section {
+            max-width: 1180px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .section-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #0b5d3b;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            color: #173a2b;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .section-heading p {
+            max-width: 650px;
+            margin: 10px auto 0;
+            color: #69756f;
+            font-size: 14px;
+        }
+
+        /* FILTER DROPDOWN */
+        .filter-wrapper {
+            max-width: 400px;
+            margin: 0 auto 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 1px solid #e0e9e4;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .filter-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #0b5d3b;
+            white-space: nowrap;
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #dce7e1;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 13px;
+            color: #26332d;
+            outline: none;
+        }
+
+        /* PRINCIPAL FEATURE CARD */
+        .principal-feature {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            background: #ffffff;
+            border: 1px solid #e0e9e4;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .principal-photo-side {
+            background: #0b5d3b;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .principal-photo {
+            width: 160px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 4px solid #ffffff;
+        }
+
+        .principal-content {
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .principal-label {
+            color: #c5a24a;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .principal-content h3 {
+            margin: 0 0 5px;
+            color: #173a2b;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .principal-designation {
+            color: #0b5d3b;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .principal-content p {
+            margin: 0;
+            color: #5f6b65;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* CATEGORY GRIDS */
+        .faculty-category {
+            margin-bottom: 50px;
+        }
+
+        .category-heading {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .category-heading::before, .category-heading::after {
+            content: "";
+            height: 1px;
+            background: #e0e9e4;
+            flex: 1;
+        }
+
+        .category-title {
+            padding: 8px 20px;
+            border-radius: 20px;
+            background: #0b5d3b;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .faculty-grid, .assistant-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .faculty-card {
+            background: #ffffff;
+            border: 1px solid #e2e9e5;
+            border-radius: 12px;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+        }
+
+        .faculty-photo {
+            width: 130px;
+            height: 155px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 0 auto 15px;
+            border: 3px solid #f7f9f8;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .faculty-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #173a2b;
+            margin-bottom: 5px;
+        }
+
+        .faculty-designation {
+            font-size: 12px;
+            color: #68746e;
+            min-height: 36px;
+        }
+
+        .subject-badge {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 4px 10px;
+            background: #edf5f1;
+            color: #0b5d3b;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        /* BACK TO TOP */
+        .back-section {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .back-button {
+            padding: 10px 22px;
+            border: 1px solid #0b5d3b;
+            border-radius: 20px;
+            background: #ffffff;
+            color: #0b5d3b;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .back-button:hover {
+            background: #0b5d3b;
+            color: #ffffff;
+        }
+
+        /* =========================================================
+           FOOTER (EXACT MATCH TO INDEX.HTML)
+        ========================================================= */
+        .home-footer {
+            background: #102b20;
+            color: #ffffff;
+            padding-top: 55px;
+        }
+
+        .footer-container {
+            max-width: 1180px;
+            margin: auto;
+            padding: 0 20px 45px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 45px;
+        }
+
+        .footer-column h3 {
+            margin: 0 0 17px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .footer-college-name {
+            margin-bottom: 13px;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .footer-column p {
+            margin: 0;
+            color: rgba(255,255,255,.68);
+            font-size: 13px;
+            line-height: 1.75;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 9px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,.70);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: #e2c970;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 13px;
+            color: rgba(255,255,255,.70);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .contact-item i {
+            width: 18px;
+            margin-top: 3px;
+            color: #d2b65d;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.10);
+            padding: 18px 20px;
+            text-align: center;
+            color: rgba(255,255,255,.58);
+            font-size: 12px;
+        }
+
+        /* =========================================================
+           RESPONSIVE BREAKPOINTS (MATCHING INDEX.HTML)
+        ========================================================= */
+        @media (max-width: 900px) {
+            .mobile-menu-button { display: block; }
+            .nav-menu { display: none; flex-direction: column; align-items: stretch; padding-bottom: 8px; }
+            .nav-menu.mobile-open { display: flex; }
+            .nav-menu > li > a, .nav-menu > li > button { width: 100%; min-height: 45px; justify-content: space-between; padding: 0 12px; }
+            .submenu { position: static; width: 100%; display: none; visibility: visible; opacity: 1; transform: none; box-shadow: none; border-top: 1px solid #dfe8e3; border-left: 3px solid #c5a24a; }
+            .nav-menu > li.open > .submenu { display: block; }
+
+            .stats-container { grid-template-columns: repeat(2, 1fr); }
+            .principal-feature { grid-template-columns: 1fr; }
+            .faculty-grid, .assistant-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-container { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .faculty-grid, .assistant-grid { grid-template-columns: 1fr; }
+            .footer-container { grid-template-columns: 1fr; gap: 30px; }
+            .category-heading::before, .category-heading::after { display: none; }
+            .category-heading { justify-content: center; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SITE HEADER (INDEX.HTML EXACT COMPONENT) -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-landmark"></i> Government of Sindh</span>
+                    <span class="separator">|</span>
+                    <span>College Education Department</span>
+                    <span class="separator">|</span>
+                    <span>Shahdadpur, District Sanghar, Sindh</span>
+                </div>
+                <div class="top-bar-right">
+                    <span><i class="fas fa-graduation-cap"></i> Quality Education</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand-header">
+            <div class="brand-container">
+                <a href="index.html" class="college-brand">
+                    <img src="photos/college logo.jpg" class="college-logo" alt="College Logo">
+                    <div class="college-name">
+                        <h1>Government Boys Degree College Shahdadpur</h1>
+                        <span>District Sanghar, Sindh</span>
+                    </div>
+                </a>
+                <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MAIN NAVIGATION MENU -->
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <ul class="nav-menu" id="mainNav">
+                    <li>
+                        <a href="index.html"><i class="fas fa-house"></i> HOME</a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <button type="button" class="submenu-toggle">
+                            ABOUT COLLEGE <i class="fas fa-chevron-down nav-arrow"></i>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="college-overview.html">College Overview</a></li>
+                            <li><a href="principal-message.html">Principal's Message</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <button type="button" class="submenu-toggle">
+                            ACADEMICS <i class="fas fa-chevron-down nav-arrow"></i>
+                        </button>
+                        <ul class="submenu">
+                            <li class="has-submenu">
+                                <button type="button" class="submenu-toggle">
+                                    Intermediate Programs <i class="fas fa-chevron-right nav-arrow"></i>
+                                </button>
+                                <ul class="submenu">
+                                    <li><a href="pre-medical.html">Pre-Medical</a></li>
+                                    <li><a href="pre-engineering.html">Pre-Engineering</a></li>
+                                    <li><a href="computer-science.html">Computer Science</a></li>
+                                    <li><a href="commerce.html">Commerce</a></li>
+                                    <li><a href="humanities.html">Humanities</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <button type="button" class="submenu-toggle">
+                                    Associate Degree Programs <i class="fas fa-chevron-right nav-arrow"></i>
+                                </button>
+                                <ul class="submenu">
+                                    <li><a href="associate-science.html">Associate Degree in Science</a></li>
+                                    <li><a href="associate-commerce.html">Associate Degree in Commerce</a></li>
+                                    <li><a href="associate-arts.html">Associate Degree in Arts</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <button type="button" class="submenu-toggle">
+                            ADMISSIONS <i class="fas fa-chevron-down nav-arrow"></i>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="eligibility.html">Eligibility</a></li>
+                            <li><a href="fee-structure.html">Fee Structure</a></li>
+                            <li><a href="Time_Table.html">Time Table</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="active">
+                        <a href="faculty.html"><i class="fas fa-chalkboard-user"></i> FACULTY</a>
+                    </li>
+
+                    <li>
+                        <a href="library.html"><i class="fas fa-book"></i> LIBRARY</a>
+                    </li>
+
+                    <li>
+                        <a href="news.html"><i class="fas fa-newspaper"></i> NEWS &amp; EVENTS</a>
+                    </li>
+
+                    <li>
+                        <a href="downloads.html"><i class="fas fa-download"></i> DOWNLOADS</a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html"><i class="fas fa-images"></i> GALLERY</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html"><i class="fas fa-envelope"></i> CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- FACULTY HERO -->
+    <section class="page-hero">
+        <span class="section-label" style="color: #c5a24a;">ACADEMIC EXCELLENCE</span>
+        <h1>Teaching Faculty</h1>
+        <p>Meet the qualified and dedicated academic team of Government Boys Degree College Shahdadpur, committed to quality teaching and academic guidance.</p>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <i class="fas fa-angle-right"></i> <span>Faculty</span>
+        </div>
+    </section>
+
+    <!-- STATS OVERVIEW -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="stat-number">1</div>
+                <div class="stat-label">Principal</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+                <div class="stat-number">3</div>
+                <div class="stat-label">Associate Professors</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="stat-number">6</div>
+                <div class="stat-label">Assistant Professors</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-book-open-reader"></i></div>
+                <div class="stat-number">16</div>
+                <div class="stat-label">Lecturers</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECTORY & FACULTY MEMBERS -->
+    <section class="home-section">
+        <div class="section-heading">
+            <span class="section-label">ACADEMIC STAFF</span>
+            <h2>Faculty Directory</h2>
+            <p>Academic leadership and teaching staff of Government Boys Degree College Shahdadpur.</p>
+        </div>
+
+        <!-- FILTER DROPDOWN -->
+        <div class="filter-wrapper">
+            <label for="designationFilter" class="filter-label"><i class="fas fa-filter"></i> Filter by Designation:</label>
+            <select id="designationFilter" class="filter-select">
+                <option value="all">All Designations</option>
+                <option value="principal">Principal</option>
+                <option value="associate">Associate Professors</option>
+                <option value="assistant">Assistant Professors</option>
+                <option value="senior">Senior Staff</option>
+                <option value="lecturer">Lecturers</option>
+            </select>
+        </div>
+
+        <!-- PRINCIPAL CARD -->
+        <div class="principal-feature">
+            <div class="principal-photo-side">
+                <img src="photos/Principal.jpg" alt="Syed Ghulam Hyder Shah" class="principal-photo" onerror="this.style.display='none';">
+            </div>
+            <div class="principal-content">
+                <div class="principal-label"><i class="fas fa-crown"></i> Academic Leadership</div>
+                <h3>Syed Ghulam Hyder Shah</h3>
+                <div class="principal-designation">Principal BPS(19)</div>
+                <p>Providing academic leadership and institutional guidance for the continued development of Government Boys Degree College Shahdadpur and its students.</p>
+            </div>
+        </div>
+
+        <!-- ASSOCIATE PROFESSORS -->
+        <div class="faculty-category associate">
+            <div class="category-heading">
+                <div class="category-title"><i class="fas fa-user-graduate"></i> Associate Professors</div>
+            </div>
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <img src="photos/Waseem Baig.jpg" alt="Waseem Baig" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">WASEEM BAIG</div>
+                    <div class="faculty-designation">Associate Professor BPS(19) - Urdu</div>
+                    <div class="subject-badge">Urdu</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/syed masood ali shah.jpg" alt="Syed Masood Ali Shah" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">SYED MASOOD ALI SHAH</div>
+                    <div class="faculty-designation">Associate Professor BPS(19) - English</div>
+                    <div class="subject-badge">English</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/Ghulam Shabir Khaskheli.jpg" alt="Ghulam Shabir" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">GHULAM SHABIR</div>
+                    <div class="faculty-designation">Associate Professor BPS(19) - Zoology</div>
+                    <div class="subject-badge">Zoology</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ASSISTANT PROFESSORS -->
+        <div class="faculty-category assistant">
+            <div class="category-heading">
+                <div class="category-title"><i class="fas fa-chalkboard-user"></i> Assistant Professors</div>
+            </div>
+            <div class="assistant-grid">
+                <div class="faculty-card">
+                    <img src="photos/Sikandar Ali Channar.jpg" alt="Sikandar Ali Channar" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">SIKANDAR ALI CHANNAR</div>
+                    <div class="faculty-designation">Assistant Professor BPS(18) - Computer Science</div>
+                    <div class="subject-badge">Computer Science</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/Mahmood Rind.jpg" alt="Mahmood" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">MAHMOOD</div>
+                    <div class="faculty-designation">Assistant Professor BPS(18) - Commerce</div>
+                    <div class="subject-badge">Commerce</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/Ayaz Ali.jpeg" alt="Ayaz Ali" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">AYAZ ALI</div>
+                    <div class="faculty-designation">Assistant Professor BPS(18) - Islamic History</div>
+                    <div class="subject-badge">Islamic History</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/Akhtar Hussain.jpeg" alt="Akhtar Hussain" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">AKHTAR HUSSAIN</div>
+                    <div class="faculty-designation">Assistant Professor BPS(18) - Economics</div>
+                    <div class="subject-badge">Economics</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/Shamsher Ali.jpg" alt="Shamsher Ali" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">SHAMSHER ALI</div>
+                    <div class="faculty-designation">Assistant Professor BPS(18) - Economics</div>
+                    <div class="subject-badge">Economics</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/Lal Muhammad.jpg" alt="Lal Muhammad" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">LAL MUHAMMAD</div>
+                    <div class="faculty-designation">Assistant Professor BPS(18) - Economics</div>
+                    <div class="subject-badge">Economics</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SENIOR STAFF -->
+        <div class="faculty-category senior">
+            <div class="category-heading">
+                <div class="category-title"><i class="fas fa-award"></i> Senior Staff</div>
+            </div>
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <img src="photos/Arbab Ali.jpeg" alt="Muhammad Adeeb Alam" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">ARBAB ALI</div>
+                    <div class="faculty-designation">Senior Director Physical Education BPS(18)</div>
+                    <div class="subject-badge">Physical Education</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/liaquat.jpg" alt="Liaquat Ali" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">LIAQUAT ALI</div>
+                    <div class="faculty-designation">Librarian BPS(18)</div>
+                    <div class="subject-badge">Library</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LECTURERS -->
+        <div class="faculty-category lecturer">
+            <div class="category-heading">
+                <div class="category-title"><i class="fas fa-book-open-reader"></i> Lecturers</div>
+            </div>
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <img src="photos/hassan aftab.jpg" alt="Hassan Aftab" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">HASSAN AFTAB</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Zoology</div>
+                    <div class="subject-badge">Zoology</div>
+                </div>
+                <div class="faculty-card">
+                  <img src="https://cdn-icons-png.flaticon.com/512/1995/1995539.png" alt="Khanzadi" class="faculty-photo">
+                    <div class="faculty-name">KHANZADI</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Zoology</div>
+                    <div class="subject-badge">Zoology</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/muhammad asim.jpg" alt="Muhammad Asim" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">MUHAMMAD ASIM</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Maths</div>
+                    <div class="subject-badge">Mathematics</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/raja muhammad asad khan.jpg" alt="Raja Muhammad Asad Khan" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">RAJA MUHAMMAD ASAD KHAN</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Islamic History</div>
+                    <div class="subject-badge">Islamic History</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/ayaz haroon.jpg" alt="Ayaz Haroon" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">AYAZ HAROON</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Geography</div>
+                    <div class="subject-badge">Geography</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/dileep.jpg" alt="Dileep Kumar" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">DILEEP KUMAR</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Botany</div>
+                    <div class="subject-badge">Botany</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/muhammad punhal.jpg" alt="Muhammad Punhal" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">MUHAMMAD PUNHAL</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Botany</div>
+                    <div class="subject-badge">Botany</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/khan muhammad.jpg" alt="Khan Muhammad" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">KHAN MUHAMMAD</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Botany</div>
+                    <div class="subject-badge">Botany</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/mohsin baig.jpg" alt="Mohsin Baig" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">MOHSIN BAIG</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Computer Science</div>
+                    <div class="subject-badge">Computer Science</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/waleed ali.jpg" alt="Waleed Ali" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">WALEED ALI</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Physics</div>
+                    <div class="subject-badge">Physics</div>
+                </div>
+                <div class="faculty-card">
+                    <img src="photos/sartaj ahmed.jpg" alt="Sartaj Ahmed" class="faculty-photo" onerror="this.style.display='none';">
+                    <div class="faculty-name">SARTAJ AHMED</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Physics</div>
+                    <div class="subject-badge">Physics</div>
+                </div>
+                <div class="faculty-card">
+                   <img src="https://cdn-icons-png.flaticon.com/512/1995/1995539.png" alt="Shughena" class="faculty-photo">
+                    <div class="faculty-name">SHUGHENA</div>
+                    <div class="faculty-designation">Lecturer BPS(17) - Sindhi</div>
+                    <div class="subject-badge">Sindhi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BACK TO TOP -->
+    <section class="back-section">
+        <button type="button" class="back-button" id="backToTop">
+            <i class="fas fa-arrow-up"></i> Back to Top
+        </button>
+    </section>
+
+    <!-- FOOTER (INDEX.HTML EXACT COMPONENT) -->
+    <footer class="home-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-college-name">
+                    Government Boys Degree College<br>Shahdadpur
+                </div>
+                <p>District Sanghar, Sindh.<br><br>Providing quality education and preparing students for higher education and professional life.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="college-overview.html">About College</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admission.html">Admissions</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="library.html">Library</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Important Links</h3>
+                <ul class="footer-links">
+                    <li><a href="downloads.html">Downloads</a></li>
+                    <li><a href="news.html">News &amp; Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Shahdadpur, District Sanghar, Sindh</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>College Office</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>College Email</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Government Boys Degree College Shahdadpur. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- COMBINED JAVASCRIPT LOGIC -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Navigation Mobile Menu Toggle
+        var menuButton = document.getElementById("mobileMenuButton");
+        var mainNav = document.getElementById("mainNav");
+
+        if (menuButton && mainNav) {
+            menuButton.addEventListener("click", function () {
+                mainNav.classList.toggle("mobile-open");
+                var icon = menuButton.querySelector("i");
+                if (icon) {
+                    if (mainNav.classList.contains("mobile-open")) {
+                        icon.classList.remove("fa-bars");
+                        icon.classList.add("fa-xmark");
+                    } else {
+                        icon.classList.remove("fa-xmark");
+                        icon.classList.add("fa-bars");
+                    }
+                }
+            });
+        }
+
+        // Dropdown Submenu Toggles
+        var submenuButtons = document.querySelectorAll(".submenu-toggle");
+        for (var i = 0; i < submenuButtons.length; i++) {
+            submenuButtons[i].addEventListener("click", function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                var parent = this.parentElement;
+                var submenu = null;
+                for (var j = 0; j < parent.children.length; j++) {
+                    if (parent.children[j].classList.contains("submenu")) {
+                        submenu = parent.children[j];
+                        break;
+                    }
+                }
+                if (!submenu) return;
+
+                var siblings = parent.parentElement.children;
+                for (var k = 0; k < siblings.length; k++) {
+                    if (siblings[k] !== parent) {
+                        siblings[k].classList.remove("open");
+                    }
+                }
+                parent.classList.toggle("open");
+            });
+        }
+
+        // Close submenus on outside click
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".main-navigation")) {
+                var openItems = document.querySelectorAll(".nav-menu li.open");
+                for (var l = 0; l < openItems.length; l++) {
+                    openItems[l].classList.remove("open");
+                }
+            }
+        });
+
+        // Faculty Designation Filter Logic
+        var designationFilter = document.getElementById("designationFilter");
+        if (designationFilter) {
+            designationFilter.addEventListener("change", function() {
+                var selectedVal = this.value;
+                var principalCard = document.querySelector(".principal-feature");
+                var categories = {
+                    associate: document.querySelector(".faculty-category.associate"),
+                    assistant: document.querySelector(".faculty-category.assistant"),
+                    senior: document.querySelector(".faculty-category.senior"),
+                    lecturer: document.querySelector(".faculty-category.lecturer")
+                };
+
+                if (principalCard) {
+                    principalCard.style.display = (selectedVal === "all" || selectedVal === "principal") ? "grid" : "none";
+                }
+
+                for (var key in categories) {
+                    if (categories[key]) {
+                        categories[key].style.display = (selectedVal === "all" || selectedVal === key) ? "block" : "none";
+                    }
+                }
+            });
+        }
+
+        // Back To Top Button
+        var backToTop = document.getElementById("backToTop");
+        if (backToTop) {
+            backToTop.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

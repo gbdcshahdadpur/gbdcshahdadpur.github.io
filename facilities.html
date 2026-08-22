@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Facilities - Government Boys Degree College Shahdadpur
+    </title>
+
+    <meta name="description"
+          content="Explore the academic, sports, and campus facilities at Government Boys Degree College Shahdadpur, District Sanghar, Sindh.">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+<style>
+
+/* =========================================================
+   PAGE SPECIFIC & THEME STYLES
+========================================================= */
+
+body {
+    margin: 0;
+    background: #f7f9f8;
+    color: #26332d;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================================
+   COMMON HEADER
+========================================================= */
+
+.site-header {
+    width: 100%;
+    background: #ffffff;
+    position: relative;
+    z-index: 9999;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+    background: #0b5d3b;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.top-bar-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 9px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.top-bar i {
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.separator {
+    opacity: .45;
+}
+
+
+/* =========================================================
+   COLLEGE BRAND HEADER
+========================================================= */
+
+.brand-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5ebe7;
+}
+
+.brand-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.college-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.college-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.college-name {
+    line-height: 1.3;
+}
+
+.college-name h1 {
+    margin: 0;
+    color: #123c2b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.college-name span {
+    display: block;
+    margin-top: 3px;
+    color: #68756e;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-navigation {
+    background: #0b5d3b;
+    border-top: 1px solid rgba(255,255,255,.08);
+    border-bottom: 3px solid #c5a24a;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.nav-menu > li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu > li > a,
+.nav-menu > li > button {
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 13px;
+
+    border: 0;
+    background: transparent;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.nav-menu > li > a:hover,
+.nav-menu > li > button:hover,
+.nav-menu > li.active > a,
+.nav-menu > li.active > button {
+    background: rgba(255,255,255,.12);
+    color: #f0d27b;
+}
+
+
+/* dropdown arrow */
+
+.nav-arrow {
+    font-size: 9px;
+    transition: transform .2s ease;
+}
+
+.nav-menu > li.open > a .nav-arrow,
+.nav-menu > li.open > button .nav-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   SUBMENUS
+========================================================= */
+
+.submenu {
+    list-style: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 230px;
+
+    margin: 0;
+    padding: 7px 0;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe8e3;
+
+    border-top: 3px solid #c5a24a;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.14);
+
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+
+    transform: translateY(8px);
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease,
+        visibility .2s ease;
+}
+
+.nav-menu > li.open > .submenu {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transform: translateY(0);
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu li a,
+.submenu li button {
+    width: 100%;
+    min-height: 40px;
+
+    box-sizing: border-box;
+
+    padding: 10px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 0;
+    background: transparent;
+
+    color: #34453d;
+
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        padding-left .2s ease;
+}
+
+.submenu li a:hover,
+.submenu li button:hover {
+    background: #edf5f1;
+    color: #0b5d3b;
+    padding-left: 21px;
+}
+
+.submenu .submenu {
+    top: -3px;
+    left: 100%;
+
+    border-top: 3px solid #c5a24a;
+}
+
+.submenu li.open > .submenu {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    border: 0;
+
+    background: #0b5d3b;
+    color: #ffffff;
+
+    font-size: 20px;
+
+    width: 46px;
+    height: 42px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PAGE HEADER / BREADCRUMB BANNER
+========================================================= */
+
+.page-banner {
+    background: linear-gradient(135deg, #0b5d3b, #123c2b);
+    color: #ffffff;
+    padding: 45px 20px;
+    border-bottom: 3px solid #c5a24a;
+}
+
+.banner-container {
+    max-width: 1180px;
+    margin: auto;
+}
+
+.banner-container h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.breadcrumb {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb a {
+    color: #f0d27b;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   FACILITIES CONTENT SECTION
+========================================================= */
+
+.facilities-section {
+    max-width: 1180px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.section-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #0b5d3b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #173a2b;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.heading-line-center {
+    width: 58px;
+    height: 4px;
+    margin: 16px auto 0;
+    background: #c5a24a;
+    border-radius: 5px;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.facility-card {
+    background: #ffffff;
+    border: 1px solid #e0e9e4;
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(20, 60, 43, .09);
+}
+
+.facility-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: #eaf4ef;
+    color: #0b5d3b;
+    font-size: 24px;
+}
+
+.facility-card h3 {
+    margin: 0 0 12px;
+    color: #173a2b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.facility-card p {
+    margin: 0;
+    color: #5f6b65;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   CTA SECTION
+========================================================= */
+
+.admission-section {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 20px 70px;
+}
+
+.admission-box {
+    position: relative;
+    overflow: hidden;
+    padding: 45px 50px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #0b5d3b, #164d38);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.admission-content span {
+    color: #e8d28a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.admission-content h2 {
+    margin: 7px 0 9px;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.admission-content p {
+    margin: 0;
+    color: rgba(255, 255, 255, .84);
+    font-size: 14px;
+}
+
+.admission-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 7px;
+    background: #c5a24a;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.home-footer {
+    background: #102b20;
+    color: #ffffff;
+    padding-top: 55px;
+}
+
+.footer-container {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 20px 45px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 45px;
+}
+
+.footer-column h3 {
+    margin: 0 0 17px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.footer-college-name {
+    margin-bottom: 13px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.footer-column p {
+    margin: 0;
+    color: rgba(255, 255, 255, .68);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 9px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, .70);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #e2c970;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 13px;
+    color: rgba(255, 255, 255, .70);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.contact-item i {
+    width: 18px;
+    margin-top: 3px;
+    color: #d2b65d;
+    text-align: center;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .10);
+    padding: 18px 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, .58);
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+    .nav-menu > li > a,
+    .nav-menu > li > button {
+        padding: 0 8px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 900px) {
+    .brand-container {
+        padding: 12px 16px;
+    }
+
+    .college-name h1 {
+        font-size: 17px;
+    }
+
+    .college-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .nav-container {
+        padding: 8px 15px;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding-bottom: 8px;
+    }
+
+    .nav-menu.mobile-open {
+        display: flex;
+    }
+
+    .nav-menu > li > a,
+    .nav-menu > li > button {
+        width: 100%;
+        min-height: 45px;
+        justify-content: space-between;
+        padding: 0 12px;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+        box-sizing: border-box;
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        box-shadow: none;
+        border-top: 1px solid #dfe8e3;
+        border-left: 3px solid #c5a24a;
+    }
+
+    .nav-menu > li.open > .submenu {
+        display: block;
+    }
+
+    .submenu .submenu {
+        position: static;
+        display: none;
+        transform: none;
+        border-left: 3px solid #0b5d3b;
+    }
+
+    .submenu li.open > .submenu {
+        display: block;
+    }
+
+    .facilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .top-bar-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar-left,
+    .top-bar-right {
+        justify-content: center;
+    }
+
+    .brand-container {
+        padding: 10px 14px;
+    }
+
+    .college-name h1 {
+        font-size: 15px;
+    }
+
+    .college-name span {
+        font-size: 10px;
+    }
+
+    .college-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admission-box {
+        padding: 35px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+
+    <div class="top-bar">
+
+        <div class="top-bar-content">
+
+            <div class="top-bar-left">
+
+                <span>
+                    <i class="fas fa-landmark"></i>
+                    Government of Sindh
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    College Education Department
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    Shahdadpur, District Sanghar, Sindh
+                </span>
+
+            </div>
+
+
+            <div class="top-bar-right">
+
+                <span>
+                    <i class="fas fa-graduation-cap"></i>
+                    Quality Education
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="brand-header">
+
+        <div class="brand-container">
+
+
+            <a href="index.html"
+               class="college-brand">
+
+                <img src="photos/college logo.jpg"
+                     class="college-logo"
+                     alt="College Logo">
+
+                <div class="college-name">
+
+                    <h1>
+                        Government Boys Degree College
+                        Shahdadpur
+                    </h1>
+
+                    <span>
+                        District Sanghar, Sindh
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <button class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    aria-label="Open Menu">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <nav class="main-navigation">
+
+        <div class="nav-container">
+
+
+            <ul class="nav-menu"
+                id="mainNav">
+
+
+                <li>
+
+                    <a href="index.html">
+
+                        <i class="fas fa-house"></i>
+
+                        HOME
+
+                    </a>
+
+                </li>
+
+
+                <li class="has-submenu active">
+
+                    <button type="button"
+                            class="submenu-toggle">
+
+                        ABOUT COLLEGE
+
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+
+                    </button>
+
+
+                    <ul class="submenu">
+
+                        <li>
+
+                            <a href="college-overview.html">
+                                College Overview
+                            </a>
+
+                        </li>
+
+                         <li>
+
+                            <a href="principal-message.html">
+                                Principal's Message
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="facilities.html">
+                                Facilities
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li class="has-submenu">
+
+                    <button type="button"
+                            class="submenu-toggle">
+
+                        ACADEMICS
+
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+
+                    </button>
+
+
+                    <ul class="submenu">
+
+
+                        <li class="has-submenu">
+
+                            <button type="button"
+                                    class="submenu-toggle">
+
+                                Intermediate Programs
+
+                                <i class="fas fa-chevron-right nav-arrow"></i>
+
+                            </button>
+
+
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="pre-medical.html">
+                                        Pre-Medical
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="pre-engineering.html">
+                                        Pre-Engineering
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="computer-science.html">
+                                        Computer Science
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="commerce.html">
+                                        Commerce
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="humanities.html">
+                                        Humanities
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class="has-submenu">
+
+                            <button type="button"
+                                    class="submenu-toggle">
+
+                                Associate Degree Programs
+
+                                <i class="fas fa-chevron-right nav-arrow"></i>
+
+                            </button>
+
+
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="associate-science.html">
+                                        Associate Degree in Science
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="associate-commerce.html">
+                                        Associate Degree in Commerce
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="associate-arts.html">
+                                        Associate Degree in Arts
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li class="has-submenu">
+
+                    <button type="button"
+                            class="submenu-toggle">
+
+                        ADMISSIONS
+
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+
+                    </button>
+
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="eligibility.html">
+                                Eligibility
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fee-structure.html">
+                                Fee Structure
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="Time_Table.html">
+                                Time Table
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li class="has-submenu">
+
+                    <button type="button"
+                            class="submenu-toggle">
+
+                        FACULTY
+
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+
+                    </button>
+
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="faculty-directory.html">
+                                Faculty Directory
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="departments.html">
+                                Academic Departments
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="faculty-resources.html">
+                                Faculty Resources
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+
+                    <a href="library.html">
+
+                        <i class="fas fa-book"></i>
+
+                        LIBRARY
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="news.html">
+
+                        <i class="fas fa-newspaper"></i>
+
+                        NEWS &amp; EVENTS
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="downloads.html">
+
+                        <i class="fas fa-download"></i>
+
+                        DOWNLOADS
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="gallery.html">
+
+                        <i class="fas fa-images"></i>
+
+                        GALLERY
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="contact.html">
+
+                        <i class="fas fa-envelope"></i>
+
+                        CONTACT US
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="page-banner">
+
+    <div class="banner-container">
+
+        <h1>College Facilities</h1>
+
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; <span>About College</span> &gt; <span>Facilities</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="facilities-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">OUR INFRASTRUCTURE</span>
+
+        <h2>College Academic Facilities</h2>
+
+        <div class="heading-line-center"></div>
+
+    </div>
+
+
+    <div class="facilities-grid">
+
+
+        <div class="facility-card">
+
+            <div class="facility-icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+
+            <h3>Computer Laboratories</h3>
+
+            <p>
+                Equipped with modern computer systems, high-speed networking, and essential development software for Computer Science and ICT practical sessions.
+            </p>
+
+        </div>
+
+
+        <div class="facility-card">
+
+            <div class="facility-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+
+            <h3>Science Laboratories</h3>
+
+            <p>
+                Fully functional practical labs for Physics, Chemistry, and Biology to support modern hands-on experimentations for intermediate students.
+            </p>
+
+        </div>
+
+
+        <div class="facility-card">
+
+            <div class="facility-icon">
+                <i class="fas fa-book-reader"></i>
+            </div>
+
+            <h3>Library</h3>
+
+            <p>
+                A peaceful reading environment stocked with thousands of textbooks, academic reference materials, journals, and local educational daily resources.
+            </p>
+
+        </div>
+
+
+        <div class="facility-card">
+
+            <div class="facility-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+
+            <h3>Spacious Classrooms</h3>
+
+            <p>
+                Well-ventilated, well-lit classrooms designed with modern seating infrastructure to maintain a clean academic environment for every section.
+            </p>
+
+        </div>
+
+
+        <div class="facility-card">
+
+            <div class="facility-icon">
+                <i class="fas fa-volleyball-ball"></i>
+            </div>
+
+            <h3>Sports Grounds</h3>
+
+            <p>
+                Dedicated sports fields and courts for cricket, football, and badminton, encouraging physical fitness and inter-college sports competitions.
+            </p>
+
+        </div>
+
+
+        <div class="facility-card">
+
+            <div class="facility-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+
+            <h3>Safe &amp; Secure Campus</h3>
+
+            <p>
+                24/7 security staff coverage and CCTV monitoring across key academic zones ensuring a safe environment for faculty and students.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="admission-section">
+
+    <div class="admission-box">
+
+        <div class="admission-content">
+
+            <span>START YOUR JOURNEY</span>
+
+            <h2>Build Your Future With Us</h2>
+
+            <p>Explore our academic programs and admission opportunities.</p>
+
+        </div>
+
+        <a href="admission.html"
+           class="admission-button">
+
+            Admission Information
+
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer class="home-footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-column">
+
+            <div class="footer-college-name">
+
+                Government Boys Degree College
+                <br>
+                Shahdadpur
+
+            </div>
+
+            <p>
+
+                District Sanghar, Sindh.
+
+                <br><br>
+
+                Providing quality education and preparing
+                students for higher education and professional
+                life.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="college-overview.html">
+                        About College
+                    </a>
+                </li>
+
+                <li>
+                    <a href="academics.html">
+                        Academics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admission.html">
+                        Admissions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="faculty.html">
+                        Faculty
+                    </a>
+                </li>
+
+                <li>
+                    <a href="library.html">
+                        Library
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Important Links
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="downloads.html">
+                        Downloads
+                    </a>
+                </li>
+
+                <li>
+                    <a href="news.html">
+                        News &amp; Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <div class="contact-item">
+
+                <i class="fas fa-location-dot"></i>
+
+                <span>
+                    Shahdadpur, District Sanghar, Sindh
+                </span>
+
+            </div>
+
+            <div class="contact-item">
+
+                <i class="fas fa-phone"></i>
+
+                <span>
+                    College Office
+                </span>
+
+            </div>
+
+            <div class="contact-item">
+
+                <i class="fas fa-envelope"></i>
+
+                <span>
+                    College Email
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Government Boys Degree College Shahdadpur.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    var menuButton = document.getElementById("mobileMenuButton");
+    var mainNav = document.getElementById("mainNav");
+
+    /* Helper function for Element.closest() (IE Fallback) */
+    function getClosest(elem, selector) {
+        while (elem && elem !== document) {
+            if (elem.matches && elem.matches(selector)) return elem;
+            if (elem.msMatchesSelector && elem.msMatchesSelector(selector)) return elem;
+            elem = elem.parentElement;
+        }
+        return null;
+    }
+
+    /* ================================================
+       MOBILE MAIN MENU
+    ================================================= */
+
+    if (menuButton && mainNav) {
+
+        menuButton.addEventListener("click", function () {
+
+            mainNav.classList.toggle("mobile-open");
+
+            var icon = menuButton.querySelector("i");
+
+            if (icon) {
+                if (mainNav.classList.contains("mobile-open")) {
+
+                    icon.classList.remove("fa-bars");
+                    icon.classList.add("fa-xmark");
+
+                } else {
+
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+
+                }
+            }
+
+        });
+
+    }
+
+
+    /* ================================================
+       ALL SUBMENU BUTTONS (IE COMPATIBLE)
+    ================================================= */
+
+    var submenuButtons = document.querySelectorAll(".submenu-toggle");
+
+    for (var i = 0; i < submenuButtons.length; i++) {
+
+        submenuButtons[i].addEventListener("click", function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            var parent = this.parentElement;
+
+            var submenu = null;
+            for (var j = 0; j < parent.children.length; j++) {
+                if (parent.children[j].classList.contains("submenu")) {
+                    submenu = parent.children[j];
+                    break;
+                }
+            }
+
+            if (!submenu) {
+                return;
+            }
+
+            var siblings = parent.parentElement.children;
+
+            for (var k = 0; k < siblings.length; k++) {
+                if (siblings[k] !== parent) {
+                    siblings[k].classList.remove("open");
+                }
+            }
+
+            parent.classList.toggle("open");
+
+        });
+
+    }
+
+
+    /* ================================================
+       CLOSE MENUS WHEN CLICKING OUTSIDE (IE COMPATIBLE)
+    ================================================= */
+
+    document.addEventListener("click", function (event) {
+
+        if (!getClosest(event.target, ".main-navigation")) {
+
+            var openItems = document.querySelectorAll(".nav-menu li.open");
+
+            for (var l = 0; l < openItems.length; l++) {
+                openItems[l].classList.remove("open");
+            }
+
+        }
+
+    });
+
+
+    /* ================================================
+       PREVENT SUBMENU CLICKS FROM CLOSING
+    ================================================= */
+
+    var submenus = document.querySelectorAll(".submenu");
+
+    for (var m = 0; m < submenus.length; m++) {
+
+        submenus[m].addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+        });
+
+    }
+
+});
+
+</script>
+
+
+</body>
+
+</html>

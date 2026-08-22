@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        College Overview | Government Boys Degree College Shahdadpur
+    </title>
+
+    <meta name="description"
+          content="College Overview of Government Boys Degree College Shahdadpur, District Sanghar, Sindh.">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- MAIN WEBSITE CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+<style>
+
+/* =========================================================
+   COLLEGE OVERVIEW PAGE
+========================================================= */
+
+.college-overview-page {
+    margin: 0;
+    padding: 0;
+    background: #f7f9f8;
+    color: #26332d;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================================
+   COMMON HEADER
+========================================================= */
+
+.site-header {
+    width: 100%;
+    background: #ffffff;
+}
+
+
+/* TOP BAR */
+
+.top-bar {
+    background: #0b5d3b;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.top-bar-content {
+    max-width: 1180px;
+    margin: auto;
+    min-height: 38px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-bar i {
+    color: #ffffff;
+}
+
+.separator {
+    opacity: .55;
+}
+
+
+/* =========================================================
+   COLLEGE BRANDING
+========================================================= */
+
+.college-brand {
+    background: #ffffff;
+    border-bottom: 1px solid #e8ecea;
+}
+
+.college-brand-inner {
+    max-width: 1180px;
+    margin: auto;
+
+    min-height: 88px;
+    padding: 12px 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.college-logo {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.college-name h1 {
+    margin: 0;
+
+    color: #123b2a;
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.college-name p {
+    margin: 5px 0 0;
+
+    color: #68736d;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.main-navigation {
+    background: #0b5d3b;
+    width: 100%;
+}
+
+.main-navigation-inner {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.nav-menu {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    align-items: stretch;
+}
+
+
+/* MAIN MENU ITEMS */
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu > li > a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    min-height: 52px;
+
+    padding: 0 15px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: background .25s ease;
+}
+
+.nav-menu > li > a:hover,
+.nav-menu > li.active > a {
+    background: #08452c;
+}
+
+
+/* DROPDOWN ARROW */
+
+.nav-menu > li.has-submenu > a .arrow {
+    font-size: 9px;
+    margin-left: 2px;
+}
+
+
+/* =========================================================
+   SUBMENU
+========================================================= */
+
+.submenu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 230px;
+
+    margin: 0;
+    padding: 7px 0;
+
+    list-style: none;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8e4;
+
+    border-radius: 0 0 8px 8px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(8px);
+
+    transition:
+        opacity .2s ease,
+        visibility .2s ease,
+        transform .2s ease;
+}
+
+
+/* SHOW SUBMENU */
+
+.nav-menu li:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* SUBMENU ITEMS */
+
+.submenu li {
+    position: relative;
+}
+
+.submenu li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 17px;
+
+    color: #33443b;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.submenu li a:hover {
+    background: #edf5f1;
+    color: #0b5d3b;
+}
+
+
+/* THIRD LEVEL MENU */
+
+.submenu .submenu {
+    top: -7px;
+    left: 100%;
+}
+
+.submenu li:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    border: 0;
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    padding: 12px 0;
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.overview-hero {
+
+    position: relative;
+
+    min-height: 210px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #123b2a 0%,
+            #0b5d3b 55%,
+            #164d38 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* DECORATIVE CIRCLE */
+
+.overview-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.055);
+
+    top: -250px;
+    right: -70px;
+}
+
+
+/* SECOND DECORATIVE SHAPE */
+
+.overview-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(191,153,61,0.13);
+
+    bottom: -190px;
+    left: -80px;
+}
+
+
+.overview-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    width: 100%;
+
+    padding: 35px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    text-align: left;
+}
+
+
+/* HERO ICON */
+
+.overview-hero-icon {
+
+    width: 62px;
+    height: 62px;
+
+    flex: 0 0 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border:
+        1px solid rgba(255,255,255,0.20);
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.12);
+}
+
+
+.overview-hero-text h1 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.overview-hero-text p {
+
+    margin: 7px 0 0;
+
+    color:
+        rgba(255,255,255,0.88);
+
+    font-size: 15px;
+}
+
+
+.overview-gold-line {
+
+    width: 55px;
+    height: 3px;
+
+    margin-top: 12px;
+
+    background: #c5a24a;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.overview-breadcrumb {
+
+    background: #ffffff;
+
+    border-bottom:
+        1px solid #e6ebe8;
+}
+
+
+.overview-breadcrumb-inner {
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 13px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    font-size: 13px;
+
+    color: #6b756f;
+}
+
+
+.overview-breadcrumb a {
+
+    color: #0b5d3b;
+
+    text-decoration: none;
+
+    font-weight: 500;
+}
+
+
+.overview-breadcrumb a:hover {
+
+    color: #08452c;
+}
+
+
+.overview-breadcrumb i {
+
+    font-size: 10px;
+
+    color: #9ba39f;
+}
+
+
+.overview-breadcrumb strong {
+
+    color: #38443e;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.overview-container {
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 65px 20px 80px;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.overview-introduction {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(300px, .65fr);
+
+    gap: 55px;
+
+    align-items: center;
+
+    margin-bottom: 65px;
+}
+
+
+.overview-label {
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #0b5d3b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+
+.overview-introduction h2 {
+
+    margin: 0;
+
+    color: #173a2b;
+
+    font-size: 31px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+}
+
+
+.overview-title-line {
+
+    width: 58px;
+    height: 4px;
+
+    margin: 17px 0 23px;
+
+    background: #c5a24a;
+
+    border-radius: 5px;
+}
+
+
+.overview-main-text p {
+
+    margin: 0 0 17px;
+
+    color: #5d6862;
+
+    font-size: 15px;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   IMAGE CARD
+========================================================= */
+
+.overview-image-card {
+
+    position: relative;
+
+    background: #ffffff;
+
+    padding: 10px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 35px rgba(25,55,43,0.10);
+
+    border:
+        1px solid #e5ebe7;
+}
+
+
+.overview-image-card img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 310px;
+
+    object-fit: cover;
+
+    border-radius: 11px;
+}
+
+
+.overview-image-caption {
+
+    padding: 13px 10px 5px;
+
+    text-align: center;
+
+    color: #53615a;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.overview-section-heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.overview-section-heading span {
+
+    color: #0b5d3b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.overview-section-heading h2 {
+
+    margin: 7px 0 0;
+
+    color: #173a2b;
+
+    font-size: 29px;
+
+    font-weight: 700;
+}
+
+
+.heading-line {
+
+    width: 55px;
+
+    height: 3px;
+
+    margin: 13px auto 0;
+
+    background: #c5a24a;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   GLANCE
+========================================================= */
+
+.overview-glance {
+
+    margin-bottom: 70px;
+}
+
+
+.glance-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.glance-card {
+
+    background: #ffffff;
+
+    border:
+        1px solid #e4ebe7;
+
+    border-radius: 13px;
+
+    padding: 28px 18px;
+
+    text-align: center;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.glance-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(20,60,43,0.10);
+}
+
+
+.glance-icon {
+
+    width: 54px;
+    height: 54px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #edf5f1;
+
+    color: #0b5d3b;
+
+    font-size: 21px;
+}
+
+
+.glance-card h3 {
+
+    margin: 0 0 7px;
+
+    color: #263f34;
+
+    font-size: 16px;
+}
+
+
+.glance-card p {
+
+    margin: 0;
+
+    color: #707b75;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HISTORY
+========================================================= */
+
+.overview-history {
+
+    margin-bottom: 65px;
+}
+
+
+.history-box {
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 35px 40px;
+
+    border:
+        1px solid #e4ebe7;
+
+    box-shadow:
+        0 8px 25px rgba(30,60,45,0.05);
+}
+
+
+.history-box p {
+
+    margin: 0 0 16px;
+
+    color: #5e6963;
+
+    font-size: 15px;
+
+    line-height: 1.85;
+}
+
+
+.history-box p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.overview-values {
+
+    margin-bottom: 10px;
+}
+
+
+.values-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.value-card {
+
+    position: relative;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 30px 25px;
+
+    border:
+        1px solid #e4ebe7;
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.value-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #0b5d3b;
+}
+
+
+.value-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(25,60,45,0.09);
+}
+
+
+.value-icon {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #f1f6f3;
+
+    color: #0b5d3b;
+
+    font-size: 19px;
+
+    margin-bottom: 17px;
+}
+
+
+.value-card h3 {
+
+    margin: 0 0 10px;
+
+    color: #243d32;
+
+    font-size: 18px;
+}
+
+
+.value-card p {
+
+    margin: 0;
+
+    color: #68736d;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    background: #123b2a;
+
+    color: #ffffff;
+
+    margin-top: 0;
+}
+
+
+.footer-inner {
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 45px 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+
+.footer-column h3 {
+
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+
+.footer-column p {
+
+    margin: 0;
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+.footer-column ul {
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.footer-column li {
+
+    margin-bottom: 9px;
+}
+
+
+.footer-column a {
+
+    color: rgba(255,255,255,.75);
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+
+.footer-column a:hover {
+
+    color: #ffffff;
+}
+
+
+.footer-bottom {
+
+    border-top:
+        1px solid rgba(255,255,255,.12);
+
+    text-align: center;
+
+    padding: 15px 20px;
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .main-navigation-inner {
+        padding: 0 20px;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .nav-menu.mobile-open {
+        display: flex;
+    }
+
+    .nav-menu > li > a {
+        min-height: 45px;
+        padding: 0 10px;
+    }
+
+    .submenu {
+        position: static;
+
+        width: 100%;
+
+        box-shadow: none;
+
+        border-radius: 0;
+
+        border: none;
+
+        display: none;
+
+        opacity: 1;
+        visibility: visible;
+
+        transform: none;
+    }
+
+    .nav-menu li.submenu-open > .submenu {
+        display: block;
+    }
+
+    .submenu .submenu {
+        position: static;
+        display: none;
+    }
+
+    .submenu li.submenu-open > .submenu {
+        display: block;
+    }
+
+    .overview-introduction {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .overview-image-card {
+        max-width: 650px;
+        margin: auto;
+    }
+
+    .glance-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .values-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .top-bar-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar-right {
+        display: none;
+    }
+
+    .college-brand-inner {
+        min-height: 75px;
+    }
+
+    .college-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .college-name h1 {
+        font-size: 16px;
+    }
+
+    .college-name p {
+        font-size: 10px;
+    }
+
+    .overview-hero {
+        min-height: 175px;
+    }
+
+    .overview-hero-content {
+        padding: 28px 20px;
+        gap: 13px;
+    }
+
+    .overview-hero-icon {
+        width: 50px;
+        height: 50px;
+        flex-basis: 50px;
+        font-size: 20px;
+    }
+
+    .overview-hero-text h1 {
+        font-size: 25px;
+    }
+
+    .overview-hero-text p {
+        font-size: 12px;
+    }
+
+    .overview-container {
+        padding:
+            45px 16px 60px;
+    }
+
+    .overview-introduction h2 {
+        font-size: 25px;
+    }
+
+    .overview-main-text p,
+    .history-box p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .overview-image-card img {
+        height: 230px;
+    }
+
+    .glance-grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 12px;
+    }
+
+    .glance-card {
+        padding: 22px 12px;
+    }
+
+    .glance-card h3 {
+        font-size: 14px;
+    }
+
+    .glance-card p {
+        font-size: 12px;
+    }
+
+    .history-box {
+        padding: 25px 20px;
+    }
+
+    .overview-section-heading h2 {
+        font-size: 25px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body class="college-overview-page">
+
+
+<!-- =========================================================
+     COMMON HEADER
+========================================================= -->
+
+<header class="site-header">
+
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        <div class="top-bar-content">
+
+            <div class="top-bar-left">
+
+                <span>
+                    <i class="fas fa-building-columns"></i>
+                    Government of Sindh
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    College Education Department
+                </span>
+
+            </div>
+
+
+            <div class="top-bar-right">
+
+                <span>
+                    <i class="fas fa-location-dot"></i>
+                    Shahdadpur, District Sanghar, Sindh
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- COLLEGE BRAND -->
+
+    <div class="college-brand">
+
+        <div class="college-brand-inner">
+
+            <!-- CHANGE THIS IMAGE IF YOUR LOGO HAS A DIFFERENT NAME -->
+
+            <img
+                src="photos/college logo.jpg"
+                alt="Government Boys Degree College Shahdadpur Logo"
+                class="college-logo"
+            >
+
+            <div class="college-name">
+
+                <h1>
+                    Government Boys Degree College Shahdadpur
+                </h1>
+
+                <p>
+                    College Education Department, Government of Sindh
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         COMMON MAIN MENU
+    ====================================================== -->
+
+    <nav class="main-navigation">
+
+        <div class="main-navigation-inner">
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open Menu">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+
+            <!-- MENU -->
+
+            <ul class="nav-menu" id="mainMenu">
+
+
+                <!-- HOME -->
+
+                <li>
+
+                    <a href="index.html">
+
+                        <i class="fas fa-house"></i>
+
+                        HOME
+
+                    </a>
+
+                </li>
+
+
+                <!-- ABOUT COLLEGE -->
+
+                <li class="has-submenu">
+
+                    <a href="#">
+
+                        ABOUT COLLEGE
+
+                        <i class="fas fa-chevron-down arrow"></i>
+
+                    </a>
+
+
+                    <ul class="submenu">
+
+                        <li>
+
+                            <a href="college-overview.html">
+
+                                College Overview
+
+                            </a>
+
+                        </li>
+
+                       
+                        <li>
+
+                            <a href="principal-message.html">
+
+                                Principal's Message
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="facilities.html">
+
+                                Facilities
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- ACADEMICS -->
+
+                <li class="has-submenu">
+
+                    <a href="#">
+
+                        ACADEMICS
+
+                        <i class="fas fa-chevron-down arrow"></i>
+
+                    </a>
+
+
+                    <ul class="submenu">
+
+
+                        <!-- INTERMEDIATE -->
+
+                        <li class="has-submenu">
+
+                            <a href="#">
+
+                                Intermediate Programs
+
+                                <i class="fas fa-chevron-right arrow"></i>
+
+                            </a>
+
+
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="pre-medical.html">
+                                        Pre-Medical
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="pre-engineering.html">
+                                        Pre-Engineering
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="computer-science.html">
+                                        Computer Science
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="commerce.html">
+                                        Commerce
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="humanities.html">
+                                        Humanities
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <!-- ASSOCIATE DEGREE -->
+
+                        <li class="has-submenu">
+
+                            <a href="#">
+
+                                Associate Degree Programs
+
+                                <i class="fas fa-chevron-right arrow"></i>
+
+                            </a>
+
+
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="associate-science.html">
+                                        Associate Degree in Science
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="associate-commerce.html">
+                                        Associate Degree in Commerce
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="associate-arts.html">
+                                        Associate Degree in Arts
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="faculty.html">
+
+                                Faculty
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="time-table.html">
+
+                                Time Table
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- ADMISSIONS -->
+
+                <li class="has-submenu">
+
+                    <a href="#">
+
+                        ADMISSIONS
+
+                        <i class="fas fa-chevron-down arrow"></i>
+
+                    </a>
+
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="admission-process.html">
+                                Admission Process
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="eligibility.html">
+                                Eligibility
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fee-structure.html">
+                                Fee Structure
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="admission-notice.html">
+                                Admission Notice
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- STUDENTS -->
+
+                <li class="has-submenu">
+
+                    <a href="#">
+
+                        STUDENTS
+
+                        <i class="fas fa-chevron-down arrow"></i>
+
+                    </a>
+
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="student-services.html">
+                                Student Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-rules.html">
+                                Student Rules
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="results.html">
+                                Results
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="scholarships.html">
+                                Scholarships
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- LIBRARY -->
+
+                <li>
+
+                    <a href="library.html">
+
+                        LIBRARY
+
+                    </a>
+
+                </li>
+
+
+                <!-- NEWS & EVENTS -->
+
+                <li>
+
+                    <a href="news-events.html">
+
+                        NEWS &amp; EVENTS
+
+                    </a>
+
+                </li>
+
+
+                <!-- DOWNLOADS -->
+
+                <li>
+
+                    <a href="downloads.html">
+
+                        DOWNLOADS
+
+                    </a>
+
+                </li>
+
+
+                <!-- GALLERY -->
+
+                <li>
+
+                    <a href="gallery.html">
+
+                        GALLERY
+
+                    </a>
+
+                </li>
+
+
+                <!-- CONTACT -->
+
+                <li>
+
+                    <a href="contact.html">
+
+                        CONTACT US
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
+
+<section class="overview-hero">
+
+    <div class="overview-hero-content">
+
+        <div class="overview-hero-icon">
+
+            <i class="fas fa-building-columns"></i>
+
+        </div>
+
+
+        <div class="overview-hero-text">
+
+            <h1>
+                College Overview
+            </h1>
+
+            <p>
+                Government Boys Degree College Shahdadpur
+            </p>
+
+            <div class="overview-gold-line"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BREADCRUMB
+========================================================= -->
+
+<div class="overview-breadcrumb">
+
+    <div class="overview-breadcrumb-inner">
+
+        <a href="index.html">
+
+            <i class="fas fa-home"></i>
+
+            Home
+
+        </a>
+
+        <i class="fas fa-angle-right"></i>
+
+        <span>
+            About College
+        </span>
+
+        <i class="fas fa-angle-right"></i>
+
+        <strong>
+            College Overview
+        </strong>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main>
+
+<div class="overview-container">
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="overview-introduction">
+
+
+        <div class="overview-main-text">
+
+            <span class="overview-label">
+                ABOUT OUR COLLEGE
+            </span>
+
+            <h2>
+                Government Boys Degree College Shahdadpur
+            </h2>
+
+            <div class="overview-title-line"></div>
+
+
+            <p>
+
+                Government Boys Degree College Shahdadpur is
+                a public-sector educational institution serving
+                students from Shahdadpur and surrounding areas
+                of District Sanghar, Sindh.
+
+            </p>
+
+
+            <p>
+
+                The college is committed to providing quality
+                education, developing academic abilities,
+                promoting discipline and character building,
+                and preparing students for higher education
+                and professional life.
+
+            </p>
+
+
+            <p>
+
+                As an institution of the College Education
+                Department, Government of Sindh, the college
+                continues to contribute to the educational and
+                social development of the region.
+
+            </p>
+
+        </div>
+
+
+        <div class="overview-image-card">
+
+            <img
+                src="photos/Main Entrance.png"
+                alt="Main Entrance of Government Boys Degree College Shahdadpur"
+            >
+
+            <div class="overview-image-caption">
+
+                Government Boys Degree College Shahdadpur
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- COLLEGE AT A GLANCE -->
+
+    <section class="overview-glance">
+
+
+        <div class="overview-section-heading">
+
+            <span>
+                COLLEGE AT A GLANCE
+            </span>
+
+            <h2>
+                Our Institution
+            </h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="glance-grid">
+
+
+            <div class="glance-card">
+
+                <div class="glance-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+
+                <h3>
+                    Established
+                </h3>
+
+                <p>
+                    Serving the community since 1978
+                </p>
+
+            </div>
+
+
+            <div class="glance-card">
+
+                <div class="glance-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+
+                <h3>
+                    Public Sector
+                </h3>
+
+                <p>
+                    Government of Sindh institution
+                </p>
+
+            </div>
+
+
+            <div class="glance-card">
+
+                <div class="glance-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <h3>
+                    Higher Education
+                </h3>
+
+                <p>
+                    Intermediate and Associate Degree programs
+                </p>
+
+            </div>
+
+
+            <div class="glance-card">
+
+                <div class="glance-icon">
+                    <i class="fas fa-location-dot"></i>
+                </div>
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Shahdadpur, District Sanghar, Sindh
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HISTORY -->
+
+    <section class="overview-history">
+
+
+        <div class="overview-section-heading">
+
+            <span>
+                OUR JOURNEY
+            </span>
+
+            <h2>
+                History &amp; Institutional Background
+            </h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="history-box">
+
+            <p>
+
+                Government Boys Degree College Shahdadpur has
+                a proud history of serving the educational needs
+                of Shahdadpur and its surrounding communities.
+
+            </p>
+
+
+            <p>
+
+                Before 1978, the college was supported through
+                the contributions and efforts of local
+                philanthropists and the people of Shahdadpur.
+                This reflected the community's strong commitment
+                to education and the development of its youth.
+
+            </p>
+
+
+            <p>
+
+                In 1978, the college was taken over by the
+                Government of Sindh under the nationalization
+                policy. Since then, it has continued its
+                educational mission as a public-sector
+                institution under the College Education
+                Department, Government of Sindh.
+
+            </p>
+
+
+            <p>
+
+                Over the years, the college has continued to
+                provide educational opportunities to students
+                and remains an important institution for higher
+                education in the region.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VALUES -->
+
+    <section class="overview-values">
+
+
+        <div class="overview-section-heading">
+
+            <span>
+                OUR COMMITMENT
+            </span>
+
+            <h2>
+                What We Stand For
+            </h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+
+                    <i class="fas fa-book-open"></i>
+
+                </div>
+
+                <h3>
+                    Quality Education
+                </h3>
+
+                <p>
+
+                    Providing students with sound academic
+                    foundations, knowledge and skills necessary
+                    for higher education and professional growth.
+
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+
+                    <i class="fas fa-users"></i>
+
+                </div>
+
+                <h3>
+                    Character Building
+                </h3>
+
+                <p>
+
+                    Encouraging discipline, responsibility,
+                    ethical values and positive attitudes among
+                    students.
+
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+
+                    <i class="fas fa-lightbulb"></i>
+
+                </div>
+
+                <h3>
+                    Future Development
+                </h3>
+
+                <p>
+
+                    Preparing students to meet the challenges
+                    of higher education, employment and a
+                    changing society.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+</main>
+
+
+
+<!-- =========================================================
+     COMMON FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+
+        <div class="footer-column">
+
+            <h3>
+                Government Boys Degree College Shahdadpur
+            </h3>
+
+            <p>
+
+                College Education Department,
+                Government of Sindh.
+
+                Providing quality education and
+                opportunities for students of Shahdadpur
+                and surrounding areas.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="college-overview.html">
+                        College Overview
+                    </a>
+                </li>
+
+                <li>
+                    <a href="intermediate.html">
+                        Intermediate Programs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="associate-degree.html">
+                        Associate Degree Programs
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+
+                <i class="fas fa-location-dot"></i>
+                Shahdadpur, District Sanghar, Sindh
+
+                <br><br>
+
+                <i class="fas fa-building-columns"></i>
+                College Education Department
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Government Boys Degree College Shahdadpur.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     MENU JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const mobileButton =
+        document.getElementById("mobileMenuButton");
+
+    const mainMenu =
+        document.getElementById("mainMenu");
+
+
+    /* MOBILE MENU */
+
+    if (mobileButton && mainMenu) {
+
+        mobileButton.addEventListener("click", function () {
+
+            mainMenu.classList.toggle("mobile-open");
+
+        });
+
+    }
+
+
+    /* MOBILE SUBMENUS */
+
+    const submenuParents =
+        document.querySelectorAll(
+            ".nav-menu > li.has-submenu > a, .submenu li.has-submenu > a"
+        );
+
+
+    submenuParents.forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            if (window.innerWidth <= 950) {
+
+                event.preventDefault();
+
+                const parent = this.parentElement;
+
+                parent.classList.toggle("submenu-open");
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
+
+
+</body>
+
+</html>

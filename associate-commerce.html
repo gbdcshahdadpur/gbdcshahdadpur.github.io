@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Associate Degree in Commerce (ADC / B.Com) | Government Boys Degree College Shahdadpur</title>
+
+<meta name="description"
+content="Two-year Associate Degree in Commerce (ADC / B.Com) program at Government Boys Degree College Shahdadpur affiliated with the University of Sindh.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* =========================================================
+   ASSOCIATE COMMERCE PAGE (ADC / B.COM STRUCTURE)
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f9f8;
+    color: #26332d;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    width: 100%;
+    background: #fff;
+    position: relative;
+    z-index: 9999;
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+    background: #0b5d3b;
+    color: #fff;
+    font-size: 12px;
+}
+
+.top-bar-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 9px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.top-bar i {
+    margin-right: 5px;
+}
+
+.separator {
+    opacity: .45;
+}
+
+/* =========================================================
+   COLLEGE BRAND
+========================================================= */
+
+.brand-header {
+    background: #fff;
+    border-bottom: 1px solid #e5ebe7;
+}
+
+.brand-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 13px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.college-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.college-logo {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.college-name h1 {
+    margin: 0;
+    color: #123c2b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.college-name span {
+    display: block;
+    margin-top: 3px;
+    color: #68756e;
+    font-size: 12px;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-navigation {
+    background: #0b5d3b;
+    border-bottom: 3px solid #c5a24a;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu > li > a,
+.nav-menu > li > button {
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 0 13px;
+
+    border: 0;
+    background: transparent;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.nav-menu > li > a:hover,
+.nav-menu > li > button:hover,
+.nav-menu > li.active > a,
+.nav-menu > li.active > button {
+    background: rgba(255,255,255,.12);
+    color: #f0d27b;
+}
+
+.nav-arrow {
+    font-size: 9px;
+    transition: transform .2s ease;
+}
+
+.nav-menu li.open > button .nav-arrow {
+    transform: rotate(180deg);
+}
+
+/* =========================================================
+   SUBMENU
+========================================================= */
+
+.submenu {
+    list-style: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 230px;
+
+    margin: 0;
+    padding: 6px 0;
+
+    background: #fff;
+
+    border: 1px solid #dfe8e3;
+    border-top: 3px solid #c5a24a;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.14);
+
+    display: none;
+}
+
+.nav-menu li.open > .submenu {
+    display: block;
+}
+
+.submenu li a,
+.submenu li button {
+    width: 100%;
+
+    min-height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 9px 15px;
+
+    border: 0;
+    background: transparent;
+
+    color: #34453d;
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+.submenu li a:hover,
+.submenu li button:hover,
+.submenu li.active > a {
+    background: #edf5f1;
+    color: #0b5d3b;
+}
+
+/* Nested submenu */
+
+.submenu .submenu {
+    top: -3px;
+    left: 100%;
+}
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 44px;
+    height: 42px;
+
+    border: 0;
+    border-radius: 6px;
+
+    background: #0b5d3b;
+    color: #fff;
+
+    font-size: 19px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.page-hero {
+    position: relative;
+
+    padding: 75px 20px;
+
+    background:
+        linear-gradient(
+            rgba(11,93,59,.88),
+            rgba(18,60,43,.94)
+        ),
+        url("photos/Main Entrance.png");
+
+    background-size: cover;
+    background-position: center;
+
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.25);
+
+    color: #f0d27b;
+    font-size: 30px;
+}
+
+.page-hero h1 {
+    margin: 0 0 10px;
+
+    color: #fff;
+
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.page-hero h2 {
+    margin: 0 0 14px;
+
+    color: #f0d27b;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.page-hero p {
+    max-width: 750px;
+    margin: auto;
+
+    color: rgba(255,255,255,.9);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.breadcrumb {
+    display: inline-flex;
+    gap: 8px;
+
+    margin-top: 20px;
+    padding: 8px 16px;
+
+    background: rgba(255,255,255,.12);
+    border-radius: 25px;
+
+    font-size: 12px;
+}
+
+.breadcrumb a {
+    color: #f0d27b;
+    text-decoration: none;
+}
+
+/* =========================================================
+   MAIN SECTIONS
+========================================================= */
+
+.section {
+    max-width: 1180px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #0b5d3b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #173a2b;
+
+    font-size: 29px;
+}
+
+.section-heading p {
+    max-width: 700px;
+    margin: 10px auto 0;
+
+    color: #69756f;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.heading-line {
+    width: 55px;
+    height: 4px;
+
+    margin: 13px auto 0;
+
+    background: #c5a24a;
+    border-radius: 5px;
+}
+
+/* =========================================================
+   INTRO & HIGHLIGHTS
+========================================================= */
+
+.intro-card {
+    background: #fff;
+
+    padding: 30px;
+
+    border: 1px solid #e0e9e4;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(20,60,43,.05);
+}
+
+.intro-card p {
+    margin: 0 0 15px;
+
+    color: #596760;
+
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.intro-card p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+
+    margin-top: 22px;
+}
+
+.highlight-card {
+    padding: 22px 15px;
+
+    text-align: center;
+
+    background: #f8fbf9;
+
+    border: 1px solid #e0e9e4;
+    border-radius: 13px;
+}
+
+.highlight-icon {
+    width: 45px;
+    height: 45px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf4ef;
+    color: #0b5d3b;
+
+    font-size: 19px;
+}
+
+.highlight-card h3 {
+    margin: 0 0 4px;
+
+    color: #173a2b;
+
+    font-size: 16px;
+}
+
+.highlight-card p {
+    margin: 0;
+
+    color: #6b7771;
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   SUBJECT SECTION
+========================================================= */
+
+.subject-section {
+    background: #fff;
+
+    border-top: 1px solid #e5ebe7;
+    border-bottom: 1px solid #e5ebe7;
+}
+
+.subject-year {
+    margin-bottom: 35px;
+}
+
+.year-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.year-badge {
+    padding: 8px 14px;
+
+    background: #0b5d3b;
+    color: #fff;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.year-title h3 {
+    margin: 0;
+
+    color: #173a2b;
+
+    font-size: 20px;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.subject-card {
+    position: relative;
+
+    padding: 22px;
+
+    background: #f9fbfa;
+
+    border: 1px solid #dfe8e3;
+    border-radius: 13px;
+
+    transition: .25s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(20,50,37,.08);
+}
+
+.subject-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eaf4ef;
+    color: #0b5d3b;
+
+    font-size: 20px;
+}
+
+.subject-card h4 {
+    margin: 0 0 7px;
+
+    color: #173a2b;
+
+    font-size: 16px;
+}
+
+.subject-card p {
+    margin: 0;
+
+    color: #68746e;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.compulsory {
+    border-left: 4px solid #c5a24a;
+}
+
+/* =========================================================
+   CAREER OPTIONS
+========================================================= */
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.career-card {
+    padding: 22px;
+
+    background: #fff;
+
+    border: 1px solid #dfe8e3;
+    border-radius: 13px;
+
+    text-align: center;
+}
+
+.career-card i {
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eaf4ef;
+    color: #0b5d3b;
+
+    font-size: 21px;
+}
+
+.career-card h4 {
+    margin: 0 0 7px;
+
+    color: #173a2b;
+    font-size: 15px;
+}
+
+.career-card p {
+    margin: 0;
+
+    color: #68746e;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   NOTICE
+========================================================= */
+
+.notice {
+    max-width: 1180px;
+    margin: 0 auto 50px;
+
+    padding: 18px 22px;
+
+    display: flex;
+    gap: 13px;
+
+    background: #fffaf0;
+
+    border-left: 4px solid #c5a24a;
+    border-radius: 7px;
+}
+
+.notice i {
+    color: #b18a28;
+    font-size: 19px;
+}
+
+.notice p {
+    margin: 0;
+
+    color: #665a3b;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   ADMISSION CTA
+========================================================= */
+
+.admission {
+    max-width: 1180px;
+    margin: auto;
+
+    padding: 10px 20px 65px;
+}
+
+.admission-box {
+    padding: 35px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    background: linear-gradient(135deg,#0b5d3b,#164d38);
+
+    border-radius: 16px;
+
+    color: #fff;
+}
+
+.admission-box h2 {
+    margin: 0 0 8px;
+
+    color: #fff;
+    font-size: 25px;
+}
+
+.admission-box p {
+    margin: 0;
+
+    color: rgba(255,255,255,.83);
+
+    font-size: 13px;
+}
+
+.admission-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 20px;
+
+    background: #c5a24a;
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.admission-button:hover {
+    background: #b18d35;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.home-footer {
+    background: #102b20;
+    color: #fff;
+
+    padding-top: 50px;
+}
+
+.footer-container {
+    max-width: 1180px;
+    margin: auto;
+
+    padding: 0 20px 40px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+}
+
+.footer-column h3 {
+    margin: 0 0 15px;
+
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-college-name {
+    margin-bottom: 12px;
+
+    color: #fff;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-column p {
+    margin: 0;
+
+    color: rgba(255,255,255,.68);
+
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,.68);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: #e2c970;
+}
+
+.contact-item {
+    display: flex;
+    gap: 9px;
+
+    margin-bottom: 11px;
+
+    color: rgba(255,255,255,.68);
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.contact-item i {
+    width: 17px;
+    color: #d2b65d;
+}
+
+.footer-bottom {
+    padding: 17px 20px;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    text-align: center;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px) {
+
+    .nav-menu > li > a,
+    .nav-menu > li > button {
+        padding: 0 8px;
+        font-size: 11px;
+    }
+
+    .highlight-grid,
+    .career-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:900px) {
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .nav-container {
+        padding: 7px 15px;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-menu.mobile-open {
+        display: flex;
+    }
+
+    .nav-menu > li > a,
+    .nav-menu > li > button {
+        width: 100%;
+        min-height: 44px;
+        justify-content: space-between;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+
+        box-shadow: none;
+
+        border-top: 1px solid #dfe8e3;
+        border-left: 3px solid #c5a24a;
+    }
+
+    .submenu .submenu {
+        position: static;
+        border-left: 3px solid #0b5d3b;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:650px) {
+
+    .top-bar-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar-left,
+    .top-bar-right {
+        justify-content: center;
+    }
+
+    .college-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .college-name h1 {
+        font-size: 15px;
+    }
+
+    .college-name span {
+        font-size: 10px;
+    }
+
+    .page-hero {
+        padding: 55px 16px;
+    }
+
+    .page-hero h1 {
+        font-size: 28px;
+    }
+
+    .page-hero h2 {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 45px 16px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .highlight-grid,
+    .subject-grid,
+    .career-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admission {
+        padding: 10px 16px 50px;
+    }
+
+    .admission-box {
+        padding: 28px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        <div class="top-bar-content">
+
+            <div class="top-bar-left">
+
+                <span>
+                    <i class="fas fa-landmark"></i>
+                    Government of Sindh
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    College Education Department
+                </span>
+
+                <span class="separator">|</span>
+
+                <span>
+                    Shahdadpur, District Sanghar, Sindh
+                </span>
+
+            </div>
+
+            <div class="top-bar-right">
+
+                <span>
+                    <i class="fas fa-graduation-cap"></i>
+                    Quality Education
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BRAND -->
+
+    <div class="brand-header">
+
+        <div class="brand-container">
+
+            <a href="index.html" class="college-brand">
+
+                <img src="photos/college logo.jpg"
+                     class="college-logo"
+                     alt="Government Boys Degree College Shahdadpur Logo">
+
+                <div class="college-name">
+
+                    <h1>
+                        Government Boys Degree College Shahdadpur
+                    </h1>
+
+                    <span>
+                        District Sanghar, Sindh
+                    </span>
+
+                </div>
+
+            </a>
+
+            <button class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    aria-label="Open Menu">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+   <!-- NAVIGATION -->
+
+<nav class="main-navigation">
+
+    <div class="nav-container">
+
+        <ul class="nav-menu" id="mainNav">
+
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-house"></i>
+                    HOME
+                </a>
+            </li>
+
+
+            <!-- ABOUT COLLEGE -->
+
+            <li class="has-submenu">
+
+                <button type="button"
+                        class="submenu-toggle">
+
+                    ABOUT COLLEGE
+
+                    <i class="fas fa-chevron-down nav-arrow"></i>
+
+                </button>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="college-overview.html">
+                            College Overview
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="principal-message.html">
+                            Principal's Message
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="facilities.html">
+                            Facilities
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <!-- ACADEMICS -->
+
+            <li class="has-submenu active">
+
+                <button type="button"
+                        class="submenu-toggle">
+
+                    ACADEMICS
+
+                    <i class="fas fa-chevron-down nav-arrow"></i>
+
+                </button>
+
+                <ul class="submenu">
+
+
+                    <!-- INTERMEDIATE -->
+
+                    <li class="has-submenu">
+
+                        <button type="button"
+                                class="submenu-toggle">
+
+                            Intermediate Programs
+
+                            <i class="fas fa-chevron-right nav-arrow"></i>
+
+                        </button>
+
+                        <ul class="submenu">
+
+                            <li>
+                                <a href="pre-medical.html">
+                                    Pre-Medical
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="pre-engineering.html">
+                                    Pre-Engineering
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="computer-science.html">
+                                    Computer Science
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="commerce.html">
+                                    Commerce
+                                </a>
+                            </li>
+
+                            <li class="active">
+                                <a href="humanities.html">
+                                    Humanities
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- ASSOCIATE DEGREE -->
+
+                    <li class="has-submenu">
+
+                        <button type="button"
+                                class="submenu-toggle">
+
+                            Associate Degree Programs
+
+                            <i class="fas fa-chevron-right nav-arrow"></i>
+
+                        </button>
+
+                        <ul class="submenu">
+
+                            <li>
+                                <a href="associate-science.html">
+                                    Associate Degree in Science
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="associate-commerce.html">
+                                    Associate Degree in Commerce
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="associate-arts.html">
+                                    Associate Degree in Arts
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <!-- ADMISSIONS -->
+
+            <li class="has-submenu">
+
+                <button type="button"
+                        class="submenu-toggle">
+
+                    ADMISSIONS
+
+                    <i class="fas fa-chevron-down nav-arrow"></i>
+
+                </button>
+
+                <ul class="submenu">
+
+                    <li>
+                        <a href="eligibility.html">
+                            Eligibility
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="fee-structure.html">
+                            Fee Structure
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="admission-process.html">
+                            Admission Process
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <!-- FACULTY -->
+
+            <li>
+                <a href="faculty.html">
+                    FACULTY
+                </a>
+            </li>
+
+
+            <!-- LIBRARY -->
+
+            <li>
+                <a href="library.html">
+                    LIBRARY
+                </a>
+            </li>
+
+
+            <!-- NEWS -->
+
+            <li>
+                <a href="news-events.html">
+                    NEWS & EVENTS
+                </a>
+            </li>
+
+
+            <!-- DOWNLOADS -->
+
+            <li>
+                <a href="downloads.html">
+                    DOWNLOADS
+                </a>
+            </li>
+
+
+            <!-- GALLERY -->
+
+            <li>
+                <a href="gallery.html">
+                    GALLERY
+                </a>
+            </li>
+
+
+            <!-- CONTACT -->
+
+            <li>
+                <a href="contact.html">
+                    CONTACT
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="page-hero">
+
+    <div class="hero-content">
+
+        <div class="hero-icon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+
+        <h1>
+            Associate Degree in Commerce (ADC / B.Com)
+        </h1>
+
+        <h2>
+            2-Year Undergraduate Degree Program
+        </h2>
+
+        <p>
+            A career-oriented 2-year undergraduate program in accounting, business finance, taxation, and management practices affiliated with the University of Sindh.
+        </p>
+
+        <div class="breadcrumb">
+
+            <a href="index.html">Home</a>
+
+            <i class="fas fa-chevron-right"></i>
+
+            <a href="#">Academics</a>
+
+            <i class="fas fa-chevron-right"></i>
+
+            <span>ADC / B.Com</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROGRAM INTRODUCTION
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            Undergraduate Level
+        </span>
+
+        <h2>
+            About Associate Degree in Commerce
+        </h2>
+
+        <div class="heading-line"></div>
+
+    </div>
+
+
+    <div class="intro-card">
+
+        <p>
+            The Associate Degree in Commerce (ADC), replacing the traditional Bachelor of Commerce (B.Com), is a comprehensive 2-year undergraduate program designed following Higher Education Commission (HEC) guidelines and affiliated with the University of Sindh.
+        </p>
+
+        <p>
+            This program delivers robust practical knowledge in financial accounting, auditing, taxation, business law, macroeconomics, and commercial practices. Graduates develop essential financial analytical skills required for direct industry entry or seamless transition into 5th semester BS Commerce / BBA programs.
+        </p>
+
+    </div>
+
+
+    <!-- HIGHLIGHTS -->
+
+    <div class="highlight-grid">
+
+        <div class="highlight-card">
+
+            <div class="highlight-icon">
+                <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+
+            <h3>Financial Accounting</h3>
+
+            <p>
+                Advanced ledger management, auditing standards, and statements
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <div class="highlight-icon">
+                <i class="fas fa-scale-balanced"></i>
+            </div>
+
+            <h3>Business Law</h3>
+
+            <p>
+                Mercantile law, corporate compliance, and taxation frameworks
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <div class="highlight-icon">
+                <i class="fas fa-arrow-trend-up"></i>
+            </div>
+
+            <h3>Economic Analysis</h3>
+
+            <p>
+                Macroeconomics, money, banking, and public finance principles
+            </p>
+
+        </div>
+
+
+        <div class="highlight-card">
+
+            <div class="highlight-icon">
+                <i class="fas fa-university"></i>
+            </div>
+
+            <h3>BS Lateral Entry</h3>
+
+            <p>
+                Direct eligibility for 5th semester BS Commerce or BS BBA degrees
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CURRICULUM / COURSE STRUCTURE SECTION
+========================================================= -->
+
+<section class="section subject-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            Course Structure
+        </span>
+
+        <h2>
+            ADC Part-I & Part-II Curriculum
+        </h2>
+
+        <p>
+            The two-year curriculum covers core business administration, financial principles, and mandatory university requirements.
+        </p>
+
+        <div class="heading-line"></div>
+
+    </div>
+
+
+    <!-- ADC PART-I -->
+
+    <div class="subject-year">
+
+        <div class="year-title">
+
+            <span class="year-badge">
+                ADC Part I
+            </span>
+
+            <h3>
+                First Year (Part I) Courses
+            </h3>
+
+        </div>
+
+
+        <div class="subject-grid">
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+
+                <h4>
+                    Advanced Financial Accounting
+                </h4>
+
+                <p>
+                    Partnership accounts, corporate financial statements, branch accounting, and consignment procedures.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+
+                <h4>
+                    Business Statistics & Math
+                </h4>
+
+                <p>
+                    Data collection, measures of central tendency, probability, index numbers, interest, and annuities.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+
+                <h4>
+                    Money, Banking & Finance
+                </h4>
+
+                <p>
+                    Monetary economics, central banking systems, credit creation, commercial bank operation, and foreign exchange.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+
+                <h4>
+                    Principles of Management
+                </h4>
+
+                <p>
+                    Organizational planning, leadership styles, decision-making dynamics, human resource principles, and control mechanisms.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card compulsory">
+
+                <div class="subject-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+
+                <h4>
+                    English Compulsory
+                </h4>
+
+                <p>
+                    Business communication skills, report writing, formal correspondence, and comprehension skills.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card compulsory">
+
+                <div class="subject-icon">
+                    <i class="fas fa-book-quran"></i>
+                </div>
+
+                <h4>
+                    Islamic Studies / Ethics
+                </h4>
+
+                <p>
+                    Islamic ethical principles in trade and personal conduct, or Ethics for non-Muslim students.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADC PART-II -->
+
+    <div class="subject-year">
+
+        <div class="year-title">
+
+            <span class="year-badge">
+                ADC Part II
+            </span>
+
+            <h3>
+                Second Year (Part II) Courses
+            </h3>
+
+        </div>
+
+
+        <div class="subject-grid">
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+
+                <h4>
+                    Cost Accounting
+                </h4>
+
+                <p>
+                    Cost concepts, material control, labor accounting, factory overhead allocation, and job costing models.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-magnifying-glass-dollar"></i>
+                </div>
+
+                <h4>
+                    Auditing & Taxation
+                </h4>
+
+                <p>
+                    Verification procedures, internal controls, audit reports, income tax ordinance, and sales tax regulations.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+
+                <h4>
+                    Mercantile & Business Law
+                </h4>
+
+                <p>
+                    Contract act, sale of goods act, negotiable instruments, partnership laws, and company law basics.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card">
+
+                <div class="subject-icon">
+                    <i class="fas fa-earth-americas"></i>
+                </div>
+
+                <h4>
+                    Economic Development of Pakistan
+                </h4>
+
+                <p>
+                    National economic planning, agricultural sector, industrial policies, trade balances, and fiscal planning.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card compulsory">
+
+                <div class="subject-icon">
+                    <i class="fas fa-flag"></i>
+                </div>
+
+                <h4>
+                    Pakistan Studies
+                </h4>
+
+                <p>
+                    Ideological foundation, political movement, geographical resources, and modern socio-economic challenges.
+                </p>
+
+            </div>
+
+
+            <div class="subject-card compulsory">
+
+                <div class="subject-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+
+                <h4>
+                    Computer Applications in Business
+                </h4>
+
+                <p>
+                    Spreadsheet modelling for financial analysis, accounting software fundamentals, and database usage.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="notice">
+
+        <i class="fas fa-circle-info"></i>
+
+        <p>
+            <strong>Eligibility Criteria:</strong>
+            Candidates holding an Intermediate in Commerce (I.Com), Intermediate Science (Pre-Engineering/General Science), or equivalent qualification from a recognized Board are eligible for admission as per University of Sindh regulations.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CAREER & PROGRESSION
+========================================================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            Future Progression
+        </span>
+
+        <h2>
+            Academic & Career Pathways
+        </h2>
+
+        <p>
+            The ADC / B.Com qualification establishes a practical foundation for immediate placement in financial services or professional accounting certifications.
+        </p>
+
+        <div class="heading-line"></div>
+
+    </div>
+
+
+    <div class="career-grid">
+
+        <div class="career-card">
+
+            <i class="fas fa-graduation-cap"></i>
+
+            <h4>
+                BS Commerce / BBA 5th Semester
+            </h4>
+
+            <p>
+                Lateral entry into the 3rd year (5th semester) of BS Commerce, BS Accounting & Finance, or BBA programs.
+            </p>
+
+        </div>
+
+
+        <div class="career-card">
+
+            <i class="fas fa-building-columns"></i>
+
+            <h4>
+                Banking Sector
+            </h4>
+
+            <p>
+                Bank officer positions, credit analysis, operations, cash management, and customer relationship roles.
+            </p>
+
+        </div>
+
+
+        <div class="career-card">
+
+            <i class="fas fa-calculator"></i>
+
+            <h4>
+                Accountant & Bookkeeper
+            </h4>
+
+            <p>
+                Maintenance of ledgers, financial statement preparation, payroll execution, and internal records handling.
+            </p>
+
+        </div>
+
+
+        <div class="career-card">
+
+            <i class="fas fa-file-contract"></i>
+
+            <h4>
+                Professional Certifications
+            </h4>
+
+            <p>
+                Exemption path towards professional qualifications including CA, ACCA, CMA, and PIPFA.
+            </p>
+
+        </div>
+
+
+        <div class="career-card">
+
+            <i class="fas fa-receipt"></i>
+
+            <h4>
+                Tax Consultancy & Audit
+            </h4>
+
+            <p>
+                Assisting tax consultants, audit assistant roles in accounting firms, and corporate compliance filing.
+            </p>
+
+        </div>
+
+
+        <div class="career-card">
+
+            <i class="fas fa-user-shield"></i>
+
+            <h4>
+                Civil Services & Public Sector
+            </h4>
+
+            <p>
+                Eligibility for provincial and federal competitive examinations requiring a graduate business degree.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ADMISSION CTA
+========================================================= -->
+
+<section class="admission">
+
+    <div class="admission-box">
+
+        <div>
+
+            <h2>
+                Interested in ADC / B.Com Admission?
+            </h2>
+
+            <p>
+                Get details regarding eligibility, registration, and application dates at Government Boys Degree College Shahdadpur.
+            </p>
+
+        </div>
+
+        <a href="admission-process.html"
+           class="admission-button">
+
+            Admission Information
+
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="home-footer">
+
+    <div class="footer-container">
+
+
+        <!-- COLLEGE -->
+
+        <div class="footer-column">
+
+            <div class="footer-college-name">
+                Government Boys Degree College Shahdadpur
+            </div>
+
+            <p>
+                A public sector degree college providing quality intermediate and higher education to students of Shahdadpur and surrounding areas.
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="college-overview.html">
+                        College Overview
+                    </a>
+                </li>
+
+                <li>
+                    <a href="faculty.html">
+                        Faculty
+                    </a>
+                </li>
+
+                <li>
+                    <a href="facilities.html">
+                        Facilities
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ACADEMICS -->
+
+        <div class="footer-column">
+
+            <h3>
+                Academics
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="commerce.html">
+                        Intermediate Commerce
+                    </a>
+                </li>
+
+                <li>
+                    <a href="associate-science.html">
+                        ADS / B.Sc Program
+                    </a>
+                </li>
+
+                <li>
+                    <a href="associate-commerce.html">
+                        ADC / B.Com Program
+                    </a>
+                </li>
+
+                <li>
+                    <a href="associate-arts.html">
+                        ADA / B.A Program
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <div class="contact-item">
+
+                <i class="fas fa-location-dot"></i>
+
+                <span>
+                    Shahdadpur, District Sanghar, Sindh
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i class="fas fa-building-columns"></i>
+
+                <span>
+                    College Education Department
+                    Government of Sindh
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <i class="fas fa-envelope"></i>
+
+                <span>
+                    Government Boys Degree College Shahdadpur
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Government Boys Degree College Shahdadpur. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const mobileButton =
+        document.getElementById("mobileMenuButton");
+
+    const mainNav =
+        document.getElementById("mainNav");
+
+
+    /* ============================================
+       MOBILE MENU
+    ============================================ */
+
+    mobileButton.addEventListener("click", function () {
+
+        mainNav.classList.toggle("mobile-open");
+
+        const icon =
+            mobileButton.querySelector("i");
+
+        if (mainNav.classList.contains("mobile-open")) {
+
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+
+        } else {
+
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+
+        }
+
+    });
+
+
+    /* ============================================
+       SUBMENU CLICK
+    ============================================ */
+
+    const submenuButtons =
+        document.querySelectorAll(".submenu-toggle");
+
+
+    submenuButtons.forEach(function (button) {
+
+        button.addEventListener("click", function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            const parent =
+                button.parentElement;
+
+            const submenu =
+                parent.querySelector(":scope > .submenu");
+
+
+            if (!submenu) {
+                return;
+            }
+
+
+            /* Close sibling submenus */
+
+            const siblings =
+                parent.parentElement.children;
+
+
+            Array.from(siblings).forEach(function (sibling) {
+
+                if (sibling !== parent) {
+
+                    sibling.classList.remove("open");
+
+                    const child =
+                        sibling.querySelector(":scope > .submenu");
+
+                    if (child) {
+                        child.style.display = "";
+                    }
+
+                }
+
+            });
+
+
+            /* Toggle current submenu */
+
+            parent.classList.toggle("open");
+
+        });
+
+    });
+
+
+    /* ============================================
+       CLOSE MENU WHEN CLICKING OUTSIDE
+    ============================================ */
+
+    document.addEventListener("click", function (event) {
+
+        if (!event.target.closest(".main-navigation")) {
+
+            document
+                .querySelectorAll(".nav-menu li.open")
+                .forEach(function (item) {
+
+                    item.classList.remove("open");
+
+                });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

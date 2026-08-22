@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Library | Government Boys Degree College Shahdadpur
+    </title>
+
+    <meta name="description"
+          content="Library and Digital Library facilities at Government Boys Degree College Shahdadpur. Access books, digital resources, computers, and multimedia equipment.">
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- PAGE SPECIFIC CSS -->
+
+    <style>
+
+        /* =========================================================
+           GLOBAL & BASE
+        ========================================================= */
+
+        body {
+            margin: 0;
+            background: #f7f9f8;
+            color: #26332d;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        /* =========================================================
+           SITE HEADER
+        ========================================================= */
+
+        .site-header {
+            width: 100%;
+            background: #ffffff;
+            position: relative;
+            z-index: 9999;
+        }
+
+
+        /* =========================================================
+           TOP BAR
+        ========================================================= */
+
+        .top-bar {
+            background: #0b5d3b;
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 9px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .top-bar-left,
+        .top-bar-right {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .top-bar i {
+            color: #ffffff;
+            margin-right: 5px;
+        }
+
+        .separator {
+            opacity: .45;
+        }
+
+
+        /* =========================================================
+           COLLEGE BRAND HEADER
+        ========================================================= */
+
+        .brand-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5ebe7;
+        }
+
+        .brand-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .college-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .college-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+
+        .college-name {
+            line-height: 1.3;
+        }
+
+        .college-name h1 {
+            margin: 0;
+            color: #123c2b;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .college-name span {
+            display: block;
+            margin-top: 3px;
+            color: #68756e;
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        .main-navigation {
+            background: #0b5d3b;
+            border-top: 1px solid rgba(255,255,255,.08);
+            border-bottom: 3px solid #c5a24a;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 15px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .nav-menu > li {
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu > li > a,
+        .nav-menu > li > button {
+            min-height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 0 13px;
+            border: 0;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease;
+        }
+
+        .nav-menu > li > a:hover,
+        .nav-menu > li > button:hover,
+        .nav-menu > li.active > a,
+        .nav-menu > li.active > button {
+            background: rgba(255,255,255,.12);
+            color: #f0d27b;
+        }
+
+        .nav-arrow {
+            font-size: 9px;
+            transition: transform .2s ease;
+        }
+
+        .nav-menu > li.open > a .nav-arrow,
+        .nav-menu > li.open > button .nav-arrow {
+            transform: rotate(180deg);
+        }
+
+
+        /* =========================================================
+           SUBMENUS
+        ========================================================= */
+
+        .submenu {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 230px;
+            margin: 0;
+            padding: 7px 0;
+            background: #ffffff;
+            border: 1px solid #dfe8e3;
+            border-top: 3px solid #c5a24a;
+            box-shadow: 0 12px 30px rgba(0,0,0,.14);
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+            transform: translateY(8px);
+            transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+        }
+
+        .nav-menu > li.open > .submenu {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+            transform: translateY(0);
+        }
+
+        .submenu li {
+            position: relative;
+        }
+
+        .submenu li a,
+        .submenu li button {
+            width: 100%;
+            min-height: 40px;
+            box-sizing: border-box;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 0;
+            background: transparent;
+            color: #34453d;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease, padding-left .2s ease;
+        }
+
+        .submenu li a:hover,
+        .submenu li button:hover {
+            background: #edf5f1;
+            color: #0b5d3b;
+            padding-left: 21px;
+        }
+
+        .submenu .submenu {
+            top: -3px;
+            left: 100%;
+            border-top: 3px solid #c5a24a;
+        }
+
+        .submenu li.open > .submenu {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+            transform: translateX(0);
+        }
+
+
+        /* =========================================================
+           MOBILE MENU BUTTON
+        ========================================================= */
+
+        .mobile-menu-button {
+            display: none;
+            border: 0;
+            background: #0b5d3b;
+            color: #ffffff;
+            font-size: 20px;
+            width: 46px;
+            height: 42px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           GREEN GRADIENT HERO SECTION
+        ===================================================== */
+
+        .library-hero {
+            background: linear-gradient(135deg, #0b5d3b, #12402d, #164d38);
+            color: #ffffff !important;
+            padding: 65px 5%;
+            text-align: center;
+        }
+
+        .library-hero-icon {
+            width: 78px;
+            height: 78px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            font-size: 34px;
+            color: #e8d28a;
+        }
+
+        .library-hero h1 {
+            margin: 0 0 12px;
+            color: #ffffff !important;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+        }
+
+        .library-hero p {
+            max-width: 900px;
+            margin: auto;
+            color: rgba(255, 255, 255, 0.92) !important;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           INTRODUCTION & GALLERY
+        ====================================================== */
+
+        .library-intro {
+            padding: 65px 5%;
+            background: #ffffff;
+        }
+
+        .library-container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .intro-box {
+            padding: 35px;
+            background: #f7f9f8;
+            border-left: 5px solid #0b5d3b;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            margin-bottom: 40px;
+        }
+
+        .intro-box h2 {
+            margin: 0 0 14px;
+            color: #0b5d3b;
+            font-size: 28px;
+        }
+
+        .intro-box p {
+            margin: 0;
+            color: #34495e;
+            line-height: 1.85;
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           PHOTO SHOWCASE STYLES
+        ====================================================== */
+
+        .photo-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 28px;
+            margin-top: 25px;
+        }
+
+        .photo-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e1e8ed;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-card-caption {
+            padding: 18px 20px;
+            text-align: center;
+            font-weight: 600;
+            color: #0b5d3b;
+            font-size: 16px;
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+           SECTION HEADING
+        ====================================================== */
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .section-heading span {
+            display: block;
+            margin-bottom: 8px;
+            color: #c5a24a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            margin: 0 0 10px;
+            color: #0b5d3b;
+            font-size: 34px;
+        }
+
+        .section-heading p {
+            max-width: 760px;
+            margin: auto;
+            color: #667788;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           LIBRARY SECTION
+        ====================================================== */
+
+        .library-section {
+            padding: 70px 5%;
+            background: #f7f9f8;
+        }
+
+
+        /* =====================================================
+           FACILITY CARDS
+        ====================================================== */
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .facility-card {
+            background: #ffffff;
+            border: 1px solid #d7dee5;
+            border-radius: 9px;
+            padding: 30px 22px;
+            text-align: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-6px);
+            border-color: #0b5d3b;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+        }
+
+        .facility-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #edf5f1;
+            color: #0b5d3b;
+            border-radius: 50%;
+            font-size: 27px;
+        }
+
+        .facility-card h3 {
+            margin: 0 0 9px;
+            color: #0b5d3b;
+            font-size: 19px;
+        }
+
+        .facility-card p {
+            margin: 0;
+            color: #657585;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           LIBRARY STATISTICS
+        ====================================================== */
+
+        .library-stats {
+            margin-top: 45px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            max-width: 1050px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-card {
+            padding: 25px 15px;
+            text-align: center;
+            background: linear-gradient(135deg, #0b5d3b, #12402d);
+            color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 7px 20px rgba(0,0,0,0.10);
+        }
+
+        .stat-card i {
+            color: #e8d28a;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 29px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .stat-label {
+            display: block;
+            margin-top: 4px;
+            color: rgba(255,255,255,0.85);
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           DIGITAL LIBRARY
+        ====================================================== */
+
+        .digital-library {
+            padding: 75px 5%;
+            background: #ffffff;
+        }
+
+        .digital-content {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: flex-start;
+        }
+
+        .digital-text h2 {
+            margin: 0 0 15px;
+            color: #0b5d3b;
+            font-size: 31px;
+        }
+
+        .digital-text p {
+            color: #445566;
+            font-size: 15px;
+            line-height: 1.85;
+            margin-bottom: 18px;
+        }
+
+        .digital-list {
+            padding: 0;
+            margin: 20px 0 0;
+            list-style: none;
+        }
+
+        .digital-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 13px;
+            color: #34495e;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .digital-list i {
+            margin-top: 4px;
+            color: #c5a24a;
+        }
+
+
+        /* =====================================================
+           MULTIMEDIA SECTION
+        ====================================================== */
+
+        .multimedia-section {
+            padding: 70px 5%;
+            background: #f7f9f8;
+        }
+
+        .multimedia-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .multimedia-card {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 9px;
+            border: 1px solid #d6dee6;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.04);
+        }
+
+        .multimedia-card-icon {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: #0b5d3b;
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .multimedia-card h3 {
+            margin: 0 0 7px;
+            color: #0b5d3b;
+            font-size: 19px;
+        }
+
+        .multimedia-card p {
+            margin: 0;
+            color: #637384;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           STUDENT USE
+        ====================================================== */
+
+        .student-use {
+            padding: 70px 5%;
+            background: #ffffff;
+        }
+
+        .student-use-box {
+            max-width: 1050px;
+            margin: auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #0b5d3b, #12402d);
+            border-radius: 10px;
+            color: #ffffff;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .student-use-box i {
+            color: #e8d28a;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .student-use-box h2 {
+            margin: 0 0 12px;
+            color: #ffffff;
+            font-size: 28px;
+        }
+
+        .student-use-box p {
+            max-width: 850px;
+            margin: auto;
+            color: rgba(255,255,255,0.88);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           BACK BUTTON
+        ====================================================== */
+
+        .back-section {
+            padding: 0 5% 65px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            background: #0b5d3b;
+            color: #ffffff;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .back-button:hover {
+            background: #12402d;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .home-footer {
+            background: #102b20;
+            color: #ffffff;
+            padding-top: 55px;
+        }
+
+        .footer-container {
+            max-width: 1180px;
+            margin: auto;
+            padding: 0 20px 45px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 45px;
+        }
+
+        .footer-column h3 {
+            margin: 0 0 17px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .footer-college-name {
+            margin-bottom: 13px;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .footer-column p {
+            margin: 0;
+            color: rgba(255,255,255,.68);
+            font-size: 13px;
+            line-height: 1.75;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 9px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,.70);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: #e2c970;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 13px;
+            color: rgba(255,255,255,.70);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .contact-item i {
+            width: 18px;
+            margin-top: 3px;
+            color: #d2b65d;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.10);
+            padding: 18px 20px;
+            text-align: center;
+            color: rgba(255,255,255,.58);
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 1050px) {
+            .nav-menu > li > a,
+            .nav-menu > li > button {
+                padding: 0 8px;
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .brand-container {
+                padding: 12px 16px;
+            }
+
+            .college-name h1 {
+                font-size: 17px;
+            }
+
+            .college-logo {
+                width: 55px;
+                height: 55px;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .nav-container {
+                padding: 8px 15px;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                padding-bottom: 8px;
+            }
+
+            .nav-menu.mobile-open {
+                display: flex;
+            }
+
+            .nav-menu > li > a,
+            .nav-menu > li > button {
+                width: 100%;
+                min-height: 45px;
+                justify-content: space-between;
+                padding: 0 12px;
+            }
+
+            .submenu {
+                position: static;
+                width: 100%;
+                box-sizing: border-box;
+                display: none;
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+                box-shadow: none;
+                border-top: 1px solid #dfe8e3;
+                border-left: 3px solid #c5a24a;
+            }
+
+            .nav-menu > li.open > .submenu {
+                display: block;
+            }
+
+            .submenu .submenu {
+                position: static;
+                display: none;
+                transform: none;
+                border-left: 3px solid #0b5d3b;
+            }
+
+            .submenu li.open > .submenu {
+                display: block;
+            }
+
+            .facility-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .library-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .digital-content {
+                grid-template-columns: 1fr;
+            }
+
+            .multimedia-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .top-bar-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .top-bar-left,
+            .top-bar-right {
+                justify-content: center;
+            }
+
+            .brand-container {
+                padding: 10px 14px;
+            }
+
+            .college-name h1 {
+                font-size: 15px;
+            }
+
+            .college-name span {
+                font-size: 10px;
+            }
+
+            .college-logo {
+                width: 48px;
+                height: 48px;
+            }
+
+            .facility-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .library-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .library-hero {
+                padding: 50px 5%;
+            }
+
+            .intro-box {
+                padding: 25px;
+            }
+
+            .digital-library,
+            .library-section,
+            .multimedia-section,
+            .student-use {
+                padding: 55px 5%;
+            }
+
+            .photo-card img {
+                height: 260px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .library-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .multimedia-card {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .photo-card img {
+                height: 220px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     SITE HEADER (MATCHING INDEX.HTML)
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <span>
+                    <i class="fas fa-landmark"></i>
+                    Government of Sindh
+                </span>
+                <span class="separator">|</span>
+                <span>
+                    College Education Department
+                </span>
+                <span class="separator">|</span>
+                <span>
+                    Shahdadpur, District Sanghar, Sindh
+                </span>
+            </div>
+
+            <div class="top-bar-right">
+                <span>
+                    <i class="fas fa-graduation-cap"></i>
+                    Quality Education
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="brand-header">
+        <div class="brand-container">
+            <a href="index.html" class="college-brand">
+                <img src="photos/college logo.jpg" class="college-logo" alt="College Logo">
+                <div class="college-name">
+                    <h1>Government Boys Degree College Shahdadpur</h1>
+                    <span>District Sanghar, Sindh</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <nav class="main-navigation">
+        <div class="nav-container">
+            <ul class="nav-menu" id="mainNav">
+
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-house"></i>
+                        HOME
+                    </a>
+                </li>
+
+                <li class="has-submenu">
+                    <button type="button" class="submenu-toggle">
+                        ABOUT COLLEGE
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="college-overview.html">College Overview</a></li>
+                        <li><a href="principal-message.html">Principal's Message</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <button type="button" class="submenu-toggle">
+                        ACADEMICS
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+                    </button>
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <button type="button" class="submenu-toggle">
+                                Intermediate Programs
+                                <i class="fas fa-chevron-right nav-arrow"></i>
+                            </button>
+                            <ul class="submenu">
+                                <li><a href="pre-medical.html">Pre-Medical</a></li>
+                                <li><a href="pre-engineering.html">Pre-Engineering</a></li>
+                                <li><a href="computer-science.html">Computer Science</a></li>
+                                <li><a href="commerce.html">Commerce</a></li>
+                                <li><a href="humanities.html">Humanities</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu">
+                            <button type="button" class="submenu-toggle">
+                                Associate Degree Programs
+                                <i class="fas fa-chevron-right nav-arrow"></i>
+                            </button>
+                            <ul class="submenu">
+                                <li><a href="associate-science.html">Associate Degree in Science</a></li>
+                                <li><a href="associate-commerce.html">Associate Degree in Commerce</a></li>
+                                <li><a href="associate-arts.html">Associate Degree in Arts</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <button type="button" class="submenu-toggle">
+                        ADMISSIONS
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="eligibility.html">Eligibility</a></li>
+                        <li><a href="fee-structure.html">Fee Structure</a></li>
+                        <li><a href="Time_Table.html">Time Table</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <button type="button" class="submenu-toggle">
+                        FACULTY
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="faculty-directory.html">Faculty Directory</a></li>
+                        <li><a href="departments.html">Academic Departments</a></li>
+                        <li><a href="faculty-resources.html">Faculty Resources</a></li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="library.html">
+                        <i class="fas fa-book"></i>
+                        LIBRARY
+                    </a>
+                </li>
+
+                <li>
+                    <a href="news.html">
+                        <i class="fas fa-newspaper"></i>
+                        NEWS &amp; EVENTS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="downloads.html">
+                        <i class="fas fa-download"></i>
+                        DOWNLOADS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">
+                        <i class="fas fa-images"></i>
+                        GALLERY
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        <i class="fas fa-envelope"></i>
+                        CONTACT US
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO SECTION (GRADIENT GREEN)
+===================================================== -->
+
+<section class="library-hero">
+
+    <div class="library-hero-icon">
+        <i class="fas fa-book-open"></i>
+    </div>
+
+    <h1>
+        Library & Digital Library
+    </h1>
+
+    <p>
+        A supportive academic learning environment providing students with access to books,
+        digital resources, computers, multimedia facilities and modern learning technology.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCTION & MAIN LIBRARY GALLERY
+===================================================== -->
+
+<section class="library-intro">
+
+    <div class="library-container">
+
+        <div class="intro-box">
+            <h2>Our Library</h2>
+            <p>
+                Government Boys Degree College Shahdadpur provides students with a well-established library facility designed to support classroom learning, self-study, research and academic development. The library contains approximately <strong>3,000 books</strong> covering a wide range of academic subjects and general educational interests. Students can use the library as a quiet and supportive place for reading, preparation and independent study.
+            </p>
+        </div>
+
+        <div class="section-heading" style="margin-bottom: 20px;">
+            <span>COLLEGE LIBRARY</span>
+            <h2>Library Facilities & Students</h2>
+        </div>
+
+        <div class="photo-gallery-grid">
+            <div class="photo-card">
+                <img src="photos/Library/libraray%20student%20studying.jpg"
+                     alt="Library Student Studying"
+                     onerror="this.src='https://via.placeholder.com/600x400?text=Library+Student+Studying'">
+                <div class="photo-card-caption">Students Studying in Library</div>
+            </div>
+
+            <div class="photo-card">
+                <img src="photos/Library/libraray%20student%20studying2.jpg"
+                     alt="Library Student Studying 02"
+                     onerror="this.src='https://via.placeholder.com/600x400?text=Library+Student+Studying+02'">
+                <div class="photo-card-caption">Students Reading & Researching</div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LIBRARY FACILITIES
+===================================================== -->
+
+<section class="library-section">
+
+    <div class="library-container">
+
+        <div class="section-heading">
+            <span>LIBRARY FACILITIES</span>
+            <h2>A Resourceful Learning Space</h2>
+            <p>
+                The college library provides students with academic resources and facilities that support their studies and intellectual development.
+            </p>
+        </div>
+
+        <div class="facility-grid">
+
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-books"></i></div>
+                <h3>3,000+ Books</h3>
+                <p>A collection of approximately 3,000 books covering academic subjects, reference materials and general educational reading.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-book-reader"></i></div>
+                <h3>Reading Facility</h3>
+                <p>A suitable environment where students can read, prepare assignments and study independently.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-book-bookmark"></i></div>
+                <h3>Reference Resources</h3>
+                <p>Reference and academic materials are available to help students enhance their classroom learning.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-laptop"></i></div>
+                <h3>Digital Library</h3>
+                <p>Students can access digital learning resources using dedicated computers available in the digital library.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-display"></i></div>
+                <h3>Multimedia Facility</h3>
+                <p>Multimedia equipment and a large screen support technology-assisted academic presentations and learning activities.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-computer"></i></div>
+                <h3>Established Computer Lab</h3>
+                <p>A dedicated computer facility supports students in practical learning, digital education and computer-based academic activities.</p>
+            </div>
+
+        </div>
+
+        <div class="library-stats">
+
+            <div class="stat-card">
+                <i class="fas fa-book"></i>
+                <span class="stat-number">3,000+</span>
+                <span class="stat-label">Books</span>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-computer"></i>
+                <span class="stat-number">12</span>
+                <span class="stat-label">Digital Library Computers</span>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-tv"></i>
+                <span class="stat-number">1</span>
+                <span class="stat-label">Television</span>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-volume-high"></i>
+                <span class="stat-number">1</span>
+                <span class="stat-label">Speaker System</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DIGITAL LIBRARY & GALLERY
+===================================================== -->
+
+<section class="digital-library">
+
+    <div class="digital-content">
+
+        <div class="photo-gallery-grid" style="grid-template-columns: 1fr;">
+
+            <div class="photo-card">
+                <img src="photos/Library/digital library.jpg"
+                     alt="Digital Library"
+                     onerror="this.src='https://via.placeholder.com/600x400?text=Digital+Library'">
+                <div class="photo-card-caption">Digital Learning Environment</div>
+            </div>
+
+            
+
+            <div class="photo-card">
+                <img src="photos/Library/digital library02.jpeg"
+                     alt="Digital Library 02"
+                     onerror="this.src='https://via.placeholder.com/600x400?text=Digital+Library+02'">
+                <div class="photo-card-caption">Computer & Research Lab</div>
+            </div>
+  <div class="photo-card">
+                <img src="photos/Library/Digital Learning Environment.jpg"
+                     alt="Digital Library 02"
+                     onerror="this.src='https://via.placeholder.com/600x400?text=Digital+Library+02'">
+                <div class="photo-card-caption">Digital Learning Environment</div>
+            </div>
+        </div>
+
+        <div class="digital-text">
+            <h2>Digital Library</h2>
+            <p>
+                The college has a dedicated digital library facility where students can use computers for digital learning, academic research, online educational resources and other technology-based learning activities.
+            </p>
+            <p>
+                The digital library is equipped with <strong>12 computers</strong> and provides students with a convenient environment for accessing digital educational material. Multimedia facilities further enhance the learning experience.
+            </p>
+
+            <ul class="digital-list">
+                <li><i class="fas fa-check-circle"></i><span>12 computers available for student use</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Digital learning and academic research</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Multimedia-supported learning</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Student access to digital educational resources</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Computer-based academic activities</span></li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MULTIMEDIA FACILITIES
+===================================================== -->
+
+<section class="multimedia-section">
+
+    <div class="library-container">
+
+        <div class="section-heading">
+            <span>DIGITAL & MULTIMEDIA FACILITIES</span>
+            <h2>Technology for Modern Learning</h2>
+            <p>
+                Modern technology facilities help students and teachers use multimedia and digital resources to make academic learning more effective.
+            </p>
+        </div>
+
+        <div class="multimedia-grid">
+
+            <div class="multimedia-card">
+                <div class="multimedia-card-icon"><i class="fas fa-desktop"></i></div>
+                <div>
+                    <h3>Computer Facilities</h3>
+                    <p>Twelve computers are available in the digital library for students to use for academic learning, research and digital educational activities.</p>
+                </div>
+            </div>
+
+            <div class="multimedia-card">
+                <div class="multimedia-card-icon"><i class="fas fa-display"></i></div>
+                <div>
+                    <h3>Multimedia Screen</h3>
+                    <p>A multimedia screen is available to support presentations, demonstrations and technology-assisted teaching and learning.</p>
+                </div>
+            </div>
+
+            <div class="multimedia-card">
+                <div class="multimedia-card-icon"><i class="fas fa-tv"></i></div>
+                <div>
+                    <h3>Television</h3>
+                    <p>A television facility is available for educational viewing and multimedia-based academic activities.</p>
+                </div>
+            </div>
+
+            <div class="multimedia-card">
+                <div class="multimedia-card-icon"><i class="fas fa-volume-high"></i></div>
+                <div>
+                    <h3>Speaker System</h3>
+                    <p>A speaker system supports multimedia presentations, educational content and other academic activities.</p>
+                </div>
+            </div>
+
+            <div class="multimedia-card">
+                <div class="multimedia-card-icon"><i class="fas fa-microchip"></i></div>
+                <div>
+                    <h3>Established Computer Lab</h3>
+                    <p>The college has an established computer laboratory that supports practical computer education and digital learning.</p>
+                </div>
+            </div>
+
+            <div class="multimedia-card">
+                <div class="multimedia-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div>
+                    <h3>Digital Learning</h3>
+                    <p>Students can make use of digital facilities to complement classroom teaching and broaden their access to educational resources.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STUDENT USE
+===================================================== -->
+
+<section class="student-use">
+
+    <div class="student-use-box">
+        <i class="fas fa-user-graduate"></i>
+        <h2>A Facility for Student Learning</h2>
+        <p>
+            The library and digital library together provide a supportive academic environment where students can read books, conduct academic research, use computers, access digital educational resources and benefit from multimedia facilities. These facilities are intended to encourage independent learning, improve digital literacy and support students in their academic journey.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<section class="back-section">
+
+    <button type="button" class="back-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <i class="fas fa-arrow-up"></i>
+        Back to Top
+    </button>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER (MATCHING INDEX.HTML)
+========================================================= -->
+
+<footer class="home-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <div class="footer-college-name">
+                Government Boys Degree College<br>Shahdadpur
+            </div>
+            <p>
+                District Sanghar, Sindh.<br><br>
+                Providing quality education and preparing students for higher education and professional life.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="college-overview.html">About College</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admission.html">Admissions</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="library.html">Library</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Important Links</h3>
+            <ul class="footer-links">
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="news.html">News &amp; Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <div class="contact-item">
+                <i class="fas fa-location-dot"></i>
+                <span>Shahdadpur, District Sanghar, Sindh</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>College Office</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>College Email</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Government Boys Degree College Shahdadpur. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     MENU INTERACTION SCRIPT (MATCHING INDEX.HTML)
+========================================================= -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    var menuButton = document.getElementById("mobileMenuButton");
+    var mainNav = document.getElementById("mainNav");
+
+    function getClosest(elem, selector) {
+        while (elem && elem !== document) {
+            if (elem.matches && elem.matches(selector)) return elem;
+            if (elem.msMatchesSelector && elem.msMatchesSelector(selector)) return elem;
+            elem = elem.parentElement;
+        }
+        return null;
+    }
+
+    /* Mobile Navigation Toggle */
+    if (menuButton && mainNav) {
+        menuButton.addEventListener("click", function () {
+            mainNav.classList.toggle("mobile-open");
+            var icon = menuButton.querySelector("i");
+            if (icon) {
+                if (mainNav.classList.contains("mobile-open")) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.add("fa-xmark");
+                } else {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+            }
+        });
+    }
+
+    /* Submenu Toggle Functions */
+    var submenuButtons = document.querySelectorAll(".submenu-toggle");
+    for (var i = 0; i < submenuButtons.length; i++) {
+        submenuButtons[i].addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            var parent = this.parentElement;
+            var submenu = null;
+
+            for (var j = 0; j < parent.children.length; j++) {
+                if (parent.children[j].classList.contains("submenu")) {
+                    submenu = parent.children[j];
+                    break;
+                }
+            }
+
+            if (!submenu) return;
+
+            var siblings = parent.parentElement.children;
+            for (var k = 0; k < siblings.length; k++) {
+                if (siblings[k] !== parent) {
+                    siblings[k].classList.remove("open");
+                }
+            }
+
+            parent.classList.toggle("open");
+        });
+    }
+
+    /* Close Submenus on Outside Click */
+    document.addEventListener("click", function (event) {
+        if (!getClosest(event.target, ".main-navigation")) {
+            var openItems = document.querySelectorAll(".nav-menu li.open");
+            for (var l = 0; l < openItems.length; l++) {
+                openItems[l].classList.remove("open");
+            }
+        }
+    });
+
+    /* Stop Click Propagation inside Submenus */
+    var submenus = document.querySelectorAll(".submenu");
+    for (var m = 0; m < submenus.length; m++) {
+        submenus[m].addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    }
+
+});
+</script>
+
+</body>
+
+</html>
