@@ -1,0 +1,1414 @@
+/* =========================================================
+   COLLEGE OVERVIEW PAGE
+   Government Boys Degree College Shahdadpur
+========================================================= */
+
+.college-overview-page {
+
+    --overview-primary: #123b2a;
+    --overview-primary-dark: #0b2b1e;
+    --overview-primary-light: #164b35;
+
+    --overview-accent: #c5a24a;
+    --overview-accent-dark: #a98735;
+
+    --overview-bg: #f6f8f7;
+    --overview-white: #ffffff;
+
+    --overview-text: #26382f;
+    --overview-muted: #68766f;
+
+    --overview-border: #e1e8e4;
+
+    background: var(--overview-bg);
+    color: var(--overview-text);
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.college-overview-page .container {
+
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   COMMON HEADER / NAVIGATION
+========================================================= */
+
+/*
+   Keep the same header structure on all pages.
+   These rules ensure the College Overview page does
+   not change the common header layout.
+*/
+
+.college-overview-page .navbar {
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #123b2a 0%,
+            #164b35 100%
+        );
+
+    border-bottom:
+        1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,.10);
+
+}
+
+
+/* Navigation container */
+
+.college-overview-page .navbar-content {
+
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+/* Main menu */
+
+.college-overview-page .nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+/* Main menu items */
+
+.college-overview-page .nav-menu > li {
+
+    position: relative;
+
+}
+
+
+/* Main menu links */
+
+.college-overview-page .nav-menu > li > a {
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+        0 15px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+
+}
+
+
+/* Icons */
+
+.college-overview-page .nav-menu > li > a i {
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+}
+
+
+/* Hover */
+
+.college-overview-page .nav-menu > li > a:hover {
+
+    background: var(--overview-accent);
+
+    color: #ffffff;
+
+}
+
+
+/* Hover icons */
+
+.college-overview-page .nav-menu > li > a:hover i {
+
+    color: #ffffff;
+
+}
+
+
+/* Active */
+
+.college-overview-page .nav-menu > li.active > a,
+.college-overview-page .nav-menu > li > a.active {
+
+    background: var(--overview-accent);
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   SUBMENU
+========================================================= */
+
+.college-overview-page .nav-menu .submenu {
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    z-index: 9999;
+
+    min-width: 245px;
+
+    margin: 0;
+    padding: 7px 0;
+
+    list-style: none;
+
+    background: #123b2a;
+
+    border-top:
+        3px solid var(--overview-accent);
+
+    border-radius:
+        0 0 8px 8px;
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.22);
+
+}
+
+
+/* Submenu item */
+
+.college-overview-page .nav-menu .submenu li {
+
+    width: 100%;
+
+}
+
+
+/* Submenu link */
+
+.college-overview-page .nav-menu .submenu li a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    padding:
+        11px 17px;
+
+    background: #123b2a;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    transition:
+        background .2s ease,
+        padding-left .2s ease;
+
+}
+
+
+/* Submenu icon */
+
+.college-overview-page .nav-menu .submenu li a i {
+
+    width: 15px;
+
+    color: var(--overview-accent);
+
+}
+
+
+/* Submenu hover */
+
+.college-overview-page .nav-menu .submenu li a:hover {
+
+    background: var(--overview-accent);
+
+    color: #ffffff;
+
+    padding-left: 22px;
+
+}
+
+
+.college-overview-page .nav-menu .submenu li a:hover i {
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.college-overview-page .mobile-menu-toggle {
+
+    color: #ffffff;
+
+    background: transparent;
+
+    border: none;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.co-hero {
+
+    position: relative;
+
+    min-height: 260px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(18,59,42,.98),
+            rgba(22,75,53,.94),
+            rgba(11,43,30,.98)
+        );
+
+    color: #ffffff;
+
+}
+
+
+/* Decorative circle */
+
+.co-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    top: -220px;
+    right: -90px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.06);
+
+}
+
+
+/* Second decorative circle */
+
+.co-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    bottom: -180px;
+    left: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(197,162,74,.10);
+
+}
+
+
+/* Hero content */
+
+.co-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding:
+        55px 0;
+
+}
+
+
+/* Hero label */
+
+.co-hero-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 13px;
+
+    color: #e6d18a;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* Hero label icon */
+
+.co-hero-label i {
+
+    color: #ffffff;
+
+}
+
+
+/* Hero heading */
+
+.co-hero h1 {
+
+    margin: 0;
+
+    max-width: 800px;
+
+    color: #ffffff;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+}
+
+
+/* Hero paragraph */
+
+.co-hero p {
+
+    max-width: 720px;
+
+    margin:
+        15px 0 0;
+
+    color:
+        rgba(255,255,255,.86);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.co-breadcrumb {
+
+    background: #ffffff;
+
+    border-bottom:
+        1px solid var(--overview-border);
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.03);
+
+}
+
+
+.co-breadcrumb-inner {
+
+    min-height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 13px;
+
+}
+
+
+.co-breadcrumb a {
+
+    color: var(--overview-primary);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+.co-breadcrumb a:hover {
+
+    color: var(--overview-accent-dark);
+
+}
+
+
+.co-breadcrumb span {
+
+    color: #8a958f;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.co-main {
+
+    padding:
+        65px 0 80px;
+
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.co-intro {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(320px, .85fr);
+
+    gap: 50px;
+
+    align-items: center;
+
+    margin-bottom: 65px;
+
+}
+
+
+/* Intro text */
+
+.co-intro-content {
+
+    min-width: 0;
+
+}
+
+
+/* Section small heading */
+
+.co-section-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+
+    color: var(--overview-primary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.co-section-label i {
+
+    color: var(--overview-accent);
+
+}
+
+
+/* Main heading */
+
+.co-intro h2 {
+
+    margin: 0;
+
+    color: #18372a;
+
+    font-size: 32px;
+
+    line-height: 1.3;
+
+    font-weight: 750;
+
+}
+
+
+/* Gold line */
+
+.co-heading-line {
+
+    width: 58px;
+
+    height: 4px;
+
+    margin:
+        16px 0 22px;
+
+    background:
+        var(--overview-accent);
+
+    border-radius: 10px;
+
+}
+
+
+/* Intro paragraphs */
+
+.co-intro p {
+
+    margin:
+        0 0 16px;
+
+    color: var(--overview-muted);
+
+    font-size: 15px;
+
+    line-height: 1.85;
+
+}
+
+
+/* =========================================================
+   INTRO IMAGE
+========================================================= */
+
+.co-intro-image {
+
+    position: relative;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--overview-border);
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 15px 35px rgba(18,59,42,.10);
+
+}
+
+
+.co-intro-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 340px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 11px;
+
+}
+
+
+/* =========================================================
+   INFORMATION CARDS
+========================================================= */
+
+.co-info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-bottom: 65px;
+
+}
+
+
+.co-info-card {
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--overview-border);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 7px 22px rgba(18,59,42,.05);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+
+}
+
+
+.co-info-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        #ccdacf;
+
+    box-shadow:
+        0 15px 32px rgba(18,59,42,.10);
+
+}
+
+
+/* Card icon */
+
+.co-info-icon {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 12px;
+
+    background:
+        #edf5f0;
+
+    color:
+        var(--overview-primary);
+
+    font-size: 21px;
+
+}
+
+
+.co-info-card h3 {
+
+    margin:
+        0 0 9px;
+
+    color:
+        #244236;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+.co-info-card p {
+
+    margin: 0;
+
+    color:
+        var(--overview-muted);
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+}
+
+
+/* =========================================================
+   CONTENT SECTIONS
+========================================================= */
+
+.co-content-section {
+
+    margin-bottom: 55px;
+
+}
+
+
+.co-content-section h2 {
+
+    margin:
+        0 0 14px;
+
+    color:
+        #18372a;
+
+    font-size: 27px;
+
+    line-height: 1.3;
+
+}
+
+
+.co-content-section p {
+
+    max-width: 900px;
+
+    margin:
+        0 0 16px;
+
+    color:
+        var(--overview-muted);
+
+    font-size: 15px;
+
+    line-height: 1.85;
+
+}
+
+
+/* =========================================================
+   HISTORY / FACTS BOX
+========================================================= */
+
+.co-facts {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin:
+        28px 0 55px;
+
+}
+
+
+.co-fact {
+
+    padding:
+        25px 20px;
+
+    text-align: center;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid var(--overview-border);
+
+    border-radius: 13px;
+
+}
+
+
+.co-fact strong {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color:
+        var(--overview-primary);
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+}
+
+
+.co-fact span {
+
+    color:
+        var(--overview-muted);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   VISION / MISSION
+========================================================= */
+
+.co-mission-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 25px;
+
+}
+
+
+.co-mission-card {
+
+    position: relative;
+
+    padding:
+        30px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #123b2a,
+            #164b35
+        );
+
+    color: #ffffff;
+
+}
+
+
+.co-mission-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -90px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.06);
+
+}
+
+
+.co-mission-card i {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color:
+        #e3c875;
+
+    font-size: 25px;
+
+}
+
+
+.co-mission-card h3 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin:
+        0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+}
+
+
+.co-mission-card p {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   PROGRAMS
+========================================================= */
+
+.co-programs {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+
+    margin-top: 25px;
+
+}
+
+
+.co-program {
+
+    padding:
+        27px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--overview-border);
+
+    border-radius: 15px;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.co-program:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 28px rgba(18,59,42,.08);
+
+}
+
+
+.co-program h3 {
+
+    margin:
+        0 0 12px;
+
+    color:
+        var(--overview-primary);
+
+    font-size: 18px;
+
+}
+
+
+.co-program p {
+
+    margin:
+        0 0 14px;
+
+    font-size: 13px;
+
+}
+
+
+.co-program ul {
+
+    margin: 0;
+
+    padding-left: 18px;
+
+    color:
+        var(--overview-muted);
+
+}
+
+
+.co-program li {
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   HIGHLIGHT / CTA
+========================================================= */
+
+.co-highlight {
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 20px;
+
+    padding:
+        40px 45px;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #123b2a,
+            #164b35
+        );
+
+    color: #ffffff;
+
+}
+
+
+.co-highlight::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: -110px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.06);
+
+}
+
+
+.co-highlight h2 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin:
+        0 0 9px;
+
+    color: #ffffff;
+
+    font-size: 26px;
+
+}
+
+
+.co-highlight p {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 720px;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .college-overview-page .nav-menu > li > a {
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        font-size: 12px;
+
+    }
+
+
+    .co-intro {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .co-intro-image {
+
+        max-width: 700px;
+
+        margin: 0 auto;
+
+    }
+
+
+    .co-info-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .co-facts {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .college-overview-page .container {
+
+        width:
+            min(100% - 30px, 1180px);
+
+    }
+
+
+    .co-hero {
+
+        min-height: 230px;
+
+    }
+
+
+    .co-hero-content {
+
+        padding:
+            45px 0;
+
+    }
+
+
+    .co-hero h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .co-hero p {
+
+        font-size: 14px;
+
+    }
+
+
+    .co-info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .co-mission-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .co-programs {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .co-highlight {
+
+        padding:
+            32px 25px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .co-main {
+
+        padding:
+            45px 0 60px;
+
+    }
+
+
+    .co-intro {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .co-intro h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .co-intro-image img {
+
+        height: 250px;
+
+    }
+
+
+    .co-facts {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .co-fact {
+
+        padding:
+            20px 12px;
+
+    }
+
+
+    .co-fact strong {
+
+        font-size: 21px;
+
+    }
+
+
+    .co-content-section h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .co-breadcrumb-inner {
+
+        min-height: 50px;
+
+        font-size: 12px;
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .co-facts {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .co-hero h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .co-hero p {
+
+        font-size: 13px;
+
+    }
+
+}

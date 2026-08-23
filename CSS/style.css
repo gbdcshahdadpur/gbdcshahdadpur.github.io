@@ -1,0 +1,242 @@
+/* =========================================================
+   GLOBAL / COMMON
+========================================================= */
+
+:root {
+    --primary-color: #123b2a;
+    --primary-dark: #0b2b1e;
+    --accent-color: #8b6b23;
+    --white: #ffffff;
+    --text-main: #333333;
+    --text-muted: #6b7280;
+    --bg-light: #f5f7f6;
+    --border-color: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-main);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+    background: var(--primary-color);
+    color: var(--white);
+    font-size: 13px;
+    width: 100%;
+}
+
+.top-bar-content {
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.top-bar .separator {
+    color: rgba(255,255,255,0.55);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid #dddddd;
+}
+
+.header-content {
+    min-height: 115px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo-area {
+    flex-shrink: 0;
+}
+
+.college-logo {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+}
+
+.college-title {
+    flex: 1;
+}
+
+.college-title h1 {
+    font-size: 24px;
+    color: #0b4f8a;
+}
+
+.college-title p {
+    margin-top: 5px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   NAVIGATION — COMMON
+========================================================= */
+
+.navbar {
+    background: var(--primary-color);
+    width: 100%;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu > li > a {
+    display: block;
+    color: var(--white);
+    padding: 15px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu > li > a:hover {
+    background: var(--accent-color);
+    color: var(--white);
+}
+
+
+/* =========================================================
+   DROPDOWN — COMMON
+========================================================= */
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 235px;
+    background: var(--white);
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+    border-top: 3px solid var(--accent-color);
+    z-index: 1000;
+    display: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 16px;
+    color: var(--text-main);
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+
+/* =========================================================
+   COMMON RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px 0;
+    }
+
+    .college-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .college-title {
+        width: 100%;
+    }
+
+    .college-title h1 {
+        font-size: 20px;
+        white-space: normal;
+    }
+
+    .college-title p {
+        white-space: normal;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-menu > li {
+        width: 100%;
+    }
+
+    .nav-menu > li > a {
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+}
