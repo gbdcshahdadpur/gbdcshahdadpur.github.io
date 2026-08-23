@@ -1104,6 +1104,82 @@
 
 
 /* =========================================================
+   ADVERTISEMENT POP-UP MODAL
+========================================================= */
+
+.ad-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.ad-modal-content {
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: modalPopIn 0.3s ease-out forwards;
+}
+
+.ad-modal-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ad-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    z-index: 10;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ad-modal-close:hover {
+    background: #c5a24a;
+    transform: scale(1.1);
+}
+
+@keyframes modalPopIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
    RESPONSIVE
 ========================================================= */
 
@@ -1414,9 +1490,14 @@
         <div class="brand-container">
 
 
-            <a href="index.html" class="college-brand">
-    <img src="photos/college logo.jpg" class="college-logo" alt="College Logo">
-    <div class="college-name">
+            <a href="index.html"
+               class="college-brand">
+
+                <img src="photos/college logo.jpg"
+                     class="college-logo"
+                     alt="College Logo">
+
+                <div class="college-name">
 
                     <h1>
                         Government Boys Degree College
@@ -1552,7 +1633,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="Computer-Science.html">
+                                    <a href="computer-science.html">
                                         Computer Science
                                     </a>
                                 </li>
@@ -2240,6 +2321,17 @@
 </footer>
 
 
+<!-- BS Chemistry Pop-up Modal Alert -->
+<div id="adModal" class="ad-modal">
+    <div class="ad-modal-content">
+        <button type="button" class="ad-modal-close" id="closeAdModal" aria-label="Close Alert">&times;</button>
+        <a href="admission.html">
+            <img src="Advertisement/BS Chemistry.jpeg" alt="BS Chemistry Admissions Open - Govt Boys Degree College Shahdadpur" onerror="this.src='BS Chemistry.jpeg';">
+        </a>
+    </div>
+</div>
+
+
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -2362,6 +2454,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
+    }
+
+
+    /* ================================================
+       ADVERTISEMENT MODAL ALERT LOGIC
+    ================================================= */
+
+    var adModal = document.getElementById("adModal");
+    var closeAdModal = document.getElementById("closeAdModal");
+
+    if (closeAdModal && adModal) {
+        // Close on 'X' button click
+        closeAdModal.addEventListener("click", function () {
+            adModal.style.display = "none";
+        });
+
+        // Close when clicking outside the image container
+        adModal.addEventListener("click", function (event) {
+            if (event.target === adModal) {
+                adModal.style.display = "none";
+            }
+        });
     }
 
 });
