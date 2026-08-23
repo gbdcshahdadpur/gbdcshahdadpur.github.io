@@ -808,7 +808,8 @@
         </div>
 
         <!-- NAVIGATION MENU -->
-        <nav class="main-navigation">
+       <!-- NAVIGATION MENU -->
+<nav class="main-navigation">
     <div class="nav-container">
         <ul class="nav-menu" id="mainNav">
 
@@ -884,10 +885,16 @@
             </li>
 
             <!-- FACULTY -->
-            <li>
-                <a href="faculty.html">
+            <li class="has-submenu">
+                <button type="button" class="submenu-toggle">
                     FACULTY
-                </a>
+                    <i class="fas fa-chevron-down nav-arrow"></i>
+                </button>
+                <ul class="submenu">
+                    <li><a href="faculty-directory.html">Faculty Directory</a></li>
+                    <li><a href="departments.html">Academic Departments</a></li>
+                    <li><a href="faculty-resources.html">Faculty Resources</a></li>
+                </ul>
             </li>
 
             <!-- LIBRARY -->
