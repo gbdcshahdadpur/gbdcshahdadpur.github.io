@@ -739,6 +739,119 @@
 
 
 /* =========================================================
+   IMPORTANT DIGITAL RESOURCES SECTION
+========================================================= */
+
+.resources-section {
+
+    background: #ffffff;
+
+    border-top: 1px solid #e7ece9;
+
+    border-bottom: 1px solid #e7ece9;
+}
+
+.resources-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.resource-card {
+
+    background: #f9fbfa;
+
+    border: 1px solid #e0e9e4;
+
+    border-radius: 12px;
+
+    padding: 22px 18px;
+
+    text-decoration: none;
+
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.resource-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(11, 93, 59, 0.08);
+
+    border-color: #0b5d3b;
+}
+
+.resource-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    background: #eaf4ef;
+
+    color: #0b5d3b;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+    margin-bottom: 14px;
+}
+
+.resource-card h4 {
+
+    margin: 0 0 8px;
+
+    color: #173a2b;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.resource-card p {
+
+    margin: 0 0 14px;
+
+    color: #68746e;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.resource-btn {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #0b5d3b;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+/* =========================================================
    NEWS
 ========================================================= */
 
@@ -1149,6 +1262,10 @@
 
         font-size: 11px;
     }
+
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -1346,6 +1463,7 @@
     }
 
     .programs-grid,
+    .resources-grid,
     .news-grid {
 
         grid-template-columns: 1fr;
@@ -1697,7 +1815,7 @@
                 </li>
 
 
-                <li>
+                <li class="has-submenu">
 
                     <a href="library.html">
 
@@ -1705,7 +1823,37 @@
 
                         LIBRARY
 
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+
                     </a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="https://ebooks.stbb.edu.pk/" title="important link" target="_blank" rel="noopener noreferrer">
+                                STBB Digital eBooks
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://lib.sindh.org/" title="important link" target="_blank" rel="noopener noreferrer">
+                                Sindh Digital Library
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://bhittaipedia.org/" title="important link" target="_blank" rel="noopener noreferrer">
+                                Bhittai Pedia Portal
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://books.sindhsalamat.com/" title="important link" target="_blank" rel="noopener noreferrer">
+                                Sindh Salamat Kitab Ghar
+                            </a>
+                        </li>
+
+                    </ul>
 
                 </li>
 
@@ -1914,6 +2062,156 @@
 
             </div>
 
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROPERLY PLACED IMPORTANT E-RESOURCES SECTION -->
+<section class="resources-section">
+
+    <div class="home-section">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                ACADEMIC &amp; CULTURAL PORTALS
+            </span>
+
+            <h2>
+                Important Digital Resources
+            </h2>
+
+            <p>
+                Access official textbook boards, digital archives, and Sindh literary portals for study and research.
+            </p>
+
+        </div>
+
+        <div class="resources-grid">
+
+            <a href="https://ebooks.stbb.edu.pk/"
+               title="important link"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="resource-card">
+                <div>
+                    <div class="resource-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h4>Sindh TextBook Board</h4>
+                    <p>Download official syllabus e-books for intermediate and degree courses.</p>
+                </div>
+                <span class="resource-btn">Visit eBooks <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="https://lib.sindh.org/"
+               title="important link"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="resource-card">
+                <div>
+                    <div class="resource-icon">
+                        <i class="fas fa-book-bookmark"></i>
+                    </div>
+                    <h4>Sindh Digital Library</h4>
+                    <p>Free digital library access to historical, educational, and reference material.</p>
+                </div>
+                <span class="resource-btn">Open Library <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="https://bhittaipedia.org/"
+               title="important link"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="resource-card">
+                <div>
+                    <div class="resource-icon">
+                        <i class="fas fa-feather"></i>
+                    </div>
+                    <h4>Bhittai Pedia</h4>
+                    <p>Comprehensive digital encyclopedia of Shah Abdul Latif Bhittai's literary works.</p>
+                </div>
+                <span class="resource-btn">Explore Portal <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="https://sindhiadabiboard.org/"
+               title="important link"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="resource-card">
+                <div>
+                    <div class="resource-icon">
+                        <i class="fas fa-monument"></i>
+                    </div>
+                    <h4>Sindhi Adabi Board</h4>
+                    <p>Official portal for Sindhi literature, scholarly research, and archives.</p>
+                </div>
+                <span class="resource-btn">Visit Portal <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="https://sindhila.edu.pk/"
+               title="important link"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="resource-card">
+                <div>
+                    <div class="resource-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h4>Sindhi Language Authority</h4>
+                    <p>Resource portal for Sindhi linguistics, learning software, and publications.</p>
+                </div>
+                <span class="resource-btn">Visit SLA <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="https://books.sindhsalamat.com/"
+               title="important link"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="resource-card">
+                <div>
+                    <div class="resource-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h4>Sindh Salamat Kitab Ghar</h4>
+                    <p>Largest digital repository of downloadable books across various disciplines.</p>
+                </div>
+                <span class="resource-btn">Browse Books <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="https://sanipanhwar.com/"
+               title="important link"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="resource-card">
+                <div>
+                    <div class="resource-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h4>Sani Panhwar Library</h4>
+                    <p>A comprehensive digital library for books on history, politics, and research.</p>
+                </div>
+                <span class="resource-btn">View Library <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="https://bhutto.org/"
+               title="important link"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="resource-card">
+                <div>
+                    <div class="resource-icon">
+                        <i class="fas fa-box-archive"></i>
+                    </div>
+                    <h4>Bhutto.org Archives</h4>
+                    <p>Historical documents, political archives, and historical speeches repository.</p>
+                </div>
+                <span class="resource-btn">Access Archives <i class="fas fa-arrow-right"></i></span>
+            </a>
 
         </div>
 
@@ -2156,32 +2454,53 @@
         <div class="footer-column">
 
             <h3>
-                Important Links
+                E-Resources
             </h3>
 
             <ul class="footer-links">
 
                 <li>
-                    <a href="downloads.html">
-                        Downloads
+                    <a href="https://ebooks.stbb.edu.pk/"
+                       title="important link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        STBB eBooks
                     </a>
                 </li>
 
                 <li>
-                    <a href="news.html">
-                        News &amp; Events
+                    <a href="https://lib.sindh.org/"
+                       title="important link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Sindh Digital Library
                     </a>
                 </li>
 
                 <li>
-                    <a href="gallery.html">
-                        Gallery
+                    <a href="https://bhittaipedia.org/"
+                       title="important link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Bhittai Pedia
                     </a>
                 </li>
 
                 <li>
-                    <a href="contact.html">
-                        Contact Us
+                    <a href="https://sindhiadabiboard.org/"
+                       title="important link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Sindhi Adabi Board
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://sindhila.edu.pk/"
+                       title="important link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Sindhi Language Authority
                     </a>
                 </li>
 
