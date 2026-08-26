@@ -25,6 +25,16 @@
         .top-bar i { color: #ffffff; margin-right: 5px; }
         .separator { opacity: .45; }
 
+        /* HEADER MINI WAVING FLAG */
+        .mini-flag-container { display: inline-flex; align-items: flex-start; margin-left: 10px; vertical-align: middle; }
+        .mini-flag-pole { width: 3px; height: 38px; background: linear-gradient(to right, #cfcfcf, #ffffff, #8c8c8c); border-radius: 2px 2px 1px 1px; box-shadow: 1px 0 3px rgba(0, 0, 0, 0.4); z-index: 2; position: relative; }
+        .mini-flag-pole::before { content: ''; position: absolute; top: -4px; left: -2.5px; width: 8px; height: 8px; background: radial-gradient(circle at 30% 30%, #ffd700, #b8860b); border-radius: 50%; }
+        .mini-flag-wave-box { position: relative; width: 42px; height: 28px; overflow: hidden; border-radius: 0 3px 3px 0; box-shadow: 2px 2px 6px rgba(0,0,0,0.4); transform-origin: left center; perspective: 300px; animation: continuousWave 2.2s infinite ease-in-out alternate; }
+        .mini-flag-svg { width: 100%; height: 100%; display: block; }
+        .mini-flag-wave-box::after { content: ''; position: absolute; top: 0; left: 0; width: 200%; height: 100%; background: linear-gradient(105deg, rgba(255, 255, 255, 0.35) 0%, rgba(0, 0, 0, 0.25) 20%, rgba(255, 255, 255, 0.4) 40%, rgba(0, 0, 0, 0.3) 60%, rgba(255, 255, 255, 0.35) 80%, rgba(0, 0, 0, 0.2) 100%); animation: windRipple 2.2s infinite linear; }
+        @keyframes windRipple { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes continuousWave { 0% { transform: rotateY(0deg) skewY(0deg) scaleY(1); } 25% { transform: rotateY(12deg) skewY(-3deg) scaleY(1.02); } 50% { transform: rotateY(-8deg) skewY(2deg) scaleY(0.98); } 75% { transform: rotateY(10deg) skewY(-2deg) scaleY(1.01); } 100% { transform: rotateY(-5deg) skewY(1deg) scaleY(1); } }
+
         /* BRAND HEADER */
         .brand-header { background: #ffffff; border-bottom: 1px solid #e5ebe7; }
         .brand-container { max-width: 1200px; margin: auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -131,6 +141,19 @@
             </div>
             <div class="top-bar-right">
                 <span><i class="fas fa-graduation-cap"></i> Quality Education</span>
+                <!-- Header Mini Waving Flag Animation -->
+                <div class="mini-flag-container">
+                    <div class="mini-flag-pole"></div>
+                    <div class="mini-flag-wave-box">
+                        <svg class="mini-flag-svg" viewBox="0 0 3 2" preserveAspectRatio="none">
+                            <rect width="3" height="2" fill="#00401A"/>
+                            <rect width="0.75" height="2" fill="#FFFFFF"/>
+                            <circle cx="1.875" cy="1" r="0.6" fill="#FFFFFF"/>
+                            <circle cx="2.025" cy="0.9" r="0.55" fill="#00401A"/>
+                            <polygon points="2.075,0.7 2.125,0.85 2.275,0.85 2.15,0.95 2.2,1.1 2.075,1 1.95,1.1 2,0.95 1.875,0.85 2.025,0.85" fill="#FFFFFF"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -170,7 +193,7 @@
                             <ul class="submenu">
                                 <li><a href="pre-medical.html">Pre-Medical</a></li>
                                 <li><a href="pre-engineering.html">Pre-Engineering</a></li>
-                                <li><a href="Computer-Science.html">Computer Science</a></li>
+                                <li><a href="computer-science.html">Computer Science</a></li>
                                 <li><a href="commerce.html">Commerce</a></li>
                                 <li><a href="humanities.html">Humanities</a></li>
                             </ul>
@@ -323,7 +346,7 @@
     <div class="gallery-grid">
         <div class="gallery-item" data-category="events">
             <div class="gallery-card">
-                <img src="photos/Events/Independence Rally.jpeg" alt="14th August Independence Day Rally">
+                <img src="photos/Events/independence rally.jpeg" alt="14th August Independence Day Rally">
                 <div class="gallery-card-body">
                     <h3 class="gallery-card-title">Independence Day Rally</h3>
                     <span class="gallery-category">Events & Seminars</span>
@@ -333,7 +356,7 @@
 
         <div class="gallery-item" data-category="events">
             <div class="gallery-card">
-                <img src="photos/Events/14th august Event.jpeg" alt="Independence Day Ceremony Audience">
+                <img src="photos/Events/14th August Event.jpeg" alt="Independence Day Ceremony Audience">
                 <div class="gallery-card-body">
                     <h3 class="gallery-card-title">Event Gathering & Ceremony</h3>
                     <span class="gallery-category">Events & Seminars</span>
@@ -445,6 +468,17 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+
+    function getClosest(elem, selector) {
+        while (elem && elem !== document) {
+            if (elem.matches && elem.matches(selector)) return elem;
+            if (elem.msMatchesSelector && elem.msMatchesSelector(selector)) return elem;
+            elem = elem.parentElement;
+        }
+        return null;
+    }
+
+    /* MOBILE MAIN MENU */
     var menuButton = document.getElementById("mobileMenuButton");
     var mainNav = document.getElementById("mainNav");
 
@@ -464,6 +498,59 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    /* ALL SUBMENU BUTTON TOGGLES */
+    var submenuButtons = document.querySelectorAll(".submenu-toggle");
+
+    for (var i = 0; i < submenuButtons.length; i++) {
+        submenuButtons[i].addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            var parent = this.parentElement;
+
+            var submenu = null;
+            for (var j = 0; j < parent.children.length; j++) {
+                if (parent.children[j].classList.contains("submenu")) {
+                    submenu = parent.children[j];
+                    break;
+                }
+            }
+
+            if (!submenu) {
+                return;
+            }
+
+            var siblings = parent.parentElement.children;
+
+            for (var k = 0; k < siblings.length; k++) {
+                if (siblings[k] !== parent) {
+                    siblings[k].classList.remove("open");
+                }
+            }
+
+            parent.classList.toggle("open");
+        });
+    }
+
+    /* CLOSE MENUS WHEN CLICKING OUTSIDE */
+    document.addEventListener("click", function (event) {
+        if (!getClosest(event.target, ".main-navigation")) {
+            var openItems = document.querySelectorAll(".nav-menu li.open");
+            for (var l = 0; l < openItems.length; l++) {
+                openItems[l].classList.remove("open");
+            }
+        }
+    });
+
+    /* PREVENT SUBMENU CLICKS FROM CLOSING */
+    var submenus = document.querySelectorAll(".submenu");
+    for (var m = 0; m < submenus.length; m++) {
+        submenus[m].addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    }
+
+    /* GALLERY FILTER BUTTONS */
     const filterButtons = document.querySelectorAll('.gallery-filter-buttons .btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
