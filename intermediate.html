@@ -2,680 +2,2045 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Programs | Government Boys Degree College Shahdadpur</title>
 
-    <title>
-        Intermediate Programs | Government Boys Degree College Shahdadpur
-    </title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <meta name="description"
-          content="Intermediate Programs offered by Government Boys Degree College Shahdadpur, District Sanghar, Sindh.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- =====================================================
-         GOOGLE FONT
-    ====================================================== -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
-    <!-- =====================================================
-         COMMON WEBSITE CSS
-    ====================================================== -->
-
-    <link rel="stylesheet"
-          href="css/style.css">
-
-
-    <!-- =====================================================
-         PAGE SPECIFIC CSS
-    ====================================================== -->
+    <!-- Existing Main Website CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
-
-        /* =====================================================
-           PROGRAMS GRID
-        ====================================================== */
-
-        .intermediate-page {
-            background: #f8f9fa;
+        /* =========================================================
+           GLOBAL & BASE STYLES (MATCHING INDEX.HTML)
+        ========================================================= */
+        body {
+            margin: 0;
+            background: #f7f9f8;
+            color: #26332d;
+            font-family: 'Poppins', sans-serif;
         }
 
+        /* =========================================================
+           COMMON HEADER & TOP BAR
+        ========================================================= */
+        .site-header {
+            width: 100%;
+            background: #ffffff;
+            position: relative;
+            z-index: 9999;
+        }
 
-        .program-grid {
+        .top-bar {
+            background: #0b5d3b;
+            color: #ffffff;
+            font-size: 12px;
+        }
 
+        .top-bar-content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 6px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .top-bar-left,
+        .top-bar-right {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .top-bar i {
+            color: #ffffff;
+            margin-right: 5px;
+        }
+
+        .separator {
+            opacity: .45;
+        }
+
+        /* MINI WAVING FLAG */
+        .mini-flag-container {
+            display: inline-flex;
+            align-items: flex-start;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .mini-flag-pole {
+            width: 3px;
+            height: 38px;
+            background: linear-gradient(to right, #cfcfcf, #ffffff, #8c8c8c);
+            border-radius: 2px 2px 1px 1px;
+            box-shadow: 1px 0 3px rgba(0, 0, 0, 0.4);
+            z-index: 2;
+            position: relative;
+        }
+
+        .mini-flag-pole::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -2.5px;
+            width: 8px;
+            height: 8px;
+            background: radial-gradient(circle at 30% 30%, #ffd700, #b8860b);
+            border-radius: 50%;
+        }
+
+        .mini-flag-wave-box {
+            position: relative;
+            width: 42px;
+            height: 28px;
+            overflow: hidden;
+            border-radius: 0 3px 3px 0;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            transform-origin: left center;
+            perspective: 300px;
+            animation: continuousWave 2.2s infinite ease-in-out alternate;
+        }
+
+        .mini-flag-svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .mini-flag-wave-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(
+                105deg,
+                rgba(255, 255, 255, 0.35) 0%,
+                rgba(0, 0, 0, 0.25) 20%,
+                rgba(255, 255, 255, 0.4) 40%,
+                rgba(0, 0, 0, 0.3) 60%,
+                rgba(255, 255, 255, 0.35) 80%,
+                rgba(0, 0, 0, 0.2) 100%
+            );
+            animation: windRipple 2.2s infinite linear;
+        }
+
+        @keyframes windRipple {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes continuousWave {
+            0% { transform: rotateY(0deg) skewY(0deg) scaleY(1); }
+            25% { transform: rotateY(12deg) skewY(-3deg) scaleY(1.02); }
+            50% { transform: rotateY(-8deg) skewY(2deg) scaleY(0.98); }
+            75% { transform: rotateY(10deg) skewY(-2deg) scaleY(1.01); }
+            100% { transform: rotateY(-5deg) skewY(1deg) scaleY(1); }
+        }
+
+        /* BRAND HEADER */
+        .brand-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5ebe7;
+        }
+
+        .brand-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .college-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .college-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+
+        .college-name h1 {
+            margin: 0;
+            color: #123c2b;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .college-name span {
+            display: block;
+            margin-top: 3px;
+            color: #68756e;
+            font-size: 12px;
+        }
+
+        /* NAVIGATION & SUBMENUS */
+        .main-navigation {
+            background: #0b5d3b;
+            border-top: 1px solid rgba(255,255,255,.08);
+            border-bottom: 3px solid #c5a24a;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 15px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .nav-menu > li {
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu > li > a,
+        .nav-menu > li > button {
+            min-height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 0 13px;
+            border: 0;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease;
+        }
+
+        .nav-menu > li > a:hover,
+        .nav-menu > li > button:hover,
+        .nav-menu > li.active > a,
+        .nav-menu > li.active > button {
+            background: rgba(255,255,255,.12);
+            color: #f0d27b;
+        }
+
+        .nav-arrow {
+            font-size: 9px;
+            transition: transform .2s ease;
+        }
+
+        .nav-menu > li.open > a .nav-arrow,
+        .nav-menu > li.open > button .nav-arrow {
+            transform: rotate(180deg);
+        }
+
+        .submenu {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 230px;
+            margin: 0;
+            padding: 7px 0;
+            background: #ffffff;
+            border: 1px solid #dfe8e3;
+            border-top: 3px solid #c5a24a;
+            box-shadow: 0 12px 30px rgba(0,0,0,.14);
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+            transform: translateY(8px);
+            transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+        }
+
+        .nav-menu > li.open > .submenu {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+            transform: translateY(0);
+        }
+
+        .submenu li {
+            position: relative;
+        }
+
+        .submenu li a,
+        .submenu li button {
+            width: 100%;
+            min-height: 40px;
+            box-sizing: border-box;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 0;
+            background: transparent;
+            color: #34453d;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease, padding-left .2s ease;
+        }
+
+        .submenu li a:hover,
+        .submenu li button:hover {
+            background: #edf5f1;
+            color: #0b5d3b;
+            padding-left: 21px;
+        }
+
+        .submenu .submenu {
+            top: -3px;
+            left: 100%;
+            border-top: 3px solid #c5a24a;
+        }
+
+        .submenu li.open > .submenu {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+            transform: translateX(0);
+        }
+
+        .mobile-menu-button {
+            display: none;
+            border: 0;
+            background: #0b5d3b;
+            color: #ffffff;
+            font-size: 20px;
+            width: 46px;
+            height: 42px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* =========================================================
+           INTERMEDIATE PAGE CUSTOM COLOR OVERRIDES
+        ========================================================= */
+
+        /* Hero */
+        .program-hero {
+            background: linear-gradient(135deg, #0b5d3b, #164d38);
+            color: #ffffff;
+            padding: 65px 5%;
+            text-align: center;
+        }
+
+        .program-hero-icon {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 50%;
+            font-size: 32px;
+        }
+
+        .program-hero-icon i {
+            color: #ffffff !important;
+        }
+
+        .program-hero h1 {
+            margin: 0 0 12px;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            color: #ffffff !important;
+        }
+
+        .program-hero p {
+            max-width: 760px;
+            margin: auto;
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Intro Section */
+        .intermediate-intro {
+            padding: 65px 5%;
+            background: #ffffff;
+        }
+
+        .intermediate-container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .intro-box {
+            padding: 35px;
+            background: #f9fbfa;
+            border-left: 5px solid #0b5d3b;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .intro-box h2 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: #0b5d3b;
+            font-size: 28px;
+        }
+
+        .intro-box p {
+            margin: 0;
+            color: #5f6b65;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* Program Cards */
+        .programs-section {
+            padding: 70px 5%;
+            background: #f7f9f8;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-heading span {
+            display: block;
+            margin-bottom: 8px;
+            color: #c5a24a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            margin: 0 0 10px;
+            color: #0b5d3b;
+            font-size: 34px;
+        }
+
+        .section-heading p {
+            max-width: 700px;
+            margin: auto;
+            color: #69756f;
+            font-size: 15px;
+        }
+
+        .program-cards {
+            max-width: 1150px;
+            margin: auto;
             display: grid;
-
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
-
-            gap: 25px;
-
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
         }
-
-
-        /* =====================================================
-           PROGRAM CARD
-        ====================================================== */
 
         .program-card {
-
             background: #ffffff;
-
-            padding: 30px;
-
-            border-radius: 14px;
-
-            border-left:
-                5px solid var(--primary-color);
-
-            box-shadow:
-                var(--shadow-sm);
-
-            transition:
-                transform .25s ease,
-                box-shadow .25s ease;
-
+            border: 1px solid #e0e9e4;
+            border-radius: 9px;
+            padding: 28px 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         }
-
 
         .program-card:hover {
-
-            transform:
-                translateY(-5px);
-
-            box-shadow:
-                var(--shadow-md);
-
+            transform: translateY(-6px);
+            border-color: #0b5d3b;
+            box-shadow: 0 10px 25px rgba(20,60,43,0.10);
         }
 
+        .program-card.active {
+            border-color: #0b5d3b;
+            box-shadow: 0 8px 25px rgba(11,93,59,0.18);
+        }
 
-        /* =====================================================
-           PROGRAM ICON
-        ====================================================== */
-
-        .program-icon {
-
-            width: 50px;
-
-            height: 50px;
-
+        .program-card-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 17px;
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
-            border-radius: 12px;
-
-            background:
-                rgba(13, 71, 161, .08);
-
-            color:
-                var(--primary-color);
-
-            font-size: 21px;
-
-            margin-bottom: 18px;
-
+            background: #eaf4ef;
+            color: #0b5d3b;
+            border-radius: 50%;
+            font-size: 27px;
         }
 
-
-        /* =====================================================
-           PROGRAM TITLE
-        ====================================================== */
-
-        .program-card h2 {
-
-            color:
-                var(--primary-color);
-
-            margin:
-                0 0 18px;
-
-            font-size: 23px;
-
-            font-weight: 700;
-
+        .program-card h3 {
+            margin: 0 0 8px;
+            color: #0b5d3b;
+            font-size: 17px;
         }
 
-
-        /* =====================================================
-           SUBJECT LIST
-        ====================================================== */
-
-        .program-card ul {
-
-            padding-left: 0;
-
+        .program-card p {
             margin: 0;
-
-            list-style: none;
-
+            color: #68746e;
+            font-size: 12px;
+            line-height: 1.6;
         }
 
-
-        .program-card li {
-
-            position: relative;
-
-            padding:
-                9px 0 9px 25px;
-
-            color: #555;
-
-            font-size: 15px;
-
-            border-bottom:
-                1px solid #edf0f4;
-
+        /* Program Information Section */
+        .program-information {
+            padding: 70px 5%;
+            background: #ffffff;
         }
 
-
-        .program-card li:last-child {
-
-            border-bottom:
-                none;
-
+        .program-details {
+            max-width: 1150px;
+            margin: auto;
         }
 
-
-        .program-card li::before {
-
-            content: "\f058";
-
-            font-family:
-                "Font Awesome 6 Free";
-
-            font-weight: 900;
-
-            position: absolute;
-
-            left: 0;
-
-            top: 10px;
-
-            color:
-                #f57c00;
-
+        .program-title-box {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5ebe7;
         }
 
-
-        /* =====================================================
-           INTRODUCTION
-        ====================================================== */
-
-        .program-introduction {
-
-            max-width: 850px;
-
-            margin:
-                0 auto 35px;
-
-            text-align: center;
-
+        .program-title-icon {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eaf4ef;
+            color: #0b5d3b;
+            border-radius: 50%;
+            font-size: 25px;
         }
 
+        .program-title-box h2 {
+            margin: 0;
+            color: #0b5d3b;
+            font-size: 30px;
+        }
 
-        .program-introduction p {
-
-            color: #666;
-
-            font-size: 16px;
-
+        .program-description {
+            margin-bottom: 35px;
+            color: #34453d;
             line-height: 1.8;
+            font-size: 15px;
+        }
 
+        .subjects-title {
+            margin-bottom: 18px;
+            color: #0b5d3b;
+            font-size: 22px;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .subjects-table {
+            width: 100%;
+            min-width: 750px;
+            border-collapse: collapse;
+            background: #ffffff;
+        }
+
+        .subjects-table thead {
+            background: #0b5d3b;
+            color: #ffffff;
+        }
+
+        .subjects-table th {
+            padding: 16px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .subjects-table th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        .subjects-table td {
+            padding: 17px 16px;
+            border-bottom: 1px solid #e5ebe7;
+            color: #34453d;
+            font-size: 13px;
+            line-height: 1.7;
+            vertical-align: top;
+        }
+
+        .subjects-table td:first-child {
+            text-align: center;
+            color: #0b5d3b;
+            font-weight: 700;
+        }
+
+        .subjects-table td:nth-child(2) {
+            color: #0b5d3b;
+            font-weight: 600;
+            width: 220px;
+        }
+
+        .subjects-table tbody tr:hover {
+            background: #edf5f1;
+        }
+
+        .program-tag {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 4px 9px;
+            border-radius: 20px;
+            background: #fcf8ee;
+            color: #c5a24a;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .academic-focus {
+            margin-top: 40px;
+            padding: 28px;
+            background: #f9fbfa;
+            border-radius: 8px;
+            border-top: 3px solid #c5a24a;
+        }
+
+        .academic-focus h3 {
+            margin: 0 0 10px;
+            color: #0b5d3b;
+            font-size: 20px;
+        }
+
+        .academic-focus p {
             margin: 0;
-
+            color: #34453d;
+            line-height: 1.8;
+            font-size: 14px;
         }
 
+        .program-content {
+            display: none;
+        }
 
-        /* =====================================================
-           RESPONSIVE
-        ====================================================== */
+        .program-content.active {
+            display: block;
+            animation: fadeIn 0.35s ease;
+        }
 
-        @media (max-width: 750px) {
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-            .program-grid {
+        .back-section {
+            padding: 0 5% 65px;
+            background: #ffffff;
+            text-align: center;
+        }
 
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            background: #0b5d3b;
+            color: #ffffff;
+            border: 0;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .back-button:hover {
+            background: #164d38;
+            transform: translateY(-2px);
+        }
+
+        /* Footer Alignment */
+        .home-footer {
+            background: #102b20;
+            color: #ffffff;
+            padding-top: 55px;
+        }
+
+        .footer-container {
+            max-width: 1180px;
+            margin: auto;
+            padding: 0 20px 45px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 45px;
+        }
+
+        .footer-column h3 {
+            margin: 0 0 17px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .footer-college-name {
+            margin-bottom: 13px;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .footer-column p {
+            margin: 0;
+            color: rgba(255,255,255,.68);
+            font-size: 13px;
+            line-height: 1.75;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 9px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,.70);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: #e2c970;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 13px;
+            color: rgba(255,255,255,.70);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .contact-item i {
+            width: 18px;
+            margin-top: 3px;
+            color: #d2b65d;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.10);
+            padding: 18px 20px;
+            text-align: center;
+            color: rgba(255,255,255,.58);
+            font-size: 12px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1050px) {
+            .nav-menu > li > a,
+            .nav-menu > li > button {
+                padding: 0 8px;
+                font-size: 11px;
+            }
+
+            .program-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .brand-container {
+                padding: 12px 16px;
+            }
+
+            .college-name h1 {
+                font-size: 17px;
+            }
+
+            .college-logo {
+                width: 55px;
+                height: 55px;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .nav-container {
+                padding: 8px 15px;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                padding-bottom: 8px;
+            }
+
+            .nav-menu.mobile-open {
+                display: flex;
+            }
+
+            .nav-menu > li > a,
+            .nav-menu > li > button {
+                width: 100%;
+                min-height: 45px;
+                justify-content: space-between;
+                padding: 0 12px;
+            }
+
+            .submenu {
+                position: static;
+                width: 100%;
+                box-sizing: border-box;
+                display: none;
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+                box-shadow: none;
+                border-top: 1px solid #dfe8e3;
+                border-left: 3px solid #c5a24a;
+            }
+
+            .nav-menu > li.open > .submenu {
+                display: block;
+            }
+
+            .submenu .submenu {
+                position: static;
+                display: none;
+                transform: none;
+                border-left: 3px solid #0b5d3b;
+            }
+
+            .submenu li.open > .submenu {
+                display: block;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .program-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .program-hero {
+                padding: 50px 5%;
+            }
+
+            .program-title-box h2 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .top-bar-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .top-bar-left,
+            .top-bar-right {
+                justify-content: center;
+            }
+
+            .brand-container {
+                padding: 10px 14px;
+            }
+
+            .college-name h1 {
+                font-size: 15px;
+            }
+
+            .college-name span {
+                font-size: 10px;
+            }
+
+            .college-logo {
+                width: 48px;
+                height: 48px;
+            }
+
+            .footer-container {
                 grid-template-columns: 1fr;
-
+                gap: 30px;
             }
-
         }
 
-
-        @media (max-width: 500px) {
-
-            .program-card {
-
-                padding: 23px;
-
+        @media (max-width: 480px) {
+            .program-cards {
+                grid-template-columns: 1fr;
             }
 
-            .program-card h2 {
-
-                font-size: 21px;
-
+            .intro-box {
+                padding: 25px;
             }
 
-            .program-card li {
-
-                font-size: 14px;
-
+            .intermediate-intro,
+            .programs-section,
+            .program-information {
+                padding: 50px 5%;
             }
-
         }
-
     </style>
-
 </head>
 
+<body>
 
-<body class="intermediate-page">
+<!-- =========================================================
+     SITE HEADER (MATCHING INDEX.HTML)
+========================================================= -->
+<header class="site-header">
 
-
-    <!-- =====================================================
-         COMMON HEADER
-         
-         Loaded from:
-         components/header.html
-         
-         JavaScript:
-         js/header-footer.js
-    ====================================================== -->
-
-    <div id="header-container"></div>
-
-
-
-    <!-- =====================================================
-     GRAPHICAL INTERMEDIATE PROGRAMS HERO
-====================================================== -->
-
-<section class="intermediate-hero">
-
-    <!-- Decorative shapes -->
-    <div class="hero-circle hero-circle-one"></div>
-    <div class="hero-circle hero-circle-two"></div>
-    <div class="hero-shape"></div>
-
-    <div class="container">
-
-        <div class="intermediate-hero-content">
-
-            <!-- Left Content -->
-            <div class="intermediate-hero-text">
-
-                <div class="hero-label">
-                    <i class="fas fa-graduation-cap"></i>
-                    Academic Programs
-                </div>
-
-                <h1>
-                    Intermediate Programs
-                </h1>
-
-                <p>
-                    Government Boys Degree College Shahdadpur
-                </p>
-
-                <div class="hero-line"></div>
-
-                <span class="hero-description">
-                    Explore our Intermediate programs designed to
-                    build a strong academic foundation for higher
-                    education and future careers.
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <span>
+                    <i class="fas fa-landmark"></i>
+                    Government of Sindh
                 </span>
-
+                <span class="separator">|</span>
+                <span>
+                    College Education Department
+                </span>
+                <span class="separator">|</span>
+                <span>
+                    Shahdadpur, District Sanghar, Sindh
+                </span>
             </div>
 
-
-            <!-- Right Graphic -->
-            <div class="intermediate-hero-graphic">
-
-                <div class="graphic-circle">
-
+            <div class="top-bar-right">
+                <span>
                     <i class="fas fa-graduation-cap"></i>
-
+                    Quality Education
+                </span>
+                <div class="mini-flag-container">
+                    <div class="mini-flag-pole"></div>
+                    <div class="mini-flag-wave-box">
+                        <svg class="mini-flag-svg" viewBox="0 0 3 2" preserveAspectRatio="none">
+                            <rect width="3" height="2" fill="#00401A"/>
+                            <rect width="0.75" height="2" fill="#FFFFFF"/>
+                            <circle cx="1.875" cy="1" r="0.6" fill="#FFFFFF"/>
+                            <circle cx="2.025" cy="0.9" r="0.55" fill="#00401A"/>
+                            <polygon points="2.075,0.7 2.125,0.85 2.275,0.85 2.15,0.95 2.2,1.1 2.075,1 1.95,1.1 2,0.95 1.875,0.85 2.025,0.85" fill="#FFFFFF"/>
+                        </svg>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="floating-card card-one">
-                    <i class="fas fa-flask"></i>
-                    <span>Pre-Medical</span>
+    <div class="brand-header">
+        <div class="brand-container">
+            <a href="index.html" class="college-brand">
+                <img src="photos/college logo.jpg" class="college-logo" alt="College Logo" onerror="this.src='https://via.placeholder.com/64?text=GBDC'">
+                <div class="college-name">
+                    <h1>Government Boys Degree College Shahdadpur</h1>
+                    <span>District Sanghar, Sindh</span>
                 </div>
+            </a>
 
-                <div class="floating-card card-two">
-                    <i class="fas fa-laptop-code"></i>
-                    <span>Computer Science</span>
+            <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <nav class="main-navigation">
+        <div class="nav-container">
+            <ul class="nav-menu" id="mainNav">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-house"></i>
+                        HOME
+                    </a>
+                </li>
+
+                <li class="has-submenu">
+                    <button type="button" class="submenu-toggle">
+                        ABOUT COLLEGE
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+                    </button>
+                    <ul class="submenu">
+                        <li>
+                            <a href="college-overview.html">College Overview</a>
+                        </li>
+                        <li>
+                            <a href="regional-director.html">Regional Director's Message</a>
+                        </li>
+                        <li>
+                            <a href="principal-message.html">Principal's Message</a>
+                        </li>
+                        <li>
+                            <a href="facilities.html">Facilities</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu active">
+                    <button type="button" class="submenu-toggle">
+                        ACADEMICS
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+                    </button>
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <button type="button" class="submenu-toggle">
+                                Intermediate Programs
+                                <i class="fas fa-chevron-right nav-arrow"></i>
+                            </button>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="pre-medical.html">Pre-Medical</a>
+                                </li>
+                                <li>
+                                    <a href="pre-engineering.html">Pre-Engineering</a>
+                                </li>
+                                <li>
+                                    <a href="computer-science.html">Computer Science</a>
+                                </li>
+                                <li>
+                                    <a href="commerce.html">Commerce</a>
+                                </li>
+                                <li>
+                                    <a href="humanities.html">Humanities</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-submenu">
+                            <button type="button" class="submenu-toggle">
+                                Associate Degree Programs
+                                <i class="fas fa-chevron-right nav-arrow"></i>
+                            </button>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="associate-science.html">Associate Degree in Science</a>
+                                </li>
+                                <li>
+                                    <a href="associate-commerce.html">Associate Degree in Commerce</a>
+                                </li>
+                                <li>
+                                    <a href="associate-arts.html">Associate Degree in Arts</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <button type="button" class="submenu-toggle">
+                        ADMISSIONS
+                        <i class="fas fa-chevron-down nav-arrow"></i>
+                    </button>
+                    <ul class="submenu">
+                        <li>
+                            <a href="eligibility.html">Eligibility</a>
+                        </li>
+                        <li>
+                            <a href="fee-structure.html">Fee Structure</a>
+                        </li>
+                        <li>
+                            <a href="Time_Table.html">Time Table</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="faculty.html">FACULTY</a>
+                </li>
+
+                <li>
+                    <a href="library.html">
+                        <i class="fas fa-book"></i>
+                        LIBRARY
+                    </a>
+                </li>
+
+                <li>
+                    <a href="news.html">
+                        <i class="fas fa-newspaper"></i>
+                        NEWS &amp; EVENTS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="downloads.html">
+                        <i class="fas fa-download"></i>
+                        DOWNLOADS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">
+                        <i class="fas fa-images"></i>
+                        GALLERY
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        <i class="fas fa-envelope"></i>
+                        CONTACT US
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+<section class="program-hero">
+    <div class="program-hero-icon">
+        <i class="fas fa-graduation-cap"></i>
+    </div>
+    <h1>Intermediate Programs</h1>
+    <p>
+        Building a strong academic foundation for higher education,
+        professional development, and future careers.
+    </p>
+</section>
+
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+<section class="intermediate-intro">
+    <div class="intermediate-container">
+        <div class="intro-box">
+            <h2>About Intermediate Education</h2>
+            <p>
+                Government Boys Degree College Shahdadpur offers a range
+                of Intermediate programs designed to provide students
+                with a strong academic foundation for university education
+                and future professional careers. The college offers
+                Pre-Medical, Pre-Engineering, Computer Science,
+                Commerce, and Arts/Humanities streams.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     PROGRAM CARDS
+========================================================= -->
+<section class="programs-section">
+    <div class="intermediate-container">
+        <div class="section-heading">
+            <span>ACADEMIC PROGRAMS</span>
+            <h2>Choose Your Program</h2>
+            <p>
+                Select a program below to view its subjects and
+                major areas of study.
+            </p>
+        </div>
+
+        <div class="program-cards">
+            <!-- PRE MEDICAL -->
+            <div class="program-card active" data-program="pre-medical">
+                <div class="program-card-icon">
+                    <i class="fas fa-microscope"></i>
                 </div>
-
-                <div class="floating-card card-three">
-                    <i class="fas fa-gears"></i>
-                    <span>Pre-Engineering</span>
-                </div>
-
+                <h3>Pre-Medical</h3>
+                <p>Biology, Chemistry & Physics</p>
+                <span class="program-tag">Science</span>
             </div>
 
+            <!-- PRE ENGINEERING -->
+            <div class="program-card" data-program="pre-engineering">
+                <div class="program-card-icon">
+                    <i class="fas fa-gears"></i>
+                </div>
+                <h3>Pre-Engineering</h3>
+                <p>Mathematics, Physics & Chemistry</p>
+                <span class="program-tag">Science</span>
+            </div>
+
+            <!-- COMPUTER SCIENCE -->
+            <div class="program-card" data-program="computer-science">
+                <div class="program-card-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Computer Science</h3>
+                <p>Computing, Programming & Technology</p>
+                <span class="program-tag">Computing</span>
+            </div>
+
+            <!-- COMMERCE -->
+            <div class="program-card" data-program="commerce">
+                <div class="program-card-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Commerce</h3>
+                <p>Accounting, Business & Economics</p>
+                <span class="program-tag">Business</span>
+            </div>
+
+            <!-- ARTS -->
+            <div class="program-card" data-program="arts">
+                <div class="program-card-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Arts / Humanities</h3>
+                <p>Languages, Social Sciences & Humanities</p>
+                <span class="program-tag">Humanities</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+     PROGRAM INFORMATION
+========================================================= -->
+<section class="program-information">
+    <div class="program-details">
+
+        <!-- PRE MEDICAL -->
+        <div class="program-content active" id="pre-medical">
+            <div class="program-title-box">
+                <div class="program-title-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <div>
+                    <h2>Pre-Medical</h2>
+                    <span class="program-tag">Science Program</span>
+                </div>
+            </div>
+
+            <p class="program-description">
+                The Pre-Medical program is designed for students
+                interested in medicine, health sciences, biological
+                sciences, and related fields. It develops a strong
+                foundation in Biology, Chemistry, and Physics,
+                together with language and compulsory subjects.
+            </p>
+
+            <h3 class="subjects-title">Subjects & Major Chapters</h3>
+
+            <div class="table-container">
+                <table class="subjects-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Subject</th>
+                            <th>Main Chapters / Areas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Biology</td>
+                            <td>
+                                Cell Biology, Biological Molecules,
+                                Enzymes, Bioenergetics, Biodiversity,
+                                Kingdoms, Plant Biology, Human Biology,
+                                Genetics, Evolution, Reproduction, Ecology
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Chemistry</td>
+                            <td>
+                                Atomic Structure, Chemical Bonding,
+                                States of Matter, Chemical Equilibrium,
+                                Acids & Bases, Thermochemistry,
+                                Organic Chemistry, Hydrocarbons,
+                                Functional Groups, Biochemistry
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Physics</td>
+                            <td>
+                                Measurements, Vectors, Motion, Force,
+                                Work & Energy, Circular Motion,
+                                Gravitation, Waves, Thermodynamics,
+                                Electricity, Magnetism, Electromagnetism,
+                                Electronics, Modern Physics
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>English</td>
+                            <td>
+                                Grammar, Vocabulary, Comprehension,
+                                Writing Skills, Essay Writing,
+                                Communication Skills, Literature
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Urdu / Sindhi</td>
+                            <td>
+                                Grammar, Prose, Poetry, Literature,
+                                Composition and Language Skills
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Islamiyat / Ethics</td>
+                            <td>
+                                Quranic Studies, Seerah, Islamic
+                                Teachings, Islamic Values, Ethics
+                                and Moral Development
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Pakistan Studies</td>
+                            <td>
+                                Ideology of Pakistan, History,
+                                Geography, Constitution, Culture,
+                                Economy and National Development
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- PRE ENGINEERING -->
+        <div class="program-content" id="pre-engineering">
+            <div class="program-title-box">
+                <div class="program-title-icon">
+                    <i class="fas fa-gears"></i>
+                </div>
+                <div>
+                    <h2>Pre-Engineering</h2>
+                    <span class="program-tag">Science Program</span>
+                </div>
+            </div>
+
+            <p class="program-description">
+                The Pre-Engineering program is designed for students
+                who wish to pursue engineering, technology, physical
+                sciences, and other technical disciplines. The program
+                emphasizes Mathematics, Physics, and Chemistry,
+                developing analytical and problem-solving abilities.
+            </p>
+
+            <h3 class="subjects-title">Subjects & Major Chapters</h3>
+
+            <div class="table-container">
+                <table class="subjects-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Subject</th>
+                            <th>Main Chapters / Areas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mathematics</td>
+                            <td>
+                                Algebra, Matrices & Determinants,
+                                Functions, Quadratic Equations,
+                                Sequences & Series, Permutation &
+                                Combination, Binomial Theorem,
+                                Trigonometry, Analytical Geometry,
+                                Vectors, Limits, Differentiation,
+                                Integration
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Physics</td>
+                            <td>
+                                Measurements, Vectors, Motion, Force,
+                                Work & Energy, Circular Motion,
+                                Gravitation, Properties of Matter,
+                                Waves, Thermodynamics, Electricity,
+                                Magnetism, Electromagnetism,
+                                Electronics, Modern Physics
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Chemistry</td>
+                            <td>
+                                Atomic Structure, Chemical Bonding,
+                                States of Matter, Chemical Equilibrium,
+                                Acids & Bases, Thermochemistry,
+                                Electrochemistry, Organic Chemistry,
+                                Hydrocarbons, Functional Groups,
+                                Industrial Chemistry
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>English</td>
+                            <td>
+                                Grammar, Vocabulary, Comprehension,
+                                Composition, Essay Writing,
+                                Communication Skills, Literature
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Urdu / Sindhi</td>
+                            <td>
+                                Grammar, Prose, Poetry, Literature,
+                                Composition and Language Skills
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Islamiyat / Ethics</td>
+                            <td>
+                                Quranic Studies, Seerah, Islamic
+                                Teachings, Values, Ethics and
+                                Moral Development
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Pakistan Studies</td>
+                            <td>
+                                Ideology of Pakistan, History,
+                                Geography, Constitution, Culture,
+                                Economy and National Development
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- COMPUTER SCIENCE -->
+        <div class="program-content" id="computer-science">
+            <div class="program-title-box">
+                <div class="program-title-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div>
+                    <h2>Computer Science</h2>
+                    <span class="program-tag">Computing Program</span>
+                </div>
+            </div>
+
+            <p class="program-description">
+                The Computer Science program introduces students
+                to computing, programming, information technology,
+                and problem-solving. It provides a foundation for
+                higher education in Computer Science, Information
+                Technology, Software Engineering, Artificial
+                Intelligence, Data Science, and related fields.
+            </p>
+
+            <h3 class="subjects-title">Subjects & Major Chapters</h3>
+
+            <div class="table-container">
+                <table class="subjects-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Subject</th>
+                            <th>Main Chapters / Areas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Computer Science</td>
+                            <td>
+                                Introduction to Computing,
+                                Computer Hardware, Software,
+                                Operating Systems, Data Representation,
+                                Number Systems, Programming Fundamentals,
+                                Algorithms, Flowcharts, Databases,
+                                Networks, Internet and Web Technologies
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mathematics</td>
+                            <td>
+                                Algebra, Functions, Matrices,
+                                Sequences & Series, Trigonometry,
+                                Coordinate Geometry, Vectors,
+                                Limits, Differentiation, Integration
+                                and Probability
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Physics / Elective</td>
+                            <td>
+                                Measurements, Motion, Force,
+                                Work & Energy, Waves, Electricity,
+                                Magnetism, Electronics and
+                                Modern Physics
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>English</td>
+                            <td>
+                                Grammar, Vocabulary, Comprehension,
+                                Writing, Essay, Communication Skills
+                                and Literature
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Urdu / Sindhi</td>
+                            <td>
+                                Grammar, Prose, Poetry, Literature,
+                                Composition and Language Skills
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Islamiyat / Ethics</td>
+                            <td>
+                                Islamic Teachings, Quranic Studies,
+                                Seerah, Values, Ethics and Moral
+                                Development
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Pakistan Studies</td>
+                            <td>
+                                History, Geography, Ideology,
+                                Constitution, Culture, Economy
+                                and National Development
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="academic-focus">
+                <h3>Computer Science Focus</h3>
+                <p>
+                    Programming fundamentals, algorithms and
+                    problem solving, computer hardware and software,
+                    databases, computer networks, internet technologies,
+                    web development and information technology.
+                </p>
+            </div>
+        </div>
+
+        <!-- COMMERCE -->
+        <div class="program-content" id="commerce">
+            <div class="program-title-box">
+                <div class="program-title-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                    <h2>Commerce</h2>
+                    <span class="program-tag">Business Program</span>
+                </div>
+            </div>
+
+            <p class="program-description">
+                The Commerce program provides students with
+                fundamental knowledge of business, accounting,
+                economics, finance, and commercial activities.
+                It prepares students for further studies in
+                Commerce, Business Administration, Accounting,
+                Finance, Economics, Banking, and related disciplines.
+            </p>
+
+            <h3 class="subjects-title">Subjects & Major Chapters</h3>
+
+            <div class="table-container">
+                <table class="subjects-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Subject</th>
+                            <th>Main Chapters / Areas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Principles of Accounting</td>
+                            <td>
+                                Introduction to Accounting,
+                                Accounting Concepts, Journal,
+                                Ledger, Trial Balance, Cash Book,
+                                Bank Reconciliation, Adjustments,
+                                Financial Statements, Depreciation
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Principles of Commerce</td>
+                            <td>
+                                Introduction to Commerce, Trade,
+                                Business Organizations, Sole
+                                Proprietorship, Partnership,
+                                Joint Stock Companies, Banking,
+                                Insurance, Transportation,
+                                Warehousing
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Economics</td>
+                            <td>
+                                Basic Economic Concepts,
+                                Demand & Supply, Production,
+                                Cost, Market Structures,
+                                National Income, Money & Banking,
+                                Inflation, Public Finance,
+                                International Trade
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Business Mathematics / Statistics</td>
+                            <td>
+                                Percentages, Ratios, Proportion,
+                                Interest, Profit & Loss, Algebra,
+                                Statistics, Data Presentation,
+                                Measures of Central Tendency
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>English</td>
+                            <td>
+                                Grammar, Vocabulary, Comprehension,
+                                Writing Skills, Essay Writing,
+                                Communication and Literature
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Urdu / Sindhi</td>
+                            <td>
+                                Grammar, Prose, Poetry, Literature,
+                                Composition and Language Skills
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Islamiyat / Ethics & Pakistan Studies</td>
+                            <td>
+                                Islamic/Ethical Values, Pakistan
+                                Movement, History, Geography,
+                                Constitution, Culture and
+                                National Development
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="academic-focus">
+                <h3>Commerce Focus</h3>
+                <p>
+                    Accounting, business management, economics,
+                    banking, finance, entrepreneurship and
+                    commercial activities.
+                </p>
+            </div>
+        </div>
+
+        <!-- ARTS -->
+        <div class="program-content" id="arts">
+            <div class="program-title-box">
+                <div class="program-title-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div>
+                    <h2>Arts / Humanities</h2>
+                    <span class="program-tag">Humanities Program</span>
+                </div>
+            </div>
+
+            <p class="program-description">
+                The Arts/Humanities program provides students
+                with a broad-based education in languages,
+                social sciences, humanities, and related
+                disciplines. It encourages critical thinking,
+                communication, creativity, social awareness,
+                and an understanding of culture and society.
+            </p>
+
+            <h3 class="subjects-title">Subjects & Major Chapters</h3>
+
+            <div class="table-container">
+                <table class="subjects-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Subject / Area</th>
+                            <th>Main Chapters / Areas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>English</td>
+                            <td>
+                                Grammar, Comprehension,
+                                Vocabulary, Essay Writing,
+                                Composition, Communication
+                                Skills, Literature
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Urdu / Sindhi</td>
+                            <td>
+                                Prose, Poetry, Grammar,
+                                Literature, Composition,
+                                Language and Communication
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Civics</td>
+                            <td>
+                                State, Government, Constitution,
+                                Citizenship, Rights & Duties,
+                                Democracy, Political Institutions
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Economics</td>
+                            <td>
+                                Basic Economic Concepts,
+                                Demand & Supply, Production,
+                                Markets, Money & Banking,
+                                National Income, Public Finance
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Education</td>
+                            <td>
+                                Introduction to Education,
+                                Aims of Education, Learning,
+                                Teaching Methods, Curriculum,
+                                Educational Psychology, Assessment
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>History</td>
+                            <td>
+                                Ancient History, Medieval History,
+                                Modern History, Regional History,
+                                Pakistan Movement and Important
+                                Historical Events
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Geography</td>
+                            <td>
+                                Physical Geography, Climate,
+                                Landforms, Population, Natural
+                                Resources, Agriculture, Industries
+                                and Economic Geography
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Islamiyat / Ethics</td>
+                            <td>
+                                Islamic Teachings, Quranic Studies,
+                                Seerah, Islamic Culture, Moral Values
+                                and Ethics
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Pakistan Studies</td>
+                            <td>
+                                Ideology of Pakistan, History,
+                                Geography, Constitution, Culture,
+                                Economy and National Development
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
-
 </section>
 
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+<section class="back-section">
+    <button type="button" class="back-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        <i class="fas fa-arrow-up"></i>
+        Back to Top
+    </button>
+</section>
 
-
-    <!-- =====================================================
-         MAIN CONTENT
-    ====================================================== -->
-
-    <main class="page-container">
-
-        <div class="container">
-
-
-            <!-- =================================================
-                 INTRODUCTION
-            ================================================== -->
-
-            <div class="program-introduction">
-
-                <p>
-                    Government Boys Degree College Shahdadpur
-                    offers a range of Intermediate programs designed
-                    to provide students with a strong academic
-                    foundation for higher education and professional
-                    development.
-                </p>
-
+<!-- =========================================================
+     FOOTER (MATCHING INDEX.HTML)
+========================================================= -->
+<footer class="home-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <div class="footer-college-name">
+                Government Boys Degree College
+                <br>
+                Shahdadpur
             </div>
-
-
-
-            <!-- =================================================
-                 PROGRAM GRID
-            ================================================== -->
-
-            <div class="program-grid">
-
-
-                <!-- =================================================
-                     PRE-MEDICAL
-                ================================================== -->
-
-                <div class="program-card">
-
-                    <div class="program-icon">
-
-                        <i class="fas fa-flask"></i>
-
-                    </div>
-
-                    <h2>
-                        Pre-Medical
-                    </h2>
-
-                    <ul>
-
-                        <li>
-                            Biology
-                        </li>
-
-                        <li>
-                            Chemistry
-                        </li>
-
-                        <li>
-                            Physics
-                        </li>
-
-                        <li>
-                            English
-                        </li>
-
-                        <li>
-                            Pakistan Studies
-                        </li>
-
-                        <li>
-                            Islamic Studies
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-
-                <!-- =================================================
-                     PRE-ENGINEERING
-                ================================================== -->
-
-                <div class="program-card">
-
-                    <div class="program-icon">
-
-                        <i class="fas fa-gears"></i>
-
-                    </div>
-
-                    <h2>
-                        Pre-Engineering
-                    </h2>
-
-                    <ul>
-
-                        <li>
-                            Mathematics
-                        </li>
-
-                        <li>
-                            Physics
-                        </li>
-
-                        <li>
-                            Chemistry
-                        </li>
-
-                        <li>
-                            English
-                        </li>
-
-                        <li>
-                            Pakistan Studies
-                        </li>
-
-                        <li>
-                            Islamic Studies
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-
-                <!-- =================================================
-                     COMPUTER SCIENCE
-                ================================================== -->
-
-                <div class="program-card">
-
-                    <div class="program-icon">
-
-                        <i class="fas fa-laptop-code"></i>
-
-                    </div>
-
-                    <h2>
-                        Computer Science
-                    </h2>
-
-                    <ul>
-
-                        <li>
-                            Computer Science
-                        </li>
-
-                        <li>
-                            Mathematics
-                        </li>
-
-                        <li>
-                            Physics
-                        </li>
-
-                        <li>
-                            English
-                        </li>
-
-                        <li>
-                            Pakistan Studies
-                        </li>
-
-                        <li>
-                            Islamic Studies
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-
-                <!-- =================================================
-                     COMMERCE
-                ================================================== -->
-
-                <div class="program-card">
-
-                    <div class="program-icon">
-
-                        <i class="fas fa-chart-line"></i>
-
-                    </div>
-
-                    <h2>
-                        Commerce
-                    </h2>
-
-                    <ul>
-
-                        <li>
-                            Accounting
-                        </li>
-
-                        <li>
-                            Commerce
-                        </li>
-
-                        <li>
-                            Economics
-                        </li>
-
-                        <li>
-                            Business Mathematics
-                        </li>
-
-                        <li>
-                            English
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-
-                <!-- =================================================
-                     HUMANITIES
-                ================================================== -->
-
-                <div class="program-card">
-
-                    <div class="program-icon">
-
-                        <i class="fas fa-book-open"></i>
-
-                    </div>
-
-                    <h2>
-                        Humanities
-                    </h2>
-
-                    <ul>
-
-                        <li>
-                            English
-                        </li>
-
-                        <li>
-                            Pakistan Studies
-                        </li>
-
-                        <li>
-                            Islamic Studies
-                        </li>
-
-                        <li>
-                            Elective Subjects
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-            </div>
-
+            <p>
+                District Sanghar, Sindh.
+                <br><br>
+                Providing quality education and preparing
+                students for higher education and professional
+                life.
+            </p>
         </div>
 
-    </main>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li>
+                    <a href="college-overview.html">About College</a>
+                </li>
+                <li>
+                    <a href="academics.html">Academics</a>
+                </li>
+                <li>
+                    <a href="admission.html">Admissions</a>
+                </li>
+                <li>
+                    <a href="faculty.html">Faculty</a>
+                </li>
+                <li>
+                    <a href="library.html">Library</a>
+                </li>
+            </ul>
+        </div>
 
+        <div class="footer-column">
+            <h3>Important Links</h3>
+            <ul class="footer-links">
+                <li>
+                    <a href="downloads.html">Downloads</a>
+                </li>
+                <li>
+                    <a href="news.html">News &amp; Events</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
 
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <div class="contact-item">
+                <i class="fas fa-location-dot"></i>
+                <span>Shahdadpur, District Sanghar, Sindh</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>College Office</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>College Email</span>
+            </div>
+        </div>
+    </div>
 
-    <!-- =====================================================
-         COMMON FOOTER
+    <div class="footer-bottom">
+        &copy; 2026 Government Boys Degree College Shahdadpur. All Rights Reserved.
+    </div>
+</footer>
 
-         Loaded from:
-         components/footer.html
-    ====================================================== -->
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-    <div id="footer-container"></div>
+    var menuButton = document.getElementById("mobileMenuButton");
+    var mainNav = document.getElementById("mainNav");
 
+    function getClosest(elem, selector) {
+        while (elem && elem !== document) {
+            if (elem.matches && elem.matches(selector)) return elem;
+            if (elem.msMatchesSelector && elem.msMatchesSelector(selector)) return elem;
+            elem = elem.parentElement;
+        }
+        return null;
+    }
 
+    /* ================================================
+       MOBILE MAIN MENU TOGGLE
+    ================================================= */
+    if (menuButton && mainNav) {
+        menuButton.addEventListener("click", function () {
+            mainNav.classList.toggle("mobile-open");
 
-    <!-- =====================================================
-         COMMON HEADER / FOOTER JAVASCRIPT
+            var icon = menuButton.querySelector("i");
+            if (icon) {
+                if (mainNav.classList.contains("mobile-open")) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.add("fa-xmark");
+                } else {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+            }
+        });
+    }
 
-         IMPORTANT:
-         Use header-footer.js
-         NOT main.js
-    ====================================================== -->
+    /* ================================================
+       ALL SUBMENU TOGGLES (MULTI-LEVEL DROPDOWNS)
+    ================================================= */
+    var submenuButtons = document.querySelectorAll(".submenu-toggle");
 
-    <script src="js/header-footer.js"></script>
+    for (var i = 0; i < submenuButtons.length; i++) {
+        submenuButtons[i].addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
 
+            var parent = this.parentElement;
+
+            var submenu = null;
+            for (var j = 0; j < parent.children.length; j++) {
+                if (parent.children[j].classList.contains("submenu")) {
+                    submenu = parent.children[j];
+                    break;
+                }
+            }
+
+            if (!submenu) {
+                return;
+            }
+
+            var siblings = parent.parentElement.children;
+            for (var k = 0; k < siblings.length; k++) {
+                if (siblings[k] !== parent) {
+                    siblings[k].classList.remove("open");
+                }
+            }
+
+            parent.classList.toggle("open");
+        });
+    }
+
+    /* ================================================
+       CLOSE MENUS WHEN CLICKING OUTSIDE
+    ================================================= */
+    document.addEventListener("click", function (event) {
+        if (!getClosest(event.target, ".main-navigation")) {
+            var openItems = document.querySelectorAll(".nav-menu li.open");
+            for (var l = 0; l < openItems.length; l++) {
+                openItems[l].classList.remove("open");
+            }
+        }
+    });
+
+    /* ================================================
+       PREVENT SUBMENU CLICK DISPROPAGATION
+    ================================================= */
+    var submenus = document.querySelectorAll(".submenu");
+    for (var m = 0; m < submenus.length; m++) {
+        submenus[m].addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    }
+
+    /* ================================================
+       INTERMEDIATE PROGRAM TAB SWITCHING
+    ================================================= */
+    const programCards = document.querySelectorAll(".program-card");
+    const programContents = document.querySelectorAll(".program-content");
+
+    programCards.forEach(function(card) {
+        card.addEventListener("click", function() {
+            const program = this.getAttribute("data-program");
+
+            programCards.forEach(function(item) {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            programContents.forEach(function(content) {
+                content.classList.remove("active");
+            });
+
+            const selectedProgram = document.getElementById(program);
+            if (selectedProgram) {
+                selectedProgram.classList.add("active");
+            }
+
+            setTimeout(function() {
+                const informationSection = document.querySelector(".program-information");
+                if (informationSection) {
+                    informationSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
+            }, 100);
+        });
+    });
+
+});
+</script>
 
 </body>
-
 </html>
